@@ -32,7 +32,7 @@ export const cvDataEn: CVData = {
     {
       company: "COMFENALCO VALLE DELAGENTE",
       position: "Web Designer (Internship)",
-      period: "2019 - 2020",
+      period: "January 2017 – June 2017",
       description: "Maintained and updated content on the organization's internal portal, enhancing user experience. Made front-end updates using HTML and CSS to align the interface with corporate branding.",
       technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "jQuery", "SASS"]
     }
@@ -52,17 +52,24 @@ export const cvDataEn: CVData = {
     }
   ],
   skills: [
-    { name: "JavaScript", level: 5, category: "Programming Languages" },
+    { name: "JavaScript/TypeScript", level: 5, category: "Programming Languages" },
     { name: "Angular", level: 5, category: "Frontend Frameworks" },
-    { name: "React", level: 4, category: "Frontend Frameworks" },
-    { name: "Node.js", level: 4, category: "Backend Technologies" },
-    { name: "Python", level: 3, category: "Programming Languages" },
-    { name: "AWS", level: 4, category: "Cloud Platforms" },
+    { name: "Vue 3", level: 4, category: "Frontend Frameworks" },
+    { name: "Java / Spring Boot", level: 5, category: "Backend Technologies" },
+    { name: "SQL (Oracle, PostgreSQL, MySQL)", level: 5, category: "Databases" },
+    { name: "Microservices & REST APIs", level: 4, category: "Software Architecture" },
     { name: "Docker", level: 4, category: "DevOps" },
-    { name: "PostgreSQL", level: 4, category: "Databases" },
-    { name: "Git", level: 5, category: "Version Control" },
-    { name: "Agile/Scrum", level: 4, category: "Methodologies" }
+    { name: "Kubernetes", level: 3, category: "DevOps" },
+    { name: "Git / GitHub", level: 5, category: "Version Control" },
+    { name: "Jenkins (CI/CD)", level: 4, category: "DevOps" },
+    { name: "Postman / SoapUI", level: 4, category: "API Testing" },
+    { name: "Jira / Confluence", level: 5, category: "Project Management" },
+    { name: "Agile Methodologies (Scrum, Kanban)", level: 5, category: "Methodologies" },
+    { name: "Scalable & High Availability Architectures", level: 4, category: "Software Architecture" },
+    { name: "Figma", level: 4, category: "Design & Prototyping" },
+    { name: "AEM (Adobe Experience Manager)", level: 3, category: "Content Management" }
   ],
+  
   projects: [
     {
       name: "encárgate app - Landing Page",

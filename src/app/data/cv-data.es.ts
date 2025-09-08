@@ -54,15 +54,22 @@ export const cvDataEs: CVData = {
   skills: [
     { name: "JavaScript/TypeScript", level: 5, category: "Lenguajes de Programación" },
     { name: "Angular", level: 5, category: "Frameworks Frontend" },
-    { name: "React", level: 4, category: "Frameworks Frontend" },
-    { name: "Node.js", level: 4, category: "Tecnologías Backend" },
-    { name: "Python", level: 3, category: "Lenguajes de Programación" },
-    { name: "AWS", level: 4, category: "Plataformas en la Nube" },
+    { name: "Vue 3", level: 4, category: "Frameworks Frontend" },
+    { name: "Java / Spring Boot", level: 5, category: "Tecnologías Backend" },
+    { name: "SQL (Oracle, PostgreSQL, MySQL)", level: 5, category: "Bases de Datos" },
+    { name: "Microservicios & REST APIs", level: 4, category: "Arquitectura de Software" },
     { name: "Docker", level: 4, category: "DevOps" },
-    { name: "PostgreSQL", level: 4, category: "Bases de Datos" },
-    { name: "Git", level: 5, category: "Control de Versiones" },
-    { name: "Agile/Scrum", level: 4, category: "Metodologías" }
+    { name: "Kubernetes", level: 3, category: "DevOps" },
+    { name: "Git / GitHub", level: 5, category: "Control de Versiones" },
+    { name: "Jenkins (CI/CD)", level: 4, category: "DevOps" },
+    { name: "Postman / SoapUI", level: 4, category: "Testing de APIs" },
+    { name: "Jira / Confluence", level: 5, category: "Gestión de Proyectos" },
+    { name: "Metodologías Ágiles (Scrum, Kanban)", level: 5, category: "Metodologías" },
+    { name: "Arquitecturas Escalables y Alta Disponibilidad", level: 4, category: "Arquitectura de Software" },
+    { name: "Figma", level: 4, category: "Diseño y Prototipado" },
+    { name: "AEM (Adobe Experience Manager)", level: 3, category: "Gestión de Contenidos" }
   ],
+  
   projects: [
     {
       name: "encárgate app - Landing Page",
