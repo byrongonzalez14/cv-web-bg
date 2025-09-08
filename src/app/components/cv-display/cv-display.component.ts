@@ -29,4 +29,8 @@ export class CvDisplayComponent {
     if (level >= 3) return 'text-yellow-500';
     return 'text-orange-500';
   }
+
+  getCleanPhoneNumber(phone: string): string {
+    return phone.replace(/[^0-9]/g, '');
+  }
 }
