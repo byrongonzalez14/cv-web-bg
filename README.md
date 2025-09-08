@@ -163,9 +163,9 @@ Las contribuciones son bienvenidas. Por favor:
 
 Si tienes alguna pregunta o sugerencia, no dudes en contactarme a través de:
 
-- **Email**: byron.Gonzalez@email.com
-- **LinkedIn**: [linkedin.com/in/byron-Gonzalez](https://linkedin.com/in/byron-Gonzalez)
-- **GitHub**: [github.com/byron-Gonzalez](https://github.com/byron-Gonzalez)
+- **Email**: byrongonzalez14@gmail.com
+- **LinkedIn**: [linkedin.com/in/byrongonzalezing/](https://www.linkedin.com/in/byrongonzalezing/)
+- **GitHub**: [github.com/byrongonzalez14](https://github.com/byrongonzalez14)
 
 ---
 
