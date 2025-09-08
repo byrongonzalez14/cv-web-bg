@@ -14,13 +14,11 @@ export class LanguageService {
 
   private initializeLanguage(): void {
     const savedLanguage = localStorage.getItem('language') as Language;
-    const browserLanguage = navigator.language.split('-')[0];
     
     if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'es')) {
       this.currentLanguage.set(savedLanguage);
-    } else if (browserLanguage === 'es') {
-      this.currentLanguage.set('es');
     } else {
+      // Default to English regardless of browser language
       this.currentLanguage.set('en');
     }
   }

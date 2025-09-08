@@ -12,12 +12,12 @@ export class ThemeService {
 
   private initializeTheme(): void {
     const savedTheme = localStorage.getItem('theme');
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     
     if (savedTheme) {
       this.isDarkMode.set(savedTheme === 'dark');
     } else {
-      this.isDarkMode.set(prefersDark);
+      // Default to dark mode regardless of system preference
+      this.isDarkMode.set(true);
     }
     
     this.applyTheme();
