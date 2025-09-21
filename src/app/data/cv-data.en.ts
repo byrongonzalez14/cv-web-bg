@@ -3,7 +3,7 @@ import { CVData } from '../models/cv-data.interface';
 export const cvDataEn: CVData = {
   personalInfo: {
     name: "Byron Gonzalez",
-    title: "Technical Lead in Service Integration",
+    title: "Technical Lead - Business Analyst",
     summary: "Multimedia Engineer with over five years of experience leading technology projects, primarily in the banking and corporate sectors. I specialize in bridging the gap between business needs and technical teams, working closely with external development providers and internal stakeholders. My background includes drafting technical documentation, estimating project timelines, integrating third-party services (APIs, databases), and managing production deployments. I’ve led projects through their full lifecycle (from planning and technical scoping to QA and go-live) ensuring deliverables meet quality standards and business goals. I’m focused on practical, well-documented solutions and clear communication between functional and technical areas.",
     contact: {
       email: "byrongonzalez14@gmail.com",
