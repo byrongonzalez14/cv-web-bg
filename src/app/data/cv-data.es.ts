@@ -76,21 +76,24 @@ export const cvDataEs: CVData = {
       description: "Proyecto de landing page para Encárgate, una plataforma estilo TaskRabbit enfocada en conectar personas con servicios caseros de manera rápida y confiable.",
       technologies: ["Vue.js 3", "Vite", "Tailwind CSS", "JavaScript", "TypeScript", "Node.js", "Express.js", "PostgreSQL", "Git"],
       link: "https://encargate-app.vercel.app/",
-      github: "https://github.com/byrongonzalez14/encargate-app.git"
+      github: "https://github.com/byrongonzalez14/encargate-app.git",
+      previewImage: "assets/encargate-thumbnail.PNG"
     },
     {
-      name: "App Notes",
-      description: "Herramienta de gestión de proyectos colaborativa con actualizaciones en tiempo real, compartir archivos y características de comunicación en equipo.",
-      technologies: ["React", "Socket.io", "Express.js", "PostgreSQL", "Redis"],
-      link: "https://taskmanager.byron-Gonzalez.dev",
-      github: "https://github.com/byron-Gonzalez/task-manager"
+      name: "VIDRIOS BEDOYA",
+      description: "Sitio web corporativo para Vidrios Bedoya. Desarrollado con Angular y Bulma, presenta un diseño moderno y adaptable.",
+      technologies: ["Angular","Bulma","TypeScript","HTML5","SCSS","Git","GitHub","Diseño UI/UX"],
+      link: "https://vidrios-bedoya.vercel.app/",
+      github: "https://github.com/byrongonzalez14/vidrios-bedoya.git",
+      previewImage: "assets/vidrios-bedoya-thumbnail.png"
     },
     {
-      name: "Dashboard del Clima",
-      description: "Dashboard de monitoreo del clima en tiempo real con mapas interactivos y visualización de datos.",
-      technologies: ["Vue.js", "D3.js", "OpenWeather API", "Chart.js"],
-      link: "https://weather.byron-Gonzalez.dev",
-      github: "https://github.com/byron-Gonzalez/weather-dashboard"
+      name: "La Rivera",
+      description: "Sitio web en desarrollado en Angular para mostrar instalaciones y servicios, cotizador en tiempo real y reservas integradas. Optimizado para móviles y escritorio.",
+      technologies: ["Angular","Bulma","TypeScript","HTML5","SCSS/SASS","Git","Vercel"],
+      link: "https://la-rivera.vercel.app/",
+      github: "https://github.com/byrongonzalez14/la-rivera-landing.git",
+      previewImage: "assets/la-rivera-thumbnail.png"
     }
   ],
   languages: [
@@ -125,6 +128,10 @@ export const cvDataEs: CVData = {
     {
       name: "Curso de desarrollo web y contenido digital – Udemy",
       certificateUrl: "https://www.udemy.com/certificate/your-certificate-id"
-    }
+    },
+    {
+      name: "Resumen del plan de preparación: AWS Certified Solutions Architect - Associate – AWS Training and Certification",
+      certificateUrl: "assets/certificacion-aws.pdf"
+    }    
   ]
 };

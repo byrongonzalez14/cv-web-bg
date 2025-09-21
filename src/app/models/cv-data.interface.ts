@@ -34,6 +34,8 @@ export interface Project {
   technologies: string[];
   link?: string;
   github?: string;
+  image?: string;
+  previewImage?: string;
 }
 
 export interface Language {
