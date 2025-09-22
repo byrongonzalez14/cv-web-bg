@@ -11,7 +11,7 @@ export const cvDataEs: CVData = {
       location: "Cali, Colombia",
       linkedin: "https://www.linkedin.com/in/byrongonzalezing/",
       github: "https://github.com/byrongonzalez14",
-      website: "https://byron-Gonzalez.dev"
+      website: "https://byrongonzalez.com.co/"
     }
   },
   experience: [
@@ -132,6 +132,11 @@ export const cvDataEs: CVData = {
     {
       name: "Resumen del plan de preparación: AWS Certified Solutions Architect - Associate – AWS Training and Certification",
       certificateUrl: "assets/certificacion-aws.pdf"
-    }    
+    },
+    {
+      name: "Lógica Programación: Aprende Programar en Cualquier Lenguaje – Udemy",
+      certificateUrl: "https://www.udemy.com/certificate/UC-4113573a-6a7d-4aef-a0e7-64c454afd342/"
+    }
+    
   ]
 };
