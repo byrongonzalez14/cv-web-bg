@@ -3,7 +3,7 @@ import { CVData } from '../models/cv-data.interface';
 export const cvDataEs: CVData = {
   personalInfo: {
     name: "Byron Gonzalez",
-    title: "Líder Técnico - Analista de Negocios",
+    title: "Líder Técnico - Ingeniero de proyectos de TI",
     summary: "Ingeniero Multimedia con más de cinco años de experiencia liderando proyectos de tecnología, principalmente en el sector bancario. Me he especializado en conectar las necesidades del negocio con las soluciones técnicas, trabajando de la mano con proveedores de desarrollo y distintos equipos internos. Tengo experiencia en la definición técnica de proyectos, documentación, estimación de esfuerzos, integración de servicios (como APIs y bases de datos) y despliegues en ambientes productivos. He acompañado todas las etapas del ciclo de vida de los proyectos, desde la planificación hasta su implementación final, asegurando que cada entrega cumpla con los estándares de calidad y los objetivos del negocio. Me enfoco en generar soluciones prácticas, bien documentadas y que permitan una comunicación fluida entre las áreas técnicas y funcionales.",
     contact: {
       email: "byrongonzalez14@gmail.com",
