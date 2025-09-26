@@ -3,8 +3,8 @@ import { CVData } from '../models/cv-data.interface';
 export const cvDataEn: CVData = {
   personalInfo: {
     name: "Byron Gonzalez",
-    title: "Technical Lead - IT Project Engineer",
-    summary: "Multimedia Engineer with over five years of experience leading technology projects, primarily in the banking and corporate sectors. I specialize in bridging the gap between business needs and technical teams, working closely with external development providers and internal stakeholders. My background includes drafting technical documentation, estimating project timelines, integrating third-party services (APIs, databases), and managing production deployments. I’ve led projects through their full lifecycle (from planning and technical scoping to QA and go-live) ensuring deliverables meet quality standards and business goals. I’m focused on practical, well-documented solutions and clear communication between functional and technical areas.",
+    title: "Technical Lead – Business Analyst",
+    summary: "Multimedia Engineer with more than five years of experience leading technology projects in the banking and corporate sectors. Skilled at connecting business requirements with technical solutions, working closely with external vendors and cross-functional teams to deliver projects on time and with quality.\n My background includes technical documentation, effort estimation, service integration (APIs, databases), QA audits, and production deployments. I have managed projects through the entire lifecycle—from planning and requirements analysis to testing and go-live—always ensuring alignment with business goals and corporate standards.\nI focus on providing practical, well-documented solutions, fostering clear communication between business and technical areas, and maintaining high quality and consistency in every delivery. This mix of technical leadership and business analysis allows me to guide teams effectively while keeping projects aligned with strategic objectives.",
     contact: {
       email: "byrongonzalez14@gmail.com",
       phone: "(+57) 322 584 8613",
@@ -16,25 +16,46 @@ export const cvDataEn: CVData = {
   },
   experience: [
     {
+      company: "Freelancer",
+      position: "Full Stack Developer",
+      period: "June 2022 – Present",
+      description: "• End-to-end project management: from UX/UI design to production deployment, including documentation and support.\n• Frontend Development: building websites and web applications with Angular, Vue, and TypeScript, following usability and responsive design best practices.\n• Backend Development: creating APIs and microservices with Spring Boot and Node.js, connected to PostgreSQL and MySQL databases.\n• Testing & QA: running functional and integration tests, validating acceptance criteria to ensure quality before release.\n• Deployment & DevOps: publishing projects on Vercel, Railway, and Docker, keeping stable development, QA, and production environments.\n• Web styling and design: using SCSS, Tailwind CSS, and Bootstrap to deliver visually appealing and brand-consistent solutions.\n\nServices as a Full Stack Developer:\n• Creation of corporate websites and landing pages optimized for SEO.\n• Development of custom web applications with scalable architecture.\n• Integration of external APIs and microservices.\n• Implementation of data capture forms and dashboards for analytics.\n• Technical support, maintenance, and performance optimization.",
+      technologies: ["Angular","Vue.js 3","JavaScript","TypeScript","HTML5","CSS3","SCSS","Tailwind CSS","Bootstrap","Node.js","Express.js","Spring Boot","REST APIs","PostgreSQL","MySQL","Docker","Vercel","Railway","Git","GitHub","SEO","Responsive Design","UX/UI Design"]
+    },
+    {
       company: "Q-VISION TECHNOLOGIES for BANCO UNION S.A.",
-      position: "Technical Lead - Development Analyst",
+      position: "Development Analyst – Technical Lead",
       period: "June 2022 – May 2024",
-      description: "Served as the main point of contact between business teams and external development vendors, ensuring alignment across all phases of the project. Created and validated technical documentation, including architectural diagrams, integration flows, and data usage guidelines. Estimated timelines and technical effort for each project phase, helping define realistic development plans. Led daily meetings with providers, tracked progress, addressed technical blockers, and kept deliveries on schedule. Worked alongside QA teams to validate functionality and resolve issues throughout the testing process. Participated in production rollouts, providing support and validation to ensure systems launched smoothly.",
-      technologies: ["Angular","Vue.js 3","JavaScript","TypeScript","HTML5","CSS3","Node.js","Express.js","Spring Boot","REST APIs","SQL","PostgreSQL","Oracle Database","GoAnywhere MFT","Docker","Kubernetes","AWS","Azure","CI/CD","GitHub","Agile (Scrum, Kanban)","Jira","Confluence","Lucidchart","Figma","Microservices Architecture","API Gateway"]
+      description: "• Main point of contact between business teams and external vendors, helping to coordinate technical and functional tasks.\n• Created and reviewed technical documentation such as architectures, integrations, and data flows.\n• Helped model processes with BPMN to make sure business needs matched technical solutions.\n• Estimated effort and supported project planning, making timelines more realistic and easier to achieve.\n• Joined daily and follow-up meetings, solved technical issues, and kept track of progress with vendors.\n• Participated in User Acceptance Testing (UAT), checking acceptance criteria and supporting business users.\n• Supported QA by running smoke, functional, non-functional, and integration tests to ensure quality.\n• Helped in production rollouts, checking requirements were met and giving support in case of incidents.\n• Worked on ETL projects, preparing reports for different areas of the bank.",
+      technologies: ["Angular","Vue.js 3","JavaScript","TypeScript","HTML5","CSS3","Node.js","Express.js","Spring Boot","REST APIs","SQL","PostgreSQL","Oracle Database","GoAnywhere MFT","Docker","Kubernetes","AWS","Azure","CI/CD","GitHub","Agile (Scrum, Kanban)","Jira","Confluence","Lucidchart","Figma","Microservices Architecture","API Gateway","BPMN","ETL"],
+      keyProjects: [
+        "Added new features to the bank's transactional portal, improving the customer experience.",
+        "Migration and improvement of core banking service integrations, reducing errors and response times.",
+        "Supported critical deployments in production with no major incidents.",
+        "Built reporting processes with ETL that gave managers better access to information for decisions."
+      ]
     },
     {
       company: "COLGATE - PALMOLIVE",
-      position: "Web Content Analyst",
+      position: "Web Content Analyst - QA & SEO Specialist",
       period: "March 2018 – June 2022",
-      description: "Coordinated global web projects through the AEM platform, ensuring adherence to brand and technical guidelines. Worked closely with development, marketing, and design teams across regions to keep delivery timelines on track. Reviewed and tested website updates for SEO, accessibility, and user experience compliance. Implemented tracking codes and created reports based on user behavior and analytics insights.",
-      technologies: ["HTML5","CSS3","JavaScript","Adobe Experience Manager (AEM)","SEO (Google Analytics, Google Search Console)","Jira","Confluence","Google Workspace","Figma","Adobe Creative Suite (Photoshop, Illustrator)","User Experience (UX)","WordPress","Google Tag Manager","Version Control (Git, GitHub)","Agile (Scrum, Kanban)"]
+      description: "• Coordinated international web projects in AEM, making sure global brand guidelines were followed and deadlines were met.\n• Performed QA audits and created clear reports on site quality, using internal checklists and SEO/accessibility criteria.\n• Verified SEO practices and brand standards on global websites, running crawl analysis and reporting issues.\n• Implemented tracking codes, tags, and data collection forms in LATAM, improving traceability of digital campaigns.\n• Supported BEX Authors and global agencies with crawl reports, guideline validation, and issue resolution.\n• Documented processes and content workflows in BPMN, helping to standardize practices across regional digital projects.",
+      technologies: ["HTML5","CSS3","JavaScript","Adobe Experience Manager (AEM)","SEO (Google Analytics, Google Search Console)","Jira","Confluence","Google Workspace","Figma","Adobe Creative Suite (Photoshop, Illustrator)","User Experience (UX)","WordPress","Google Tag Manager","Version Control (Git, GitHub)","Agile (Scrum, Kanban)","BPMN","QA Testing","Accessibility Standards"],
+      keyProjects: [
+        "Migration of 50+ Colgate websites to AEM, ensuring SEO and accessibility compliance.",
+        "Global standardization of SEO and QA practices, improving brand visibility and consistency across different markets.",
+        "Implementation of analytics reports and data capture forms for LATAM, supporting data-driven marketing decisions."
+      ]
     },
     {
       company: "COMFENALCO VALLE DELAGENTE",
       position: "Web Designer (Internship)",
       period: "January 2017 – June 2017",
-      description: "Maintained and updated content on the organization's internal portal, enhancing user experience. Made front-end updates using HTML and CSS to align the interface with corporate branding.",
-      technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "jQuery", "SASS"]
+      description: "• Updated content and improved the user experience of the corporate intranet.\n• Made adjustments in HTML and CSS according to corporate brand guidelines.\n• Assisted in Scrum ceremonies (daily meetings, sprint planning, and reviews).",
+      technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "jQuery", "SASS", "Scrum"],
+      keyProjects: [
+        "Partial redesign of the corporate intranet, improving navigation and page load times."
+      ]
     }
   ],
   education: [

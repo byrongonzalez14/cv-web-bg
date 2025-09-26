@@ -33,4 +33,11 @@ export class CvDisplayComponent {
   getCleanPhoneNumber(phone: string): string {
     return phone.replace(/[^0-9]/g, '');
   }
+
+  formatDescription(description: string): string {
+    // Convert bullet points (•) to HTML list items and line breaks to <br>
+    return description
+      .replace(/\n/g, '<br>')
+      .replace(/• /g, '<span class="inline-block w-2 h-2 bg-primary-600 dark:bg-primary-400 rounded-full mr-2 mt-2 flex-shrink-0"></span>');
+  }
 }

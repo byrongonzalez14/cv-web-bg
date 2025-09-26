@@ -13,6 +13,7 @@ export interface Experience {
   period: string;
   description: string;
   technologies?: string[];
+  keyProjects?: string[];
 }
 
 export interface Education {

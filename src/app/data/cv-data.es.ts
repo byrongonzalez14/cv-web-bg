@@ -3,8 +3,8 @@ import { CVData } from '../models/cv-data.interface';
 export const cvDataEs: CVData = {
   personalInfo: {
     name: "Byron Gonzalez",
-    title: "Líder Técnico - Ingeniero de proyectos de TI",
-    summary: "Ingeniero Multimedia con más de cinco años de experiencia liderando proyectos de tecnología, principalmente en el sector bancario. Me he especializado en conectar las necesidades del negocio con las soluciones técnicas, trabajando de la mano con proveedores de desarrollo y distintos equipos internos. Tengo experiencia en la definición técnica de proyectos, documentación, estimación de esfuerzos, integración de servicios (como APIs y bases de datos) y despliegues en ambientes productivos. He acompañado todas las etapas del ciclo de vida de los proyectos, desde la planificación hasta su implementación final, asegurando que cada entrega cumpla con los estándares de calidad y los objetivos del negocio. Me enfoco en generar soluciones prácticas, bien documentadas y que permitan una comunicación fluida entre las áreas técnicas y funcionales.",
+    title: "Líder Técnico - Analista de Negocios",
+    summary: "Ingeniero Multimedia con más de cinco años de experiencia liderando proyectos de tecnología en los sectores bancario y corporativo. Experto en conectar los requerimientos del negocio con soluciones técnicas, trabajando de cerca con proveedores externos y equipos multidisciplinarios para entregar proyectos a tiempo y con calidad.\nMi experiencia incluye documentación técnica, estimación de esfuerzos, integración de servicios (APIs, bases de datos), auditorías de QA y despliegues en entornos productivos. He gestionado proyectos a lo largo de todo su ciclo de vida —desde la planificación y el análisis de requerimientos hasta las pruebas y la salida a producción— asegurando siempre la alineación con los objetivos del negocio y los estándares corporativos.\nMe enfoco en ofrecer soluciones prácticas y bien documentadas, promoviendo una comunicación clara entre las áreas técnicas y de negocio, y manteniendo alta calidad y consistencia en cada entrega. Esta combinación de liderazgo técnico y análisis de negocio me permite guiar equipos de forma efectiva mientras mantengo los proyectos alineados con los objetivos estratégicos.",
     contact: {
       email: "byrongonzalez14@gmail.com",
       phone: "(+57) 322 584 8613",
@@ -16,25 +16,45 @@ export const cvDataEs: CVData = {
   },
   experience: [
     {
+      company: "Freelancer",
+      position: "Desarrollador Full Stack",
+      period: "Junio 2022 – Presente",
+      description: "• Gestión de ciclo completo de proyectos (LCSD): desde el diseño UX/UI hasta el despliegue en producción, incluyendo documentación y soporte.\n• Desarrollo Frontend: construcción de sitios y aplicaciones web con Angular, Vue y TypeScript, aplicando buenas prácticas de usabilidad y responsive design.\n• Desarrollo Backend: implementación de APIs y microservicios con Spring Boot y Node.js, integrados a bases de datos PostgreSQL y MySQL.\n• Pruebas y QA: ejecución de pruebas funcionales, integración y validación de criterios de aceptación, garantizando calidad antes del paso a producción.\n• Despliegue y DevOps: publicación de proyectos en Vercel, Railway y Docker, asegurando entornos estables de desarrollo, QA y producción.\n• Estilos y diseño web: aplicación de SCSS, Tailwind CSS y Bootstrap para soluciones visualmente atractivas y consistentes con la identidad de cada cliente.\n\nServicios ofrecidos como Full Stack Developer:\n• Creación de sitios corporativos y landing pages optimizados para SEO.\n• Desarrollo de aplicaciones web a medida con arquitectura escalable.\n• Integración de APIs externas y microservicios.\n• Implementación de formularios de captura de datos y dashboards para análisis.\n• Soporte técnico, mantenimiento evolutivo y optimización de rendimiento.",
+      technologies: ["Angular","Vue.js 3","JavaScript","TypeScript","HTML5","CSS3","SCSS","Tailwind CSS","Bootstrap","Node.js","Express.js","Spring Boot","REST APIs","PostgreSQL","MySQL","Docker","Vercel","Railway","Git","GitHub","SEO","Responsive Design","UX/UI Design"]
+    },
+    {
       company: "Q-VISION TECHNOLOGIES para BANCO UNION S.A.",
       position: "Analista de desarrollo - Líder Técnico",
-      period: " Junio 2022 – Mayo 2024",
-      description: "Servía como punto de contacto entre las áreas del negocio y los proveedores externos de desarrollo, facilitando la coordinación técnica de los proyectos. Me encargué de crear y revisar la documentación técnica, incluyendo arquitecturas, integraciones, uso de bases de datos y consumo de servicios. Estimé tiempos y recursos necesarios para cada etapa del proyecto, ayudando a definir cronogramas realistas y alcanzables. Participé en reuniones diarias con proveedores, haciendo seguimiento a los avances, resolviendo bloqueos técnicos y asegurando que se cumplieran los tiempos. Colaboré con el equipo de QA para verificar pruebas funcionales y técnicas, y me aseguré de que los cambios fueran correctamente implementados. Estuve presente durante las salidas a producción para validar el correcto funcionamiento de los desarrollos y dar soporte ante cualquier incidente.",
-      technologies: ["Angular", "Node.js", "TypeScript", "AWS", "Docker", "Kubernetes", "PostgreSQL"]
+      period: "Junio 2022 – Mayo 2024",
+      description: "• Punto de contacto entre negocio y proveedores externos, coordinando la definición técnica de proyectos y modelando procesos en BPMN.\n• Elaboración y validación de documentación técnica (arquitecturas, integraciones, flujos de datos) y estimación de esfuerzos para planes realistas.\n• Participación en UAT y verificación de criterios de aceptación, asegurando el cumplimiento de requerimientos funcionales.\n• Apoyo en QA mediante pruebas de humo, funcionales, no funcionales e integración, garantizando la calidad de las entregas.\n• Soporte en despliegues a producción, validando entregas y resolviendo incidentes críticos en tiempo real.\n• Colaboración en proyectos de ETL, generando reportes estratégicos para distintas áreas del banco.",
+      technologies: ["Angular","Vue.js 3","JavaScript","TypeScript","HTML5","CSS3","Node.js","Express.js","Spring Boot","REST APIs","SQL","PostgreSQL","Oracle Database","GoAnywhere MFT","Docker","Kubernetes","AWS","Azure","CI/CD","GitHub","Agile (Scrum, Kanban)","Jira","Confluence","Lucidchart","Figma","Microservices Architecture","API Gateway","BPMN","ETL"],
+      keyProjects: [
+        "Implementación de nuevas funcionalidades en el portal transaccional.",
+        "Migración y optimización de integraciones con sistemas core banking.",
+        "Acompañamiento en despliegues de alta criticidad con cero incidentes mayores."
+      ]
     },
     {
       company: "COLGATE - PALMOLIVE",
       position: "Web Content Analyst",
       period: "Marzo 2018 – Junio 2022",
-      description: "Coordiné proyectos web internacionales a través de la plataforma AEM, siguiendo las pautas de marca y estándares técnicos. Colaboré con equipos de desarrollo, diseño y marketing, facilitando la comunicación entre áreas y asegurando entregas coherentes. Verifiqué el cumplimiento de estándares de calidad y SEO, además de realizar pruebas y ajustes en entornos QA y producción. Implementé códigos de seguimiento para análisis de tráfico y creé reportes con base en datos de comportamiento de usuarios.",
-      technologies: ["React", "Vue.js", "Express.js", "MongoDB", "Redis", "Docker"]
+      description: "• Coordinación de proyectos web internacionales en AEM, asegurando cumplimiento de lineamientos globales y entregas dentro de los tiempos establecidos.\n• Ejecución de auditorías QA y elaboración de reportes claros y oportunos sobre la calidad de los sitios, aplicando checklist interno y criterios de SEO y accesibilidad.\n• Verificación de prácticas SEO y estándares de marca en sitios globales, incluyendo análisis con herramientas de rastreo y generación de reportes de incidencias.\n• Implementación de códigos de seguimiento, tags y formularios de recolección de datos en LATAM, habilitando la trazabilidad de campañas digitales.\n• Soporte a equipos BEX Authors y agencias globales en la interpretación de reportes de crawl, validación de guidelines y resolución de incidencias.\n• Documentación de procesos y flujos de contenido en BPMN, estandarizando prácticas en proyectos digitales regionales.",
+      technologies: ["HTML5","CSS3","JavaScript","Adobe Experience Manager (AEM)","SEO (Google Analytics, Google Search Console)","Jira","Confluence","Google Workspace","Figma","Adobe Creative Suite (Photoshop, Illustrator)","User Experience (UX)","WordPress","Google Tag Manager","Version Control (Git, GitHub)","Agile (Scrum, Kanban)","BPMN","QA Testing","Accessibility Standards"],
+      keyProjects: [
+        "Migración de 50+ sitios web de Colgate a AEM, garantizando su calidad en SEO y accesibilidad.",
+        "Estandarización global de prácticas SEO y QA, mejorando la visibilidad y consistencia de la marca en múltiples mercados.",
+        "Implementación de reportes analíticos y formularios de captura de datos para LATAM, apoyando decisiones de marketing digital basadas en datos."
+      ]
     },
     {
       company: "COMFENALCO VALLE DELAGENTE",
       position: "Web Designer (práctica profesional)",
       period: "Enero 2017 – Junio 2017",
-      description: "Actualicé contenidos y mejoré la estructura visual de la intranet corporativa, facilitando la navegación y la experiencia de usuario. Realicé modificaciones en HTML y CSS para adaptar la interfaz a los lineamientos de marca de la institución.",
-      technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "jQuery", "SASS"]
+      description: "• Actualización de contenidos y mejora de la experiencia de usuario en la intranet corporativa.\n• Ajustes en HTML y CSS según lineamientos de marca.\n• Apoyo en ceremonias Scrum (daily, sprint planning y reviews).",
+      technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "jQuery", "SASS", "Scrum"],
+      keyProjects: [
+        "Rediseño parcial de la intranet corporativa, mejorando la navegación y tiempos de carga."
+      ]
     }
   ],
   education: [
