@@ -81,7 +81,7 @@
         <!-- 3. About Section (Mobile) -->
         <div>
           <h3 class="text-xl font-semibold text-neutral-900 dark:text-white mb-4">
-            {{ languageService.isEnglish() ? 'About' : 'Acerca de mí' }}
+            {{ languageService.isEnglish() ? 'About me' : 'Acerca de mí' }}
           </h3>
           <p class="text-sm text-neutral-700 dark:text-neutral-300 leading-relaxed">
             {{ cvData().personalInfo.summary }}
@@ -170,7 +170,7 @@
           <!-- About Section -->
           <div>
             <h3 class="text-3xl font-semibold text-neutral-900 dark:text-white mb-6">
-              {{ languageService.isEnglish() ? 'About' : 'Acerca de mí' }}
+              {{ languageService.isEnglish() ? 'About me' : 'Acerca de mí' }}
             </h3>
             <p class="text-sm md:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed">
               {{ cvData().personalInfo.summary }}
@@ -348,7 +348,7 @@
     <!-- 6. Projects Section -->
     <section id="projects" class="mb-16 md:mb-20 scroll-mt-24">
       <h3 class="text-2xl md:text-3xl font-semibold text-neutral-900 dark:text-white mb-6 md:mb-8 text-center">
-        {{ languageService.isEnglish() ? 'Projects' : 'Proyectos' }}
+        {{ languageService.isEnglish() ? 'Recent Projects' : 'Proyectos Recientes' }}
       </h3>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         <div *ngFor="let project of cvData().projects" class="bg-white dark:bg-dark-900 rounded-2xl p-4 md:p-6 shadow-soft border border-neutral-200/50 dark:border-dark-800/50 card-hover h-full flex flex-col">

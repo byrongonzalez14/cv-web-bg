@@ -3,8 +3,8 @@ import { CVData } from '../models/cv-data.interface';
 export const cvDataEs: CVData = {
   personalInfo: {
     name: "Byron Gonzalez",
-    title: "Líder Técnico - Analista de Negocios",
-    summary: "Ingeniero Multimedia con más de cinco años de experiencia liderando proyectos de tecnología en los sectores bancario y corporativo. Experto en conectar los requerimientos del negocio con soluciones técnicas, trabajando de cerca con proveedores externos y equipos multidisciplinarios para entregar proyectos a tiempo y con calidad.\nMi experiencia incluye documentación técnica, estimación de esfuerzos, integración de servicios (APIs, bases de datos), auditorías de QA y despliegues en entornos productivos. He gestionado proyectos a lo largo de todo su ciclo de vida —desde la planificación y el análisis de requerimientos hasta las pruebas y la salida a producción— asegurando siempre la alineación con los objetivos del negocio y los estándares corporativos.\nMe enfoco en ofrecer soluciones prácticas y bien documentadas, promoviendo una comunicación clara entre las áreas técnicas y de negocio, y manteniendo alta calidad y consistencia en cada entrega. Esta combinación de liderazgo técnico y análisis de negocio me permite guiar equipos de forma efectiva mientras mantengo los proyectos alineados con los objetivos estratégicos.",
+    title: "Líder técnico y analista de negocios | Soluciones Cloud e IA",
+    summary: "Ingeniero Multimedia con enfoque en Cloud, IA y Automatización, con sólida experiencia en IA generativa, despliegues en la nube y optimización de flujos de trabajo. Experto en la aplicación de conceptos clave de inteligencia artificial como ventanas de contexto, tokens y LLMs, además de diseñar e implementar soluciones de automatización que integran servicios y mejoran la eficiencia operativa. Poseo un conocimiento sólido en AWS Solutions Architect, con capacidad para diseñar arquitecturas en la nube, administrar servicios y roles, y desplegar entornos escalables.\nCon más de cinco años de experiencia liderando proyectos tecnológicos en los sectores bancario y corporativo, aporto conocimientos en documentación técnica, estimación de esfuerzos, procesos de QA y UAT, y despliegues a producción. Mi combinación de experiencia en cloud, dominio de IA y liderazgo técnico me permite entregar soluciones prácticas y bien estructuradas, asegurando la calidad y la alineación con los objetivos de negocio.",
     contact: {
       email: "byrongonzalez14@gmail.com",
       phone: "(+57) 322 584 8613",
@@ -17,17 +17,17 @@ export const cvDataEs: CVData = {
   experience: [
     {
       company: "Freelancer",
-      position: "Desarrollador Full Stack",
+      position: "Ingeniero Cloud y de Automatización",
       period: "Mayo 2024 – Presente",
-      description: "• Gestión de ciclo completo de proyectos (LCSD): desde el diseño UX/UI hasta el despliegue en producción, incluyendo documentación y soporte.\n• Desarrollo Frontend: construcción de sitios y aplicaciones web con Angular, Vue y TypeScript, aplicando buenas prácticas de usabilidad y responsive design.\n• Desarrollo Backend: implementación de APIs y microservicios con Spring Boot y Node.js, integrados a bases de datos PostgreSQL y MySQL.\n• Pruebas y QA: ejecución de pruebas funcionales, integración y validación de criterios de aceptación, garantizando calidad antes del paso a producción.\n• Despliegue y DevOps: publicación de proyectos en Vercel, Railway y Docker, asegurando entornos estables de desarrollo, QA y producción.\n• Estilos y diseño web: aplicación de SCSS, Tailwind CSS y Bootstrap para soluciones visualmente atractivas y consistentes con la identidad de cada cliente.\n\nServicios ofrecidos como Full Stack Developer:\n• Creación de sitios corporativos y landing pages optimizados para SEO.\n• Desarrollo de aplicaciones web a medida con arquitectura escalable.\n• Integración de APIs externas y microservicios.\n• Implementación de formularios de captura de datos y dashboards para análisis.\n• Soporte técnico, mantenimiento evolutivo y optimización de rendimiento.",
-      technologies: ["Angular","Vue.js 3","JavaScript","TypeScript","HTML5","CSS3","SCSS","Tailwind CSS","Bootstrap","Node.js","Express.js","Spring Boot","REST APIs","PostgreSQL","MySQL","Docker","Vercel","Railway","Git","GitHub","SEO","Responsive Design","UX/UI Design"]
+      description: "• Experto en plataformas low-code y de AI-powered coding como Claude, Cursor y Windsurf, y en la creación de procesos de automatización con n8n. Con experiencia en el uso de herramientas de IA generativa, aplicando conceptos clave como ventanas de contexto, tokens y LLMs para acelerar el desarrollo y el prototipado ágil.\n• Realización de despliegues en la nube con Supabase, Railway y Vercel, además de la gestión de dominios y entornos productivos.\n• Diseño e implementación de soluciones de automatización con n8n, integrando servicios y optimizando procesos empresariales.\n• Sólidos conocimientos en AWS Solutions Architect, con habilidades en diseño de arquitecturas en la nube, administración de servicios y roles, y despliegue de entornos escalables.",
+      technologies: ["Generative AI (ChatGPT, Gemini, Grok)","Claude","Cursor","Windsurf","n8n","Supabase","Railway","Vercel","AWS (fundamentos de Solutions Architect)","Diseño de Arquitecturas Cloud"]
     },
     {
       company: "Q-VISION TECHNOLOGIES para BANCO UNION S.A.",
-      position: "Analista de desarrollo - Líder Técnico",
+      position: "Líder Técnico - Analista de desarrollo",
       period: "Junio 2022 – Mayo 2024",
-      description: "• Punto de contacto entre negocio y proveedores externos, coordinando la definición técnica de proyectos y modelando procesos en BPMN.\n• Elaboración y validación de documentación técnica (arquitecturas, integraciones, flujos de datos) y estimación de esfuerzos para planes realistas.\n• Participación en UAT y verificación de criterios de aceptación, asegurando el cumplimiento de requerimientos funcionales.\n• Apoyo en QA mediante pruebas de humo, funcionales, no funcionales e integración, garantizando la calidad de las entregas.\n• Soporte en despliegues a producción, validando entregas y resolviendo incidentes críticos en tiempo real.\n• Colaboración en proyectos de ETL, generando reportes estratégicos para distintas áreas del banco.",
-      technologies: ["Angular","Vue.js 3","JavaScript","TypeScript","HTML5","CSS3","Node.js","Express.js","Spring Boot","REST APIs","SQL","PostgreSQL","Oracle Database","GoAnywhere MFT","Docker","Kubernetes","AWS","Azure","CI/CD","GitHub","Agile (Scrum, Kanban)","Jira","Confluence","Lucidchart","Figma","Microservices Architecture","API Gateway","BPMN","ETL"],
+      description: "• Coordiné entre equipos de negocio y proveedores externos, elaborando y validando documentación técnica (arquitecturas, integraciones, flujos de datos) y modelando procesos con BPMN.\n• Estimé esfuerzos y apoyé la planificación de proyectos, asegurando cronogramas realistas y un seguimiento efectivo de las entregas.\n• Participé en procesos de QA y UAT, ejecutando pruebas de humo, funcionales, no funcionales e integración, para validar criterios de aceptación y garantizar la calidad del producto.\n• Brindé soporte en despliegues críticos a producción y trabajé en proyectos de ETL, generando reportes que fortalecieron la toma de decisiones en distintas áreas del banco.",
+      technologies: ["Spring Boot","REST APIs","SQL","PostgreSQL","Oracle Database","ETL","BPMN","QA Testing","Agile (Scrum, Kanban)","Jira"],
       keyProjects: [
         "Implementación de nuevas funcionalidades en el portal transaccional.",
         "Migración y optimización de integraciones con sistemas core banking.",
@@ -38,8 +38,8 @@ export const cvDataEs: CVData = {
       company: "COLGATE - PALMOLIVE",
       position: "Web Content Analyst",
       period: "Marzo 2018 – Junio 2022",
-      description: "• Coordinación de proyectos web internacionales en AEM, asegurando cumplimiento de lineamientos globales y entregas dentro de los tiempos establecidos.\n• Ejecución de auditorías QA y elaboración de reportes claros y oportunos sobre la calidad de los sitios, aplicando checklist interno y criterios de SEO y accesibilidad.\n• Verificación de prácticas SEO y estándares de marca en sitios globales, incluyendo análisis con herramientas de rastreo y generación de reportes de incidencias.\n• Implementación de códigos de seguimiento, tags y formularios de recolección de datos en LATAM, habilitando la trazabilidad de campañas digitales.\n• Soporte a equipos BEX Authors y agencias globales en la interpretación de reportes de crawl, validación de guidelines y resolución de incidencias.\n• Documentación de procesos y flujos de contenido en BPMN, estandarizando prácticas en proyectos digitales regionales.",
-      technologies: ["HTML5","CSS3","JavaScript","Adobe Experience Manager (AEM)","SEO (Google Analytics, Google Search Console)","Jira","Confluence","Google Workspace","Figma","Adobe Creative Suite (Photoshop, Illustrator)","User Experience (UX)","WordPress","Google Tag Manager","Version Control (Git, GitHub)","Agile (Scrum, Kanban)","BPMN","QA Testing","Accessibility Standards"],
+      description: "• Coordiné proyectos web internacionales en AEM, asegurando el cumplimiento de los lineamientos globales de marca y el cumplimiento de los plazos establecidos.\n• Realicé auditorías de QA y generé reportes claros sobre la calidad de los sitios, aplicando listas de verificación internas y criterios de SEO y accesibilidad.\n• Verifiqué prácticas de SEO y estándares de marca en sitios globales, ejecutando análisis de rastreo y reportando incidencias.\n• Implementé códigos de seguimiento, etiquetas y formularios de recolección de datos en LATAM, mejorando la trazabilidad de las campañas digitales.",
+      technologies: ["Adobe Experience Manager (AEM)","SEO (Google Analytics,Google Search Console)","Google Tag Manager","QA Testing","Accessibility Standards","BPMN","Agile (Scrum,Kanban)","Figma","Jira","Confluence"],
       keyProjects: [
         "Migración de 50+ sitios web de Colgate a AEM, garantizando su calidad en SEO y accesibilidad.",
         "Estandarización global de prácticas SEO y QA, mejorando la visibilidad y consistencia de la marca en múltiples mercados.",
@@ -72,24 +72,24 @@ export const cvDataEs: CVData = {
     }
   ],
   skills: [
-    { name: "JavaScript/TypeScript", level: 5, category: "Lenguajes de Programación" },
+    { name: "AWS (Diseño de Arquitectura Cloud)", level: 4, category: "Cloud" },
+    { name: "IA Generativa (ChatGPT, Gemini, Grok)", level: 4, category: "Inteligencia Artificial" },
+    { name: "Claude / Cursor / Windsurf", level: 4, category: "Low-Code & AI-powered Coding" },
+    { name: "n8n (Flujos de Automatización)", level: 3, category: "Automatización" },
+    { name: "Microservicios & REST APIs", level: 4, category: "Arquitectura de Software" },
+    { name: "SQL (Oracle, PostgreSQL, MySQL)", level: 5, category: "Bases de Datos" },
+    { name: "Java / Spring Boot", level: 5, category: "Tecnologías Backend" },
+    { name: "JavaScript / TypeScript", level: 5, category: "Lenguajes de Programación" },
+    { name: "Docker", level: 4, category: "DevOps" },
     { name: "Angular", level: 5, category: "Frameworks Frontend" },
     { name: "Vue 3", level: 4, category: "Frameworks Frontend" },
-    { name: "Java / Spring Boot", level: 5, category: "Tecnologías Backend" },
-    { name: "SQL (Oracle, PostgreSQL, MySQL)", level: 5, category: "Bases de Datos" },
-    { name: "Microservicios & REST APIs", level: 4, category: "Arquitectura de Software" },
-    { name: "Docker", level: 4, category: "DevOps" },
-    { name: "Kubernetes", level: 3, category: "DevOps" },
-    { name: "Git / GitHub", level: 5, category: "Control de Versiones" },
-    { name: "Jenkins (CI/CD)", level: 4, category: "DevOps" },
-    { name: "Postman / SoapUI", level: 4, category: "Testing de APIs" },
+    { name: "Pruebas QA (Funcionales, UAT, Integración)", level: 4, category: "Aseguramiento de Calidad" },
+    { name: "Adobe Experience Manager (AEM)", level: 5, category: "Gestión de Contenidos" },
+    { name: "SEO & Estándares de Accesibilidad", level: 4, category: "Optimización Web" },
+    { name: "BPMN", level: 4, category: "Modelado de Procesos" },
     { name: "Jira / Confluence", level: 5, category: "Gestión de Proyectos" },
-    { name: "Metodologías Ágiles (Scrum, Kanban)", level: 5, category: "Metodologías" },
-    { name: "Arquitecturas Escalables y Alta Disponibilidad", level: 4, category: "Arquitectura de Software" },
-    { name: "Figma", level: 4, category: "Diseño y Prototipado" },
-    { name: "AEM (Adobe Experience Manager)", level: 5, category: "Gestión de Contenidos" }
-  ],
-  
+    { name: "Metodologías Ágiles (Scrum, Kanban)", level: 5, category: "Metodologías" }
+  ],  
   projects: [
     {
       name: "encárgate app - Landing Page",
@@ -122,41 +122,37 @@ export const cvDataEs: CVData = {
   ],
   certifications: [
     {
-      name: "EF SET English Certificate (C1) – EF Education First",
+      name: "EF SET English Certificado (C1) – EF Education First",
       certificateUrl: "https://cert.efset.org/Exe5JG"
     },
     {
-      name: "Software Architecture & Design of Modern Large Scale Systems - Udemy",
+      name: "Preparación General para el examen: Arquitecto de soluciones certificado por AWS - Asociado - AWS Training and Certification",
+      certificateUrl: "assets/certificacion-aws.pdf"
+    }
+    ,
+    {
+      name: "Arquitectura de software y diseño de sistemas modernos a gran escala - Udemy",
       certificateUrl: "https://www.udemy.com/certificate/UC-572a3e50-a17d-4fca-9fd1-678e0f1f2bc1/"
+    },
+    {
+      name: "Modelado de procesos de negocio BPMN 2.0 para analistas de negocio - Udemy",
+      certificateUrl: "https://www.udemy.com/certificate/UC-a9a4f333-338f-45fa-983d-7a0e11937b4b/"
     },
     {
       name: "Desarrollo frontend con Angular y backend Spring Boot 3, RESTFul, JPA, Spring Security JWT, Redux - Udemy",
       certificateUrl: "https://www.udemy.com/certificate/your-certificate-id"
     },
     {
-      name: "BPMN 2.0 Business Process Modelling for Business Analysts - Udemy",
-      certificateUrl: "https://www.udemy.com/certificate/UC-a9a4f333-338f-45fa-983d-7a0e11937b4b/"
-    },
-    {
-      name: "Scrum Master Professional Certificate – CertiProf",
+      name: "Certificado Profesional Scrum Master – CertiProf",
       certificateUrl: "https://www.credly.com/badges/52311806-1a13-4ac3-ad98-2bb9c0b8b7fd"
     },
     {
-      name: "Scrum Foundation Professional Certificate – CertiProf",
+      name: "Certificado Profesional de Scrum Foundation – CertiProf",
       certificateUrl: "https://www.credly.com/badges/25bc1630-1712-435b-951d-826a67547259"
     },
     {
-      name: "Curso de desarrollo web y contenido digital – Udemy",
-      certificateUrl: "https://www.udemy.com/certificate/your-certificate-id"
-    },
-    {
-      name: "Resumen del plan de preparación: AWS Certified Solutions Architect - Associate – AWS Training and Certification",
-      certificateUrl: "assets/certificacion-aws.pdf"
-    },
-    {
-      name: "Lógica Programación: Aprende Programar en Cualquier Lenguaje – Udemy",
+      name: "Lógica Programación: Aprende a Programar en Cualquier Lenguaje – Udemy",
       certificateUrl: "https://www.udemy.com/certificate/UC-4113573a-6a7d-4aef-a0e7-64c454afd342/"
     }
-    
   ]
 };
