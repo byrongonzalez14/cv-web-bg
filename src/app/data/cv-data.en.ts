@@ -118,7 +118,7 @@ export const cvDataEn: CVData = {
     }
   ],
   languages: [
-    { name: "English", level: "C1 - Advance" },
+    { name: "English", level: "Advanced (CEFR C1)" },
     { name: "Spanish", level: "Native" },
   ],
   certifications: [

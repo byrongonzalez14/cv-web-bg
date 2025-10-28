@@ -56,25 +56,12 @@
           (click)="toggleLanguage()"
           class="group flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-neutral-800/80 hover:bg-neutral-700/80 transition-all duration-300 border border-neutral-700/50 hover:shadow-soft"
           [attr.aria-label]="isEnglish ? 'Switch to Spanish' : 'Switch to English'">
-          <svg class="w-4 h-4 text-primary-400 group-hover:text-primary-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-4 h-4 text-[#CAFF33] group-hover:text-[#d3ff4d] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
           </svg>
           <span class="text-sm font-semibold text-neutral-300 group-hover:text-white transition-colors">
             {{ isEnglish ? 'ES' : 'EN' }}
           </span>
-        </button>
-
-        <!-- Theme Toggle -->
-        <button 
-          (click)="toggleTheme()"
-          class="group flex items-center justify-center w-11 h-11 rounded-xl bg-neutral-800/80 hover:bg-neutral-700/80 transition-all duration-300 border border-neutral-700/50 hover:shadow-soft"
-          [attr.aria-label]="isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'">
-          <svg *ngIf="!isDarkMode" class="w-5 h-5 text-neutral-300 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-          </svg>
-          <svg *ngIf="isDarkMode" class="w-5 h-5 text-yellow-400 group-hover:text-yellow-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-          </svg>
         </button>
       </div>
     </div>
@@ -177,31 +164,19 @@
       </a> -->
     </nav>
 
-    <!-- Mobile Menu Footer with Language and Theme Toggle -->
+    <!-- Mobile Menu Footer with Language Toggle -->
     <div class="absolute bottom-0 left-0 right-0 p-6 border-t border-neutral-800">
-      <div class="flex items-center justify-between">
+      <div class="flex items-center justify-center">
         <!-- Language Toggle -->
         <button 
           (click)="toggleLanguage()"
           class="group flex items-center space-x-2 px-4 py-2.5 rounded-xl bg-neutral-800/80 hover:bg-neutral-700/80 transition-all duration-300 border border-neutral-700/50">
-          <svg class="w-4 h-4 text-primary-400 group-hover:text-primary-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg class="w-4 h-4 text-[#CAFF33] group-hover:text-[#d3ff4d] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path>
           </svg>
           <span class="text-sm font-semibold text-neutral-300 group-hover:text-white transition-colors">
             {{ isEnglish ? 'ES' : 'EN' }}
           </span>
-        </button>
-
-        <!-- Theme Toggle -->
-        <button 
-          (click)="toggleTheme()"
-          class="group flex items-center justify-center w-11 h-11 rounded-xl bg-neutral-800/80 hover:bg-neutral-700/80 transition-all duration-300 border border-neutral-700/50">
-          <svg *ngIf="!isDarkMode" class="w-5 h-5 text-neutral-300 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
-          </svg>
-          <svg *ngIf="isDarkMode" class="w-5 h-5 text-yellow-400 group-hover:text-yellow-300 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
-          </svg>
         </button>
       </div>
     </div>

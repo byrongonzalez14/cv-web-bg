@@ -117,7 +117,7 @@ export const cvDataEs: CVData = {
     }
   ],
   languages: [
-    { name: "Inglés", level: "C1 – Avanzado" },
+    { name: "Inglés", level: "Avanzado (CEFR C1)" },
     { name: "Español", level: "Nativo" },
   ],
   certifications: [
@@ -140,7 +140,7 @@ export const cvDataEs: CVData = {
     },
     {
       name: "Desarrollo frontend con Angular y backend Spring Boot 3, RESTFul, JPA, Spring Security JWT, Redux - Udemy",
-      certificateUrl: "hhttps://www.udemy.com/certificate/UC-44e88d6a-501d-4753-aab5-6a9bf61a1b4e/"
+      certificateUrl: "https://www.udemy.com/certificate/UC-44e88d6a-501d-4753-aab5-6a9bf61a1b4e/"
     },
     {
       name: "Certificado Profesional Scrum Master – CertiProf",

@@ -31,8 +31,8 @@ body {
 }
 
 .dark body {
-  color: #f1f5f9;
-  background-color: #020617;
+  color: #FFFFFF;
+  background-color: #0C0C0C;
 }
 
 /* Enhanced scrollbar */
@@ -45,7 +45,7 @@ body {
 }
 
 .dark ::-webkit-scrollbar-track {
-  background: #1e293b;
+  background: #161616;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -54,7 +54,7 @@ body {
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background: #475569;
+  background: #CAFF33;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -62,7 +62,7 @@ body {
 }
 
 .dark ::-webkit-scrollbar-thumb:hover {
-  background: #64748b;
+  background: #a3cc29;
 }
 
 /* Professional typography enhancements */
@@ -91,7 +91,7 @@ h3 {
 /* Enhanced focus styles for accessibility */
 button:focus-visible,
 a:focus-visible {
-  outline: 2px solid #0ea5e9;
+  outline: 2px solid #CAFF33;
   outline-offset: 2px;
   border-radius: 0.5rem;
 }
@@ -122,7 +122,7 @@ a:focus-visible {
 }
 
 .btn-primary {
-  @apply bg-gradient-to-r from-[#3C1DFF] to-[#14C9C9] text-white hover:opacity-90 focus:ring-white/40;
+  @apply bg-gradient-to-r from-[#CAFF33] to-[#a3cc29] text-black font-semibold hover:opacity-90 focus:ring-[#CAFF33]/40;
 }
 
 .btn-secondary {

@@ -1,7 +1,6 @@
 import { Component, computed, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
-import { ThemeService } from '../../services/theme.service';
 import { CVData } from '../../models/cv-data.interface';
 import { cvDataEn } from '../../data/cv-data.en';
 import { cvDataEs } from '../../data/cv-data.es';
@@ -14,7 +13,6 @@ import { cvDataEs } from '../../data/cv-data.es';
 })
 export class CvDisplayComponent {
   languageService = inject(LanguageService);
-  private themeService = inject(ThemeService);
 
   cvData = computed<CVData>(() => {
     return this.languageService.isEnglish() ? cvDataEn : cvDataEs;
@@ -87,5 +85,47 @@ export class CvDisplayComponent {
     return description
       .replace(/\n/g, '<br>')
       .replace(/• /g, '<span class="inline-block w-2 h-2 bg-primary-600 dark:bg-primary-400 rounded-full mr-2 mt-2 flex-shrink-0"></span>');
+  }
+
+  getCertificationLogo(certName: string): string {
+    const name = certName.toLowerCase();
+    
+    if (name.includes('ef set') || name.includes('ef education')) {
+      return 'assets/logos-certifications/ef-logo.svg';
+    }
+    if (name.includes('aws') || name.includes('solutions architect')) {
+      return 'assets/logos-certifications/aws-logo.svg';
+    }
+    if (name.includes('scrum master')) {
+      return 'assets/logos-certifications/certiprof-scrum-master-badge.png';
+    }
+    if (name.includes('scrum foundation')) {
+      return 'assets/logos-certifications/certiprof-scrum-foundation-badge.png';
+    }
+    if (name.includes('udemy')) {
+      return 'assets/logos-certifications/udemy-logo.svg';
+    }
+    
+    // Default fallback
+    return 'assets/logos-certifications/udemy-logo.svg';
+  }
+
+  getCompanyLogo(companyName: string): string | null {
+    const name = companyName.toLowerCase();
+    
+    if (name.includes('freelancer')) {
+      return null; // No logo for freelancer
+    }
+    if (name.includes('q-vision') || name.includes('banco union')) {
+      return 'assets/logos-experience/banco-union-logo.svg';
+    }
+    if (name.includes('colgate') || name.includes('palmolive')) {
+      return 'assets/logos-experience/colgate-palmolive-logo.png';
+    }
+    if (name.includes('comfenalco')) {
+      return 'assets/logos-experience/comfenalco-logo.svg';
+    }
+    
+    return null;
   }
 }
