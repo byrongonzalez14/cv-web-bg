@@ -29,4 +29,10 @@ export class HeaderComponent {
   get isEnglish(): boolean {
     return this.languageService.isEnglish();
   }
+
+  getCVUrl(): string {
+    return this.languageService.isEnglish()
+      ? 'assets/cv/CV-2026-EN-BYRON-GONZALEZ.pdf'
+      : 'assets/cv/CV-2026-ES-BYRON-GONZALEZ.pdf';
+  }
 }
