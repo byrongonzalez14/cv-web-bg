@@ -71,25 +71,98 @@ export const cvDataEs: CVData = {
       description: "Programa intensivo cubriendo prácticas modernas de desarrollo web y frameworks"
     }
   ],
-  skills: [
-    { name: "AWS (Diseño de Arquitectura Cloud)", level: 4, category: "Cloud" },
-    { name: "IA Generativa (ChatGPT, Gemini, Grok)", level: 4, category: "Inteligencia Artificial" },
-    { name: "Claude / Cursor / Windsurf", level: 4, category: "Low-Code & AI-powered Coding" },
-    { name: "n8n (Flujos de Automatización)", level: 3, category: "Automatización" },
-    { name: "Microservicios & REST APIs", level: 4, category: "Arquitectura de Software" },
-    { name: "SQL (Oracle, PostgreSQL, MySQL)", level: 5, category: "Bases de Datos" },
-    { name: "Java / Spring Boot", level: 5, category: "Tecnologías Backend" },
-    { name: "JavaScript / TypeScript", level: 5, category: "Lenguajes de Programación" },
-    { name: "Docker", level: 4, category: "DevOps" },
-    { name: "Angular", level: 5, category: "Frameworks Frontend" },
-    { name: "Vue 3", level: 4, category: "Frameworks Frontend" },
-    { name: "Pruebas QA (Funcionales, UAT, Integración)", level: 4, category: "Aseguramiento de Calidad" },
-    { name: "Adobe Experience Manager (AEM)", level: 5, category: "Gestión de Contenidos" },
-    { name: "SEO & Estándares de Accesibilidad", level: 4, category: "Optimización Web" },
-    { name: "BPMN", level: 4, category: "Modelado de Procesos" },
-    { name: "Jira / Confluence", level: 5, category: "Gestión de Proyectos" },
-    { name: "Metodologías Ágiles (Scrum, Kanban)", level: 5, category: "Metodologías" }
-  ],  
+skills: [
+  { 
+    name: "Diseño de Arquitectura Cloud", 
+    level: 4, 
+    category: "Cloud",
+    logos: ["assets/logos-skills/aws.svg", "assets/logos-skills/gcp.svg"]
+  },
+  { 
+    name: "Ingeniería DevOps", 
+    level: 4, 
+    category: "DevOps",
+    logos: ["assets/logos-skills/docker.svg", "assets/logos-skills/kubernetes.svg"]
+  },
+  { 
+    name: "Modelos de IA Generativa", 
+    level: 5, 
+    category: "Inteligencia Artificial",
+    logos: ["assets/logos-skills/chatgpt.svg", "assets/logos-skills/gemini.svg", "assets/logos-skills/gcp.svg"]
+  },
+  { 
+    name: "Herramientas de Codificación con IA", 
+    level: 4, 
+    category: "Herramientas IA",
+    logos: ["assets/logos-skills/claude.svg", "assets/logos-skills/cursor.svg", "assets/logos-skills/windsurf.svg"]
+  },
+  { 
+    name: "Soluciones de Automatización", 
+    level: 3, 
+    category: "Automatización",
+    logos: ["assets/logos-skills/n8n.svg", "assets/logos-skills/zapier.svg"]
+  },
+  { 
+    name: "Microservicios e Integración de APIs", 
+    level: 4, 
+    category: "Arquitectura",
+    logos: ["assets/logos-skills/soapui.svg", "assets/logos-skills/postman.svg"]
+  },
+  { 
+    name: "Bases de Datos SQL", 
+    level: 5, 
+    category: "Bases de Datos",
+    logos: ["assets/logos-skills/oracle.svg", "assets/logos-skills/postgresql.svg"]
+  },
+  { 
+    name: "Bases de Datos NoSQL", 
+    level: 3, 
+    category: "Bases de Datos",
+    logos: ["assets/logos-skills/mongodb.svg", "assets/logos-skills/firebase.svg"]
+  },
+  { 
+    name: "Desarrollo Backend", 
+    level: 4, 
+    category: "Desarrollo",
+    logos: ["assets/logos-skills/java.svg", "assets/logos-skills/spring-boot.svg", "assets/logos-skills/nodejs.svg", "assets/logos-skills/typescript.svg"]
+  },
+  { 
+    name: "Desarrollo Frontend", 
+    level: 5, 
+    category: "Desarrollo",
+    logos: ["assets/logos-skills/angular.svg", "assets/logos-skills/vuejs.svg", "assets/logos-skills/reactjs.svg", "assets/logos-skills/tailwind.svg"]
+  },
+  { 
+    name: "Optimización SEO y Accesibilidad", 
+    level: 4, 
+    category: "Optimización Web",
+    logos: ["assets/logos-skills/google-analytics.svg", "assets/logos-skills/gtm.svg"]
+  },
+  { 
+    name: "Administración de CMS", 
+    level: 5, 
+    category: "Gestión Web",
+    logos: ["assets/logos-skills/aem.svg", "assets/logos-skills/wordpress.svg"]
+  },
+  { 
+    name: "Inteligencia de Negocios (BI)", 
+    level: 4, 
+    category: "Análisis",
+    logos: ["assets/logos-skills/powerbi.svg"]
+  },
+  { 
+    name: "Modelado de Procesos de Negocio", 
+    level: 5, 
+    category: "Análisis",
+    logos: ["assets/logos-skills/bizagi.svg", "assets/logos-skills/lucidchart.svg"]
+  },
+  { 
+    name: "Herramientas de Gestión de Proyectos", 
+    level: 5, 
+    category: "Gestión",
+    logos: ["assets/logos-skills/jira.svg", "assets/logos-skills/confluence.svg", "assets/logos-skills/trello.svg"]
+  }
+], 
   projects: [
     {
       name: "encárgate app - Landing Page",

@@ -27,6 +27,7 @@ export interface Skill {
   name: string;
   level: number; // 1-5
   category: string;
+  logos?: string[]; // Array of logo paths (max 4)
 }
 
 export interface Project {

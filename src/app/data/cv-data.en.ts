@@ -71,25 +71,98 @@ export const cvDataEn: CVData = {
       description: "Diploma in Multimedia Project Design and Construction"
     }
   ],
-  skills: [
-    { name: "AWS (Cloud Architecture Design)", level: 4, category: "Cloud" },
-    { name: "Generative AI (ChatGPT, Gemini, Grok)", level: 4, category: "Artificial Intelligence" },
-    { name: "Claude / Cursor / Windsurf", level: 4, category: "Low-Code & AI-powered Coding" },
-    { name: "n8n (Automation Workflows)", level: 3, category: "Automation" },
-    { name: "Microservices & REST APIs", level: 4, category: "Software Architecture" },
-    { name: "SQL (Oracle, PostgreSQL, MySQL)", level: 5, category: "Databases" },
-    { name: "Java / Spring Boot", level: 5, category: "Backend Technologies" },
-    { name: "JavaScript / TypeScript", level: 5, category: "Programming Languages" },
-    { name: "Docker", level: 4, category: "DevOps" },
-    { name: "Angular", level: 5, category: "Frontend Frameworks" },
-    { name: "Vue 3", level: 4, category: "Frontend Frameworks" },
-    { name: "QA Testing (Functional, UAT, Integration)", level: 4, category: "Quality Assurance" },
-    { name: "Adobe Experience Manager (AEM)", level: 5, category: "Content Management" },
-    { name: "SEO & Accessibility Standards", level: 4, category: "Web Optimization" },
-    { name: "BPMN", level: 4, category: "Process Modeling" },
-    { name: "Jira / Confluence", level: 5, category: "Project Management" },
-    { name: "Agile Methodologies (Scrum, Kanban)", level: 5, category: "Methodologies" }
-  ],
+skills: [
+  { 
+    name: "Cloud Architecture Design", 
+    level: 4, 
+    category: "Cloud",
+    logos: ["assets/logos-skills/aws.svg", "assets/logos-skills/gcp.svg"]
+  },
+  { 
+    name: "DevOps Engineering", 
+    level: 4, 
+    category: "DevOps",
+    logos: ["assets/logos-skills/docker.svg", "assets/logos-skills/kubernetes.svg"]
+  },
+  { 
+    name: "Generative AI Models", 
+    level: 5, 
+    category: "Artificial Intelligence",
+    logos: ["assets/logos-skills/chatgpt.svg", "assets/logos-skills/gemini.svg", "assets/logos-skills/gcp.svg"]
+  },
+  { 
+    name: "AI-Powered Coding Tools", 
+    level: 4, 
+    category: "AI Tools",
+    logos: ["assets/logos-skills/claude.svg", "assets/logos-skills/cursor.svg", "assets/logos-skills/windsurf.svg"]
+  },
+  { 
+    name: "Automation Solutions", 
+    level: 3, 
+    category: "Automation",
+    logos: ["assets/logos-skills/n8n.svg", "assets/logos-skills/zapier.svg"]
+  },
+  { 
+    name: "Microservices & API Integration", 
+    level: 4, 
+    category: "Architecture",
+    logos: ["assets/logos-skills/soapui.svg", "assets/logos-skills/postman.svg"]
+  },
+  { 
+    name: "SQL Databases", 
+    level: 5, 
+    category: "Databases",
+    logos: ["assets/logos-skills/oracle.svg", "assets/logos-skills/postgresql.svg"]
+  },
+  { 
+    name: "NoSQL Databases", 
+    level: 3, 
+    category: "Databases",
+    logos: ["assets/logos-skills/mongodb.svg", "assets/logos-skills/firebase.svg"]
+  },
+  { 
+    name: "Backend Development", 
+    level: 4, 
+    category: "Development",
+    logos: ["assets/logos-skills/java.svg", "assets/logos-skills/spring-boot.svg", "assets/logos-skills/nodejs.svg", "assets/logos-skills/typescript.svg"]
+  },
+  { 
+    name: "Frontend Development", 
+    level: 5, 
+    category: "Development",
+    logos: ["assets/logos-skills/angular.svg", "assets/logos-skills/vuejs.svg", "assets/logos-skills/reactjs.svg", "assets/logos-skills/tailwind.svg"]
+  },
+  { 
+    name: "SEO & Accessibility Optimization", 
+    level: 4, 
+    category: "Web Optimization",
+    logos: ["assets/logos-skills/google-analytics.svg", "assets/logos-skills/gtm.svg"]
+  },
+  { 
+    name: "CMS Administration", 
+    level: 5, 
+    category: "Web Management",
+    logos: ["assets/logos-skills/aem.svg", "assets/logos-skills/wordpress.svg"]
+  },
+  { 
+    name: "Business Intelligence (BI)", 
+    level: 4, 
+    category: "Analytics",
+    logos: ["assets/logos-skills/powerbi.svg"]
+  },
+  { 
+    name: "Business Process Modeling", 
+    level: 5, 
+    category: "Analysis",
+    logos: ["assets/logos-skills/bizagi.svg", "assets/logos-skills/lucidchart.svg"]
+  },
+  { 
+    name: "Project Management Tools", 
+    level: 5, 
+    category: "Management",
+    logos: ["assets/logos-skills/jira.svg", "assets/logos-skills/confluence.svg", "assets/logos-skills/trello.svg"]
+  }
+],
   
   projects: [
     {

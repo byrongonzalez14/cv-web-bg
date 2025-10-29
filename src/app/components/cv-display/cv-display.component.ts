@@ -120,7 +120,7 @@ export class CvDisplayComponent {
       return 'assets/logos-experience/banco-union-logo.svg';
     }
     if (name.includes('colgate') || name.includes('palmolive')) {
-      return 'assets/logos-experience/colgate-palmolive-logo.png';
+      return 'assets/logos-experience/cp-logo.png';
     }
     if (name.includes('comfenalco')) {
       return 'assets/logos-experience/comfenalco-logo.svg';
