@@ -10,8 +10,7 @@
           <h1 class="text-3xl font-bold text-neutral-900 dark:text-white mb-3 leading-tight">
             {{ cvData().personalInfo.name }}
           </h1>
-          <h2 class="text-base text-transparent bg-gradient-to-r from-[#CAFF33] to-[#a3cc29] bg-clip-text font-semibold mb-6 px-4">
-            {{ cvData().personalInfo.title }}
+          <h2 class="text-base font-semibold mb-6 px-4" [innerHTML]="cvData().personalInfo.title">
           </h2>
         </div>
         
@@ -20,7 +19,7 @@
           <div class="w-full mb-6">
             <img 
               src="assets/profile-image-bg.png" 
-              alt="{{ cvData().personalInfo.name }}"
+              alt="{{ cvData().personalInfo.name }} - Professional Profile Photo"
               class="w-full h-auto object-contain"
             />
           </div>
@@ -89,7 +88,7 @@
           <div class="mb-8" style="width: 670px;">
             <img 
               src="assets/profile-image-bg.png" 
-              alt="{{ cvData().personalInfo.name }}"
+              alt="{{ cvData().personalInfo.name }} - Professional Profile Photo"
               class="w-full h-auto object-contain"
             />
           </div>
@@ -146,8 +145,7 @@
             <h1 class="text-5xl lg:text-6xl font-bold text-neutral-900 dark:text-white mb-4 leading-tight">
               {{ cvData().personalInfo.name }}
             </h1>
-            <h2 class="text-xl lg:text-2xl text-transparent bg-gradient-to-r from-[#CAFF33] to-[#a3cc29] bg-clip-text font-semibold mb-8">
-              {{ cvData().personalInfo.title }}
+            <h2 class="text-xl lg:text-2xl font-semibold mb-8" [innerHTML]="cvData().personalInfo.title">
             </h2>
           </div>
           
@@ -246,7 +244,7 @@
               <!-- Company logo only (without text) -->
               <div *ngIf="getCompanyLogo(exp.company)" class="mb-4">
                 <img [src]="getCompanyLogo(exp.company)!" 
-                     [alt]="exp.company"
+                     [alt]="exp.company + ' logo'"
                      class="h-[33px] md:h-[60px] w-auto object-contain">
               </div>
               
@@ -316,9 +314,9 @@
                 <div *ngIf="skill.logos && skill.logos.length > 0" 
                      class="grid grid-cols-2 gap-2 flex-shrink-0">
                   <div *ngFor="let logo of skill.logos" 
-                       class="w-12 h-12 flex items-center justify-center bg-neutral-100 dark:bg-neutral-800/50 rounded-lg p-2">
+                       class="w-12 h-12 flex items-center justify-center p-2">
                     <img [src]="logo" 
-                         [alt]="skill.name"
+                         [alt]="getLogoAlt(logo)"
                          class="max-w-full max-h-full object-contain">
                   </div>
                 </div>
@@ -340,7 +338,7 @@
           <div class="flex items-start space-x-4">
             <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center">
               <img [src]="getCertificationLogo(cert.name)" 
-                   [alt]="cert.name"
+                   [alt]="cert.name + ' certification logo'"
                    class="w-full h-full object-contain">
             </div>
             <div class="flex-1">
@@ -370,7 +368,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         <div *ngFor="let project of cvData().projects" class="bg-white dark:bg-dark-900 rounded-2xl p-4 md:p-6 shadow-soft border border-neutral-200/50 dark:border-dark-800/50 card-hover h-full flex flex-col">
           <div *ngIf="project.previewImage" class="mb-4 rounded-xl overflow-hidden">
-            <img [src]="project.previewImage" [alt]="project.name" class="w-full aspect-[16/9] object-cover rounded-xl">
+            <img [src]="project.previewImage" [alt]="project.name + ' project preview'" class="w-full aspect-[16/9] object-cover rounded-xl">
           </div>
           <h4 class="text-xl font-bold text-neutral-900 dark:text-white mb-3">{{ project.name }}</h4>
           <p class="text-neutral-600 dark:text-neutral-400 mb-6 leading-relaxed flex-1">{{ project.description }}</p>

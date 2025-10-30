@@ -159,3 +159,11 @@ a:hover {
 .content-spacing {
   @apply space-y-8 md:space-y-12;
 }
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(to right, #CAFF33, #a3cc29);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

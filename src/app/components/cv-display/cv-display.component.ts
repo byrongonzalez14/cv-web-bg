@@ -128,4 +128,50 @@ export class CvDisplayComponent {
     
     return null;
   }
+
+  getLogoAlt(logoPath: string): string {
+    // Extract filename from path and convert to readable name
+    const filename = logoPath.split('/').pop()?.replace('.svg', '').replace('.png', '') || '';
+    
+    // Map of logo filenames to proper names
+    const logoNames: { [key: string]: string } = {
+      'aws': 'AWS',
+      'gcp': 'Google Cloud Platform',
+      'docker': 'Docker',
+      'kubernetes': 'Kubernetes',
+      'chatgpt': 'ChatGPT',
+      'gemini': 'Gemini',
+      'claude': 'Claude AI',
+      'cursor': 'Cursor',
+      'windsurf': 'Windsurf',
+      'n8n': 'n8n',
+      'zapier': 'Zapier',
+      'soapui': 'SoapUI',
+      'postman': 'Postman',
+      'oracle': 'Oracle',
+      'postgresql': 'PostgreSQL',
+      'mongodb': 'MongoDB',
+      'firebase': 'Firebase',
+      'java': 'Java',
+      'spring-boot': 'Spring Boot',
+      'nodejs': 'Node.js',
+      'typescript': 'TypeScript',
+      'angular': 'Angular',
+      'vuejs': 'Vue.js',
+      'reactjs': 'React',
+      'tailwind': 'Tailwind CSS',
+      'google-analytics': 'Google Analytics',
+      'gtm': 'Google Tag Manager',
+      'aem': 'Adobe Experience Manager',
+      'wordpress': 'WordPress',
+      'powerbi': 'Power BI',
+      'bizagi': 'Bizagi',
+      'lucidchart': 'Lucidchart',
+      'jira': 'Jira',
+      'confluence': 'Confluence',
+      'trello': 'Trello'
+    };
+    
+    return logoNames[filename] || filename;
+  }
 }

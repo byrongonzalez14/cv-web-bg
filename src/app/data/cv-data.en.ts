@@ -3,7 +3,7 @@ import { CVData } from '../models/cv-data.interface';
 export const cvDataEn: CVData = {
   personalInfo: {
     name: "Byron Gonzalez",
-    title: "Technical Lead & Business Analyst | Cloud & AI Solutions",
+    title: "<span class='gradient-text'>Technical Lead & Business Analyst</span> <span class='text-white'>|</span> <span class='gradient-text'>Cloud & AI Solutions</span>",
     summary: "Multimedia Engineer with a focus on Cloud, AI, and Automation, bringing strong experience in generative AI, cloud deployments, and workflow optimization. Skilled at applying core AI concepts such as context windows, tokens, and LLMs, while designing and implementing automation solutions that integrate services and improve operational efficiency. Solid knowledge in AWS Solutions Architect, with the ability to design cloud architectures, manage services and roles, and deploy scalable environments.\n With over five years of experience leading technology projects in the banking and corporate sectors, I bring expertise in technical documentation, effort estimation, QA and UAT processes, and production rollouts. My mix of cloud knowledge, AI proficiency, and technical leadership enables me to deliver well-structured, practical solutions while ensuring quality and alignment with business goals.",
     contact: {
       email: "byrongonzalez14@gmail.com",
@@ -88,7 +88,7 @@ skills: [
     name: "Generative AI Models", 
     level: 5, 
     category: "Artificial Intelligence",
-    logos: ["assets/logos-skills/chatgpt.svg", "assets/logos-skills/gemini.svg", "assets/logos-skills/gcp.svg"]
+    logos: ["assets/logos-skills/chatgpt.svg", "assets/logos-skills/gemini.svg"]
   },
   { 
     name: "AI-Powered Coding Tools", 

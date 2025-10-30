@@ -3,7 +3,7 @@ import { CVData } from '../models/cv-data.interface';
 export const cvDataEs: CVData = {
   personalInfo: {
     name: "Byron Gonzalez",
-    title: "Líder técnico y analista de negocios | Soluciones Cloud e IA",
+    title: "<span class='gradient-text'>Líder técnico y analista de negocios</span> <span class='text-white'>|</span> <span class='gradient-text'>Soluciones Cloud e IA</span>",
     summary: "Ingeniero Multimedia con enfoque en Cloud, IA y Automatización, con sólida experiencia en IA generativa, despliegues en la nube y optimización de flujos de trabajo. Experto en la aplicación de conceptos clave de inteligencia artificial como ventanas de contexto, tokens y LLMs, además de diseñar e implementar soluciones de automatización que integran servicios y mejoran la eficiencia operativa. Poseo un conocimiento sólido en AWS Solutions Architect, con capacidad para diseñar arquitecturas en la nube, administrar servicios y roles, y desplegar entornos escalables.\nCon más de cinco años de experiencia liderando proyectos tecnológicos en los sectores bancario y corporativo, aporto conocimientos en documentación técnica, estimación de esfuerzos, procesos de QA y UAT, y despliegues a producción. Mi combinación de experiencia en cloud, dominio de IA y liderazgo técnico me permite entregar soluciones prácticas y bien estructuradas, asegurando la calidad y la alineación con los objetivos de negocio.",
     contact: {
       email: "byrongonzalez14@gmail.com",
@@ -88,7 +88,7 @@ skills: [
     name: "Modelos de IA Generativa", 
     level: 5, 
     category: "Inteligencia Artificial",
-    logos: ["assets/logos-skills/chatgpt.svg", "assets/logos-skills/gemini.svg", "assets/logos-skills/gcp.svg"]
+    logos: ["assets/logos-skills/chatgpt.svg", "assets/logos-skills/gemini.svg"]
   },
   { 
     name: "Herramientas de Codificación con IA", 
