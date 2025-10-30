@@ -76,8 +76,8 @@ export class CvDisplayComponent {
 
   getCVUrl(): string {
     return this.languageService.isEnglish()
-      ? 'assets/cv/CV-2026-EN-BYRON-GONZALEZ.pdf'
-      : 'assets/cv/CV-2026-ES-BYRON-GONZALEZ.pdf';
+      ? 'assets/cv/CV-2026-EN-LT-BA-BYRON-GONZALEZ.pdf'
+      : 'assets/cv/CV-2026-ES-LT-BA-BYRON-GONZALEZ.pdf';
   }
 
   formatDescription(description: string): string {
