@@ -1,1 +1,0 @@
-export { StickyExperience } from './StickyExperience';

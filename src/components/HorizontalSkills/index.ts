@@ -1,1 +1,0 @@
-export { HorizontalSkills } from './HorizontalSkills';

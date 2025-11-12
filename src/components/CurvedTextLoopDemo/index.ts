@@ -1,1 +1,0 @@
-export { CurvedTextLoopDemo } from "./CurvedTextLoopDemo";
