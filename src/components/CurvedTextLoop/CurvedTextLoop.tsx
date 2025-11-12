@@ -1,5 +1,18 @@
 import { useRef, useEffect, useState, useMemo, useId, FC, PointerEvent } from 'react';
 
+// Hook para detectar el ancho de la pantalla
+const useWindowWidth = () => {
+  const [width, setWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1440);
+  
+  useEffect(() => {
+    const handleResize = () => setWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  
+  return width;
+};
+
 interface CurvedTextLoopProps {
   marqueeText?: string;
   speed?: number;
@@ -30,6 +43,11 @@ const CurvedTextLoop: FC<CurvedTextLoopProps> = ({
   const [offset, setOffset] = useState(0);
   const uid = useId();
   const pathId = `curve-${uid}`;
+  const windowWidth = useWindowWidth();
+  
+  // Ajustar velocidad según el tamaño de pantalla
+  const isMobile = windowWidth < 768;
+  const adjustedSpeed = isMobile ? speed * 0.4 : speed; // Velocidad más lenta en mobile
   
   // Definimos la curva del path SVG (Y=52 para centrado visual)
   const pathD = `M-100,52 Q500,${52 + curveAmount} 1540,52`;
@@ -42,8 +60,16 @@ const CurvedTextLoop: FC<CurvedTextLoopProps> = ({
 
   const textLength = spacing;
   // Repetimos el texto para crear el efecto de loop infinito
+  // En mobile, repetimos más veces para que se vea más fluido
+  const repetitions = useMemo(() => {
+    if (!textLength) return 2;
+    return isMobile 
+      ? Math.ceil(2400 / textLength) + 4 
+      : Math.ceil(1800 / textLength) + 2;
+  }, [textLength, isMobile]);
+  
   const totalText = textLength
-    ? Array(Math.ceil(1800 / textLength) + 2)
+    ? Array(repetitions)
         .fill(text)
         .join('')
     : text;
@@ -75,7 +101,7 @@ const CurvedTextLoop: FC<CurvedTextLoopProps> = ({
     let frame = 0;
     const step = () => {
       if (!dragRef.current && textPathRef.current) {
-        const delta = dirRef.current === 'right' ? speed : -speed;
+        const delta = dirRef.current === 'right' ? adjustedSpeed : -adjustedSpeed;
         const currentOffset = parseFloat(textPathRef.current.getAttribute('startOffset') || '0');
         let newOffset = currentOffset + delta;
         const wrapPoint = spacing;
@@ -88,7 +114,7 @@ const CurvedTextLoop: FC<CurvedTextLoopProps> = ({
     };
     frame = requestAnimationFrame(step);
     return () => cancelAnimationFrame(frame);
-  }, [spacing, speed, ready]);
+  }, [spacing, adjustedSpeed, ready]);
 
   // Interacción con el mouse
   const onPointerDown = (e: PointerEvent) => {
@@ -131,7 +157,7 @@ const CurvedTextLoop: FC<CurvedTextLoopProps> = ({
       onPointerLeave={endDrag}
     >
       <svg
-        className="select-none w-full h-full block text-[3.5rem] font-bold uppercase leading-none"
+        className="select-none w-full h-full block text-[2rem] md:text-[3.5rem] font-bold uppercase leading-none"
         viewBox="0 0 1440 80"
         preserveAspectRatio="none"
       >
