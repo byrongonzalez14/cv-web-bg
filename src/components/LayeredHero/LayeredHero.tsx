@@ -24,7 +24,7 @@ export const LayeredHero = () => {
           }`}
         >
           <img
-            src="/images/hero/portrait.png"
+            src="/images/hero/hero-portrait.png"
             alt="Byron Gonzalez"
             className="h-full w-auto object-contain"
           />

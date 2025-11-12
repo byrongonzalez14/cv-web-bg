@@ -130,7 +130,7 @@ export const DesktopView = (): JSX.Element => {
             {/* Foto principal */}
             <div className="absolute inset-0 z-30 flex items-center justify-center">
               <img
-                src="/images/hero/portrait.png"
+                src="/images/hero/hero-portrait.png"
                 alt="Byron Gonzalez"
                 className="h-full w-auto object-contain"
               />
