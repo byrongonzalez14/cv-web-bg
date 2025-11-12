@@ -1,10 +1,5 @@
 import { Mail, Github, Linkedin, MessageCircle } from "lucide-react";
-import { CurvedTextLoopDemo } from "../../components/CurvedTextLoopDemo";
 import { CurvedTextLoop } from "../../components/CurvedTextLoop";
-import { PinnedExperience } from "../../components/PinnedExperience";
-import { ParallaxShowcase } from "../../components/ParallaxShowcase";
-import { HorizontalSkills } from "../../components/HorizontalSkills";
-import { CertificationsGrid } from "../../components/CertificationsGrid";
 import { LanguageToggle } from "../../components/LanguageToggle";
 import { LayeredHero } from "../../components/LayeredHero";
 import { MobileMenu } from "../../components/MobileMenu";
@@ -313,77 +308,6 @@ export const DesktopView = (): JSX.Element => {
           {/* Footer */}
           <Footer />
    {/* fin de la página */}
-
-
-   {/* secciones de prueba */}
-    <section className="flex w-full items-start pt-[50px] pb-5 px-[120px] relative flex-[0_0_auto] bg-[#161616]">
-      <div className="flex items-center gap-2.5 relative flex-1 grow rotate-180">
-        <img
-          className="relative flex-1 grow -rotate-180 aspect-[0.73] object-cover"
-          alt="Byron Gonzalez"
-          src="/img/byron-gonzalez-about-me.png"
-        />
-      </div>
-      <article className="inline-flex flex-col items-start relative flex-[0_0_auto]">
-        <FadeText>
-          <p className="relative flex items-center justify-center w-[728px] [font-family:'Poppins',Helvetica] font-normal text-white text-xl text-center tracking-[0] leading-[27px] whitespace-pre-line">
-            {data.personalInfo.summary}
-          </p>
-        </FadeText>
-      </article>
-    </section>
-    
-    {/* Sección de experiencia con efecto pinned (como Lenis) */}
-    <PinnedExperience />
-    {/* Separador - Skills */}
-    <div id="skills" className="w-full bg-[#1e1e1e] py-4 flex items-center">
-      <div className="transition-opacity duration-200 w-full" style={{ opacity: isTransitioning ? 0.5 : 1 }}>
-        <CurvedTextLoop 
-          marqueeText={texts.skills}
-          speed={2}
-          curveAmount={0}
-          direction="left"
-          interactive={true}
-          className="!fill-[#d9ff6c]"
-        />
-      </div>
-    </div>
-    {/* Sección de Skills con scroll horizontal */}
-    <HorizontalSkills />
-    {/* Separador - Education & Certifications */}
-    <div id="education-and-certifications" className="w-full bg-[#1e1e1e] py-4 flex items-center">
-      <div className="transition-opacity duration-200 w-full" style={{ opacity: isTransitioning ? 0.5 : 1 }}>
-        <CurvedTextLoop 
-          marqueeText={texts.education}
-          speed={2}
-          curveAmount={0}
-          direction="left"
-          interactive={true}
-          className="!fill-[#d9ff6c]"
-        />
-      </div>
-    </div>
-    {/* Sección de Certificaciones con bounce effect */}
-    <CertificationsGrid />
-    {/* Separador */}
-    <div className="w-full bg-[#1e1e1e] py-4 flex items-center">
-      <CurvedTextLoop 
-        marqueeText="Parallax Effects Tutorial ✦ Learn Parallax ✦ Effects ✦"
-        speed={2}
-        curveAmount={0}
-        direction="left"
-        interactive={true}
-        className="!fill-[#d9ff6c]"
-      />
-    </div>
-    {/* Showcase de efectos Parallax */}
-    <ParallaxShowcase />
-    {/* Sección de demostración de Curved Text Loop */}
-    <section className="w-full px-[120px] py-20">
-      <CurvedTextLoopDemo />
-    </section>
-
-
 
     </div>
   );
