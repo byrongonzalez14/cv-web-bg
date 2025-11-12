@@ -271,8 +271,8 @@ export const DesktopView = (): JSX.Element => {
       {/* Timeline de Experiencia Profesional */}
       <ExperienceTimeline />
 
-      {/* Separador animado - Work Experience */}
-      <div id="experience" className="w-full bg-[#1e1e1e] py-4 flex items-center">
+      {/* Separador animado - Education & Certifications */}
+      <div id="education-and-certifications" className="w-full bg-[#1e1e1e] py-4 flex items-center">
         <div className="transition-opacity duration-200 w-full" style={{ opacity: isTransitioning ? 0.5 : 1 }}>
           <CurvedTextLoop 
             marqueeText={texts.education}
