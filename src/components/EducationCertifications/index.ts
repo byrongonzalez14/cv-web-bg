@@ -1,0 +1,1 @@
+export { EducationCertifications } from './EducationCertifications';

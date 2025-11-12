@@ -1,0 +1,1 @@
+export { ParallaxShowcase } from './ParallaxShowcase';
