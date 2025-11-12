@@ -76,91 +76,91 @@ skills: [
     name: "Diseño de Arquitectura Cloud", 
     level: 4, 
     category: "Cloud",
-    logos: ["assets/logos-skills/aws.svg", "assets/logos-skills/gcp.svg"]
+    logos: ["assets/skills/aws.svg", "assets/skills/gcp.svg"]
   },
   { 
     name: "Ingeniería DevOps", 
     level: 4, 
     category: "DevOps",
-    logos: ["assets/logos-skills/docker.svg", "assets/logos-skills/kubernetes.svg"]
+    logos: ["assets/skills/docker.svg", "assets/skills/kubernetes.svg"]
   },
   { 
     name: "Modelos de IA Generativa", 
     level: 5, 
     category: "Inteligencia Artificial",
-    logos: ["assets/logos-skills/chatgpt.svg", "assets/logos-skills/gemini.svg"]
+    logos: ["assets/skills/chatgpt.svg", "assets/skills/gemini.svg"]
   },
   { 
     name: "Herramientas de Codificación con IA", 
     level: 4, 
     category: "Herramientas IA",
-    logos: ["assets/logos-skills/claude.svg", "assets/logos-skills/cursor.svg", "assets/logos-skills/windsurf.svg"]
+    logos: ["assets/skills/claude.svg", "assets/skills/cursor.svg", "assets/skills/windsurf.svg"]
   },
   { 
     name: "Soluciones de Automatización", 
     level: 3, 
     category: "Automatización",
-    logos: ["assets/logos-skills/n8n.svg", "assets/logos-skills/zapier.svg"]
+    logos: ["assets/skills/n8n.svg", "assets/skills/zapier.svg"]
   },
   { 
     name: "Microservicios e Integración de APIs", 
     level: 4, 
     category: "Arquitectura",
-    logos: ["assets/logos-skills/soapui.svg", "assets/logos-skills/postman.svg"]
+    logos: ["assets/skills/soapui.svg", "assets/skills/postman.svg"]
   },
   { 
     name: "Bases de Datos SQL", 
     level: 5, 
     category: "Bases de Datos",
-    logos: ["assets/logos-skills/oracle.svg", "assets/logos-skills/postgresql.svg"]
+    logos: ["assets/skills/oracle.svg", "assets/skills/postgresql.svg"]
   },
   { 
     name: "Bases de Datos NoSQL", 
     level: 3, 
     category: "Bases de Datos",
-    logos: ["assets/logos-skills/mongodb.svg", "assets/logos-skills/firebase.svg"]
+    logos: ["assets/skills/mongodb.svg", "assets/skills/firebase.svg"]
   },
   { 
     name: "Desarrollo Backend", 
     level: 4, 
     category: "Desarrollo",
-    logos: ["assets/logos-skills/java.svg", "assets/logos-skills/spring-boot.svg", "assets/logos-skills/nodejs.svg", "assets/logos-skills/typescript.svg"]
+    logos: ["assets/skills/java.svg", "assets/skills/spring-boot.svg", "assets/skills/nodejs.svg", "assets/skills/typescript.svg"]
   },
   { 
     name: "Desarrollo Frontend", 
     level: 5, 
     category: "Desarrollo",
-    logos: ["assets/logos-skills/angular.svg", "assets/logos-skills/vuejs.svg", "assets/logos-skills/reactjs.svg", "assets/logos-skills/tailwind.svg"]
+    logos: ["assets/skills/angular.svg", "assets/skills/vuejs.svg", "assets/skills/reactjs.svg", "assets/skills/tailwind.svg"]
   },
   { 
     name: "Optimización SEO y Accesibilidad", 
     level: 4, 
     category: "Optimización Web",
-    logos: ["assets/logos-skills/google-analytics.svg", "assets/logos-skills/gtm.svg"]
+    logos: ["assets/skills/google-analytics.svg", "assets/skills/gtm.svg"]
   },
   { 
     name: "Administración de CMS", 
     level: 5, 
     category: "Gestión Web",
-    logos: ["assets/logos-skills/aem.svg", "assets/logos-skills/wordpress.svg"]
+    logos: ["assets/skills/aem.svg", "assets/skills/wordpress.svg"]
   },
   { 
     name: "Inteligencia de Negocios (BI)", 
     level: 4, 
     category: "Análisis",
-    logos: ["assets/logos-skills/powerbi.svg"]
+    logos: ["assets/skills/powerbi.svg"]
   },
   { 
     name: "Modelado de Procesos de Negocio", 
     level: 5, 
     category: "Análisis",
-    logos: ["assets/logos-skills/bizagi.svg", "assets/logos-skills/lucidchart.svg"]
+    logos: ["assets/skills/bizagi.svg", "assets/skills/lucidchart.svg"]
   },
   { 
     name: "Herramientas de Gestión de Proyectos", 
     level: 5, 
     category: "Gestión",
-    logos: ["assets/logos-skills/jira.svg", "assets/logos-skills/confluence.svg", "assets/logos-skills/trello.svg"]
+    logos: ["assets/skills/jira.svg", "assets/skills/confluence.svg", "assets/skills/trello.svg"]
   }
 ], 
   projects: [

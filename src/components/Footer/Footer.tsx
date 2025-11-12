@@ -40,7 +40,7 @@ export const Footer = () => {
               <img
                 className="h-12"
                 alt="Logo"
-                src="/img/logo-bg-white-svg-4.svg"
+                src="/images/brand/logo.svg"
               />
               <p className="text-white/60 text-sm leading-relaxed [font-family:'Poppins',Helvetica] max-w-sm">
                 {language === 'en' 

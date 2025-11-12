@@ -24,7 +24,7 @@ export const LayeredHero = () => {
           }`}
         >
           <img
-            src="/img/hero-portrait.png"
+            src="/images/hero/portrait.png"
             alt="Byron Gonzalez"
             className="h-full w-auto object-contain"
           />
@@ -37,7 +37,7 @@ export const LayeredHero = () => {
           }`}
         >
           <img
-            src="/img/brush-stroke-1.png"
+            src="/images/hero/brush-stroke-1.png"
             alt="Brush stroke 1"
             className="h-[60%] w-auto object-contain"
           />
@@ -50,7 +50,7 @@ export const LayeredHero = () => {
           }`}
         >
           <img
-            src="/img/brush-stroke-2.png"
+            src="/images/hero/brush-stroke-2.png"
             alt="Brush stroke 2"
             className="h-[70%] w-auto object-contain"
           />

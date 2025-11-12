@@ -6,79 +6,79 @@ import englishFlag from '../../assets/english-lang.png';
 import spanishFlag from '../../assets/spanish-lang.png';
 
 // Import skill logos
-import awsLogo from '../../assets/logos-skills/aws.svg';
-import gcpLogo from '../../assets/logos-skills/gcp.svg';
-import dockerLogo from '../../assets/logos-skills/docker.svg';
-import kubernetesLogo from '../../assets/logos-skills/kubernetes.svg';
-import chatgptLogo from '../../assets/logos-skills/chatgpt.svg';
-import geminiLogo from '../../assets/logos-skills/gemini.svg';
-import claudeLogo from '../../assets/logos-skills/claude.svg';
-import cursorLogo from '../../assets/logos-skills/cursor.svg';
-import windsurfLogo from '../../assets/logos-skills/windsurf.svg';
-import n8nLogo from '../../assets/logos-skills/n8n.svg';
-import zapierLogo from '../../assets/logos-skills/zapier.svg';
-import soapuiLogo from '../../assets/logos-skills/soapui.svg';
-import postmanLogo from '../../assets/logos-skills/postman.svg';
-import oracleLogo from '../../assets/logos-skills/oracle.svg';
-import postgresqlLogo from '../../assets/logos-skills/postgresql.svg';
-import mongodbLogo from '../../assets/logos-skills/mongodb.svg';
-import firebaseLogo from '../../assets/logos-skills/firebase.svg';
-import javaLogo from '../../assets/logos-skills/java.svg';
-import springBootLogo from '../../assets/logos-skills/spring-boot.svg';
-import nodejsLogo from '../../assets/logos-skills/nodejs.svg';
-import typescriptLogo from '../../assets/logos-skills/typescript.svg';
-import angularLogo from '../../assets/logos-skills/angular.svg';
-import vuejsLogo from '../../assets/logos-skills/vuejs.svg';
-import reactjsLogo from '../../assets/logos-skills/reactjs.svg';
-import tailwindLogo from '../../assets/logos-skills/tailwind.svg';
-import googleAnalyticsLogo from '../../assets/logos-skills/google-analytics.svg';
-import gtmLogo from '../../assets/logos-skills/gtm.svg';
-import aemLogo from '../../assets/logos-skills/aem.svg';
-import wordpressLogo from '../../assets/logos-skills/wordpress.svg';
-import powerbiLogo from '../../assets/logos-skills/powerbi.svg';
-import bizagiLogo from '../../assets/logos-skills/bizagi.svg';
-import lucidchartLogo from '../../assets/logos-skills/lucidchart.svg';
-import jiraLogo from '../../assets/logos-skills/jira.svg';
-import confluenceLogo from '../../assets/logos-skills/confluence.svg';
-import trelloLogo from '../../assets/logos-skills/trello.svg';
+import awsLogo from '../../assets/skills/aws.svg';
+import gcpLogo from '../../assets/skills/gcp.svg';
+import dockerLogo from '../../assets/skills/docker.svg';
+import kubernetesLogo from '../../assets/skills/kubernetes.svg';
+import chatgptLogo from '../../assets/skills/chatgpt.svg';
+import geminiLogo from '../../assets/skills/gemini.svg';
+import claudeLogo from '../../assets/skills/claude.svg';
+import cursorLogo from '../../assets/skills/cursor.svg';
+import windsurfLogo from '../../assets/skills/windsurf.svg';
+import n8nLogo from '../../assets/skills/n8n.svg';
+import zapierLogo from '../../assets/skills/zapier.svg';
+import soapuiLogo from '../../assets/skills/soapui.svg';
+import postmanLogo from '../../assets/skills/postman.svg';
+import oracleLogo from '../../assets/skills/oracle.svg';
+import postgresqlLogo from '../../assets/skills/postgresql.svg';
+import mongodbLogo from '../../assets/skills/mongodb.svg';
+import firebaseLogo from '../../assets/skills/firebase.svg';
+import javaLogo from '../../assets/skills/java.svg';
+import springBootLogo from '../../assets/skills/spring-boot.svg';
+import nodejsLogo from '../../assets/skills/nodejs.svg';
+import typescriptLogo from '../../assets/skills/typescript.svg';
+import angularLogo from '../../assets/skills/angular.svg';
+import vuejsLogo from '../../assets/skills/vuejs.svg';
+import reactjsLogo from '../../assets/skills/reactjs.svg';
+import tailwindLogo from '../../assets/skills/tailwind.svg';
+import googleAnalyticsLogo from '../../assets/skills/google-analytics.svg';
+import gtmLogo from '../../assets/skills/gtm.svg';
+import aemLogo from '../../assets/skills/aem.svg';
+import wordpressLogo from '../../assets/skills/wordpress.svg';
+import powerbiLogo from '../../assets/skills/powerbi.svg';
+import bizagiLogo from '../../assets/skills/bizagi.svg';
+import lucidchartLogo from '../../assets/skills/lucidchart.svg';
+import jiraLogo from '../../assets/skills/jira.svg';
+import confluenceLogo from '../../assets/skills/confluence.svg';
+import trelloLogo from '../../assets/skills/trello.svg';
 
 // Map logo paths to imported images
 const logoMap: Record<string, string> = {
-  'assets/logos-skills/aws.svg': awsLogo,
-  'assets/logos-skills/gcp.svg': gcpLogo,
-  'assets/logos-skills/docker.svg': dockerLogo,
-  'assets/logos-skills/kubernetes.svg': kubernetesLogo,
-  'assets/logos-skills/chatgpt.svg': chatgptLogo,
-  'assets/logos-skills/gemini.svg': geminiLogo,
-  'assets/logos-skills/claude.svg': claudeLogo,
-  'assets/logos-skills/cursor.svg': cursorLogo,
-  'assets/logos-skills/windsurf.svg': windsurfLogo,
-  'assets/logos-skills/n8n.svg': n8nLogo,
-  'assets/logos-skills/zapier.svg': zapierLogo,
-  'assets/logos-skills/soapui.svg': soapuiLogo,
-  'assets/logos-skills/postman.svg': postmanLogo,
-  'assets/logos-skills/oracle.svg': oracleLogo,
-  'assets/logos-skills/postgresql.svg': postgresqlLogo,
-  'assets/logos-skills/mongodb.svg': mongodbLogo,
-  'assets/logos-skills/firebase.svg': firebaseLogo,
-  'assets/logos-skills/java.svg': javaLogo,
-  'assets/logos-skills/spring-boot.svg': springBootLogo,
-  'assets/logos-skills/nodejs.svg': nodejsLogo,
-  'assets/logos-skills/typescript.svg': typescriptLogo,
-  'assets/logos-skills/angular.svg': angularLogo,
-  'assets/logos-skills/vuejs.svg': vuejsLogo,
-  'assets/logos-skills/reactjs.svg': reactjsLogo,
-  'assets/logos-skills/tailwind.svg': tailwindLogo,
-  'assets/logos-skills/google-analytics.svg': googleAnalyticsLogo,
-  'assets/logos-skills/gtm.svg': gtmLogo,
-  'assets/logos-skills/aem.svg': aemLogo,
-  'assets/logos-skills/wordpress.svg': wordpressLogo,
-  'assets/logos-skills/powerbi.svg': powerbiLogo,
-  'assets/logos-skills/bizagi.svg': bizagiLogo,
-  'assets/logos-skills/lucidchart.svg': lucidchartLogo,
-  'assets/logos-skills/jira.svg': jiraLogo,
-  'assets/logos-skills/confluence.svg': confluenceLogo,
-  'assets/logos-skills/trello.svg': trelloLogo,
+  'assets/skills/aws.svg': awsLogo,
+  'assets/skills/gcp.svg': gcpLogo,
+  'assets/skills/docker.svg': dockerLogo,
+  'assets/skills/kubernetes.svg': kubernetesLogo,
+  'assets/skills/chatgpt.svg': chatgptLogo,
+  'assets/skills/gemini.svg': geminiLogo,
+  'assets/skills/claude.svg': claudeLogo,
+  'assets/skills/cursor.svg': cursorLogo,
+  'assets/skills/windsurf.svg': windsurfLogo,
+  'assets/skills/n8n.svg': n8nLogo,
+  'assets/skills/zapier.svg': zapierLogo,
+  'assets/skills/soapui.svg': soapuiLogo,
+  'assets/skills/postman.svg': postmanLogo,
+  'assets/skills/oracle.svg': oracleLogo,
+  'assets/skills/postgresql.svg': postgresqlLogo,
+  'assets/skills/mongodb.svg': mongodbLogo,
+  'assets/skills/firebase.svg': firebaseLogo,
+  'assets/skills/java.svg': javaLogo,
+  'assets/skills/spring-boot.svg': springBootLogo,
+  'assets/skills/nodejs.svg': nodejsLogo,
+  'assets/skills/typescript.svg': typescriptLogo,
+  'assets/skills/angular.svg': angularLogo,
+  'assets/skills/vuejs.svg': vuejsLogo,
+  'assets/skills/reactjs.svg': reactjsLogo,
+  'assets/skills/tailwind.svg': tailwindLogo,
+  'assets/skills/google-analytics.svg': googleAnalyticsLogo,
+  'assets/skills/gtm.svg': gtmLogo,
+  'assets/skills/aem.svg': aemLogo,
+  'assets/skills/wordpress.svg': wordpressLogo,
+  'assets/skills/powerbi.svg': powerbiLogo,
+  'assets/skills/bizagi.svg': bizagiLogo,
+  'assets/skills/lucidchart.svg': lucidchartLogo,
+  'assets/skills/jira.svg': jiraLogo,
+  'assets/skills/confluence.svg': confluenceLogo,
+  'assets/skills/trello.svg': trelloLogo,
 };
 
 export const SkillsLanguages = () => {

@@ -46,7 +46,7 @@ export const AboutMe = () => {
               <img
                 className="w-full h-full object-cover object-center scale-125"
                 alt="Byron Gonzalez"
-                src="/img/byron-gonzalez-about-me.png"
+                src="/images/about/profile.png"
               />
             </div>
           </div>

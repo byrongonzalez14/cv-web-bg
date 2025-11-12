@@ -92,7 +92,7 @@ export const DesktopView = (): JSX.Element => {
             <img
               className="relative flex-[0_0_auto] h-[36px] lg:h-[47px]"
               alt="Logo bg white svg"
-              src="/img/logo-bg-white-svg-4.svg"
+              src="/images/brand/logo.svg"
             />
 
             <div className="flex items-center gap-2 lg:gap-4">
@@ -130,7 +130,7 @@ export const DesktopView = (): JSX.Element => {
             {/* Foto principal */}
             <div className="absolute inset-0 z-30 flex items-center justify-center">
               <img
-                src="/img/hero-portrait.png"
+                src="/images/hero/portrait.png"
                 alt="Byron Gonzalez"
                 className="h-full w-auto object-contain"
               />
@@ -139,7 +139,7 @@ export const DesktopView = (): JSX.Element => {
             {/* Pincelada horizontal */}
             <div className="absolute inset-0 z-10 flex items-center justify-center">
               <img
-                src="/img/brush-stroke-1.png"
+                src="/images/hero/brush-stroke-1.png"
                 alt="Brush stroke 1"
                 className="h-[60%] w-auto object-contain"
               />
@@ -148,7 +148,7 @@ export const DesktopView = (): JSX.Element => {
             {/* Pincelada diagonal */}
             <div className="absolute inset-0 z-20 flex items-center justify-center">
               <img
-                src="/img/brush-stroke-2.png"
+                src="/images/hero/brush-stroke-2.png"
                 alt="Brush stroke 2"
                 className="h-[70%] w-auto object-contain"
               />
@@ -224,7 +224,7 @@ export const DesktopView = (): JSX.Element => {
               <img
                 className="relative w-[13px] lg:w-[15px] h-[16.5px] lg:h-[19.5px]"
                 alt="File icon"
-                src="/img/file-icon.svg"
+                src="/icons/file.svg"
               />
 
               <span className="relative w-fit mt-[-1.00px] [font-family:'Lexend',Helvetica] font-normal text-grey-11 text-base lg:text-lg tracking-[0] leading-[27px] whitespace-nowrap transition-opacity duration-200" style={{ opacity: isTransitioning ? 0.5 : 1 }}>

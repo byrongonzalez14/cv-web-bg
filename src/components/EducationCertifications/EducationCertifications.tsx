@@ -2,13 +2,14 @@ import { GraduationCap, Award, ExternalLink, Calendar, MapPin } from 'lucide-rea
 import { useLanguage } from '../../context/LanguageContext';
 
 // Import certification provider logos
-import udemyLogo from '../../assets/logos-certifications/udemy-logo.svg';
-import credlyLogo from '../../assets/logos-certifications/certiprof-scrum-master-badge.png';
-import efLogo from '../../assets/logos-certifications/ef-logo.svg';
-import awsLogo from '../../assets/logos-certifications/aws-logo.svg';
+import udemyLogo from '../../assets/certifications/udemy-logo.svg';
+import credlyLogo from '../../assets/certifications/certiprof-scrum-master-badge.png';
+import efLogo from '../../assets/certifications/ef-logo.svg';
+import awsLogo from '../../assets/certifications/aws-logo.svg';
 
 // Import AWS certificate PDF
-import awsCertificatePdf from '../../assets/certificacion-aws.pdf';
+// AWS certificate is now in public folder
+const awsCertificatePdf = '/documents/certifications/aws-certificate.pdf';
 
 // Función para obtener el logo del proveedor
 const getProviderLogo = (url: string): string | null => {

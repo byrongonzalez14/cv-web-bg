@@ -76,91 +76,91 @@ skills: [
     name: "Cloud Architecture Design", 
     level: 4, 
     category: "Cloud",
-    logos: ["assets/logos-skills/aws.svg", "assets/logos-skills/gcp.svg"]
+    logos: ["assets/skills/aws.svg", "assets/skills/gcp.svg"]
   },
   { 
     name: "DevOps Engineering", 
     level: 4, 
     category: "DevOps",
-    logos: ["assets/logos-skills/docker.svg", "assets/logos-skills/kubernetes.svg"]
+    logos: ["assets/skills/docker.svg", "assets/skills/kubernetes.svg"]
   },
   { 
     name: "Generative AI Models", 
     level: 5, 
     category: "Artificial Intelligence",
-    logos: ["assets/logos-skills/chatgpt.svg", "assets/logos-skills/gemini.svg"]
+    logos: ["assets/skills/chatgpt.svg", "assets/skills/gemini.svg"]
   },
   { 
     name: "AI-Powered Coding Tools", 
     level: 4, 
     category: "AI Tools",
-    logos: ["assets/logos-skills/claude.svg", "assets/logos-skills/cursor.svg", "assets/logos-skills/windsurf.svg"]
+    logos: ["assets/skills/claude.svg", "assets/skills/cursor.svg", "assets/skills/windsurf.svg"]
   },
   { 
     name: "Automation Solutions", 
     level: 3, 
     category: "Automation",
-    logos: ["assets/logos-skills/n8n.svg", "assets/logos-skills/zapier.svg"]
+    logos: ["assets/skills/n8n.svg", "assets/skills/zapier.svg"]
   },
   { 
     name: "Microservices & API Integration", 
     level: 4, 
     category: "Architecture",
-    logos: ["assets/logos-skills/soapui.svg", "assets/logos-skills/postman.svg"]
+    logos: ["assets/skills/soapui.svg", "assets/skills/postman.svg"]
   },
   { 
     name: "SQL Databases", 
     level: 5, 
     category: "Databases",
-    logos: ["assets/logos-skills/oracle.svg", "assets/logos-skills/postgresql.svg"]
+    logos: ["assets/skills/oracle.svg", "assets/skills/postgresql.svg"]
   },
   { 
     name: "NoSQL Databases", 
     level: 3, 
     category: "Databases",
-    logos: ["assets/logos-skills/mongodb.svg", "assets/logos-skills/firebase.svg"]
+    logos: ["assets/skills/mongodb.svg", "assets/skills/firebase.svg"]
   },
   { 
     name: "Backend Development", 
     level: 4, 
     category: "Development",
-    logos: ["assets/logos-skills/java.svg", "assets/logos-skills/spring-boot.svg", "assets/logos-skills/nodejs.svg", "assets/logos-skills/typescript.svg"]
+    logos: ["assets/skills/java.svg", "assets/skills/spring-boot.svg", "assets/skills/nodejs.svg", "assets/skills/typescript.svg"]
   },
   { 
     name: "Frontend Development", 
     level: 5, 
     category: "Development",
-    logos: ["assets/logos-skills/angular.svg", "assets/logos-skills/vuejs.svg", "assets/logos-skills/reactjs.svg", "assets/logos-skills/tailwind.svg"]
+    logos: ["assets/skills/angular.svg", "assets/skills/vuejs.svg", "assets/skills/reactjs.svg", "assets/skills/tailwind.svg"]
   },
   { 
     name: "SEO & Accessibility Optimization", 
     level: 4, 
     category: "Web Optimization",
-    logos: ["assets/logos-skills/google-analytics.svg", "assets/logos-skills/gtm.svg"]
+    logos: ["assets/skills/google-analytics.svg", "assets/skills/gtm.svg"]
   },
   { 
     name: "CMS Administration", 
     level: 5, 
     category: "Web Management",
-    logos: ["assets/logos-skills/aem.svg", "assets/logos-skills/wordpress.svg"]
+    logos: ["assets/skills/aem.svg", "assets/skills/wordpress.svg"]
   },
   { 
     name: "Business Intelligence (BI)", 
     level: 4, 
     category: "Analytics",
-    logos: ["assets/logos-skills/powerbi.svg"]
+    logos: ["assets/skills/powerbi.svg"]
   },
   { 
     name: "Business Process Modeling", 
     level: 5, 
     category: "Analysis",
-    logos: ["assets/logos-skills/bizagi.svg", "assets/logos-skills/lucidchart.svg"]
+    logos: ["assets/skills/bizagi.svg", "assets/skills/lucidchart.svg"]
   },
   { 
     name: "Project Management Tools", 
     level: 5, 
     category: "Management",
-    logos: ["assets/logos-skills/jira.svg", "assets/logos-skills/confluence.svg", "assets/logos-skills/trello.svg"]
+    logos: ["assets/skills/jira.svg", "assets/skills/confluence.svg", "assets/skills/trello.svg"]
   }
 ],
   
