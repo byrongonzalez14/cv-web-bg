@@ -240,7 +240,7 @@ export const DesktopView = (): JSX.Element => {
       </header>
 
       {/* Separador animado - About Me */}
-      <div id="about-me" className="w-full bg-[#1e1e1e] py-4 flex items-center">
+      <div id="about-me" className="w-full bg-[#d9ff6c] py-4 flex items-center">
         <div className="transition-opacity duration-200 w-full" style={{ opacity: isTransitioning ? 0.5 : 1 }}>
           <CurvedTextLoop 
             marqueeText={texts.aboutMe}
@@ -248,7 +248,7 @@ export const DesktopView = (): JSX.Element => {
             curveAmount={0}
             direction="left"
             interactive={true}
-            className="!fill-[#d9ff6c]"
+            className="!fill-[#1e1e1e]"
           />
         </div>
       </div>
@@ -256,7 +256,7 @@ export const DesktopView = (): JSX.Element => {
       <AboutMe />
 
       {/* Separador animado - Work Experience */}
-      <div id="experience" className="w-full bg-[#1e1e1e] py-4 flex items-center">
+      <div id="experience" className="w-full bg-[#d9ff6c] py-4 flex items-center">
         <div className="transition-opacity duration-200 w-full" style={{ opacity: isTransitioning ? 0.5 : 1 }}>
           <CurvedTextLoop 
             marqueeText={texts.workExperience}
@@ -264,7 +264,7 @@ export const DesktopView = (): JSX.Element => {
             curveAmount={0}
             direction="right"
             interactive={true}
-            className="!fill-[#d9ff6c]"
+            className="!fill-[#1e1e1e]"
           />
         </div>
       </div>
@@ -272,7 +272,7 @@ export const DesktopView = (): JSX.Element => {
       <ExperienceTimeline />
 
       {/* Separador animado - Education & Certifications */}
-      <div id="education-and-certifications" className="w-full bg-[#1e1e1e] py-4 flex items-center">
+      <div id="education-and-certifications" className="w-full bg-[#d9ff6c] py-4 flex items-center">
         <div className="transition-opacity duration-200 w-full" style={{ opacity: isTransitioning ? 0.5 : 1 }}>
           <CurvedTextLoop 
             marqueeText={texts.education}
@@ -280,7 +280,7 @@ export const DesktopView = (): JSX.Element => {
             curveAmount={0}
             direction="left"
             interactive={true}
-            className="!fill-[#d9ff6c]"
+            className="!fill-[#1e1e1e]"
           />
         </div>
       </div>
@@ -288,7 +288,7 @@ export const DesktopView = (): JSX.Element => {
       <EducationCertifications />
 
       {/* Separador - Skills */}
-      <div id="skills" className="w-full bg-[#1e1e1e] py-4 flex items-center">
+      <div id="skills" className="w-full bg-[#d9ff6c] py-4 flex items-center">
         <div className="transition-opacity duration-200 w-full" style={{ opacity: isTransitioning ? 0.5 : 1 }}>
           <CurvedTextLoop 
             marqueeText={texts.skills}
@@ -296,7 +296,7 @@ export const DesktopView = (): JSX.Element => {
             curveAmount={0}
             direction="right"
             interactive={true}
-            className="!fill-[#d9ff6c]"
+            className="!fill-[#1e1e1e]"
           />
         </div>
       </div>
