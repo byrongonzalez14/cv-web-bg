@@ -1,6 +1,23 @@
 import { Briefcase, Calendar, Code, Rocket } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 
+// Función para obtener el logo de la empresa
+const getCompanyLogo = (companyName: string): { logos: string[], hasLogo: boolean, isColgate: boolean } => {
+  const name = companyName.toUpperCase();
+  
+  if (name.includes('Q-VISION') && name.includes('BANCO UNION')) {
+    return { logos: ['/images/experiences/logo-qvision.png', '/images/experiences/banco-union-logo.svg'], hasLogo: true, isColgate: false };
+  }
+  if (name.includes('COLGATE')) {
+    return { logos: ['/images/experiences/colgate-palmolive-logo.png'], hasLogo: true, isColgate: true };
+  }
+  if (name.includes('COMFENALCO')) {
+    return { logos: ['/images/experiences/comfenalco-logo.svg'], hasLogo: true, isColgate: false };
+  }
+  
+  return { logos: [], hasLogo: false, isColgate: false };
+};
+
 export const ExperienceTimeline = () => {
   const { language, data } = useLanguage();
 
@@ -58,9 +75,25 @@ export const ExperienceTimeline = () => {
 
                   {/* Empresa y Fecha - Arriba en mobile/tablet, lateral en desktop */}
                   <div className={`lg:hidden pl-8 mb-4`}>
-                    <p className="text-3xl font-bold text-white [font-family:'Slackey',Helvetica] mb-1">
-                      {exp.company}
-                    </p>
+                    {(() => {
+                      const { logos, hasLogo, isColgate } = getCompanyLogo(exp.company);
+                      return hasLogo ? (
+                        <div className="flex items-center gap-4 mb-2">
+                          {logos.map((logo, idx) => (
+                            <img 
+                              key={idx}
+                              src={logo} 
+                              alt={exp.company}
+                              className={isColgate ? "max-w-[200px] h-16 object-contain" : "max-w-[140px] h-12 object-contain"}
+                            />
+                          ))}
+                        </div>
+                      ) : (
+                        <p className="text-3xl font-bold text-white [font-family:'Slackey',Helvetica] mb-1">
+                          {exp.company}
+                        </p>
+                      );
+                    })()}
                     <div className="flex items-center gap-2 text-white/60 text-sm [font-family:'Poppins',Helvetica]">
                       <Calendar className="w-4 h-4" />
                       {exp.period}
@@ -70,9 +103,28 @@ export const ExperienceTimeline = () => {
                   {/* Empresa y Fecha en el lado opuesto - Solo desktop */}
                   <div className={`hidden lg:flex lg:w-1/2 items-center justify-center ${isEven ? 'lg:pl-12' : 'lg:pr-12'}`}>
                     <div className="text-center">
-                      <p className="text-5xl lg:text-6xl font-bold text-white/10 [font-family:'Slackey',Helvetica] mb-2">
-                        {exp.company}
-                      </p>
+                      {(() => {
+                        const { logos, hasLogo, isColgate } = getCompanyLogo(exp.company);
+                        return hasLogo ? (
+                          <div className="flex flex-col items-center gap-6 mb-4">
+                            {logos.map((logo, idx) => (
+                              <img 
+                                key={idx}
+                                src={logo} 
+                                alt={exp.company}
+                                className={isColgate 
+                                  ? "max-w-[240px] lg:max-w-[300px] h-20 lg:h-24 object-contain transition-transform hover:scale-110"
+                                  : "max-w-[180px] lg:max-w-[220px] h-16 lg:h-20 object-contain transition-transform hover:scale-110"
+                                }
+                              />
+                            ))}
+                          </div>
+                        ) : (
+                          <p className="text-5xl lg:text-6xl font-bold text-white [font-family:'Slackey',Helvetica] mb-2">
+                            {exp.company}
+                          </p>
+                        );
+                      })()}
                       <div className="flex items-center justify-center gap-2 text-white/40 text-sm [font-family:'Poppins',Helvetica]">
                         <Calendar className="w-4 h-4" />
                         {exp.period}
