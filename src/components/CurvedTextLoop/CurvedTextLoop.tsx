@@ -159,7 +159,7 @@ const CurvedTextLoop: FC<CurvedTextLoopProps> = ({
       <svg
         className="select-none w-full h-full block text-[2rem] md:text-[3.5rem] font-bold uppercase leading-none"
         viewBox="0 0 1440 80"
-        preserveAspectRatio="none"
+        preserveAspectRatio="xMidYMid meet"
       >
         {/* Texto invisible para medir */}
         <text ref={measureRef} xmlSpace="preserve" style={{ visibility: 'hidden', opacity: 0, pointerEvents: 'none' }}>

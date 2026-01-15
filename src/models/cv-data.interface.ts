@@ -49,6 +49,7 @@ export interface Project {
 export interface Language {
   name: string;
   level: string;
+  logos: string[];
 }
 
 export interface Certification {

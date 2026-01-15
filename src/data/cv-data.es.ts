@@ -3,166 +3,111 @@ import { CVData } from '../models/cv-data.interface';
 export const cvDataEs: CVData = {
   personalInfo: {
     name: "Byron Gonzalez",
-    title: "Analista de Negocios & Líder Técnico",
-    summary: "Ingeniero Multimedia y Analista de Negocios Tecnológicos con un perfil técnico orientado a la gestión y coordinación de proyectos de desarrollo, automatización e integración de sistemas. Tengo experiencia en el levantamiento y análisis de requerimientos, documentación funcional y técnica, y modelado de procesos de negocio con BPMN y UML, garantizando la trazabilidad entre las necesidades del negocio y las soluciones tecnológicas. Participo activamente en todo el ciclo de vida del desarrollo de software (SDLC), incluyendo la definición de requerimientos, pruebas funcionales y no funcionales, pruebas UAT y soporte en despliegues. Mi formación y conocimiento en arquitecturas de software, entornos cloud (AWS), bases de datos SQL y tecnologías frontend y backend me permiten comunicarme eficazmente con equipos técnicos y no técnicos, asegurando soluciones de calidad, escalables y alineadas con los objetivos del negocio.",
+    title: "Analista de Negocio Técnico | Automatización e Integración de Sistemas",
+    summary: "Analista de Negocio Técnico con experiencia en entornos bancarios, fintech y corporativos. Especializado en traducir necesidades de negocio en requerimientos funcionales y técnicos claros, utilizando BPMN, UML y análisis de flujos de datos. Trabajo de forma cercana con equipos de desarrollo, QA, arquitectura y proveedores para asegurar la alineación durante todo el ciclo de vida del software (SDLC). He apoyado iniciativas de automatización e integración de sistemas mediante la documentación de procesos, definición de requerimientos de APIs y validación de soluciones low-code como n8n, contribuyendo a la reducción de tareas manuales y a una entrega más eficiente.",
     contact: {
-      email: "byrongonzalez14@gmail.com",
-      phone: "(+57) 322 584 8613",
+      email: "byrongonzalezing@gmail.com",
+      phone: "+57 315 039 7431",
       location: "Cali, Colombia",
       linkedin: "https://www.linkedin.com/in/byrongonzalezing/",
       github: "https://github.com/byrongonzalez14",
       website: "https://byrongonzalez.com.co/"
     }
   },
-  experience: [
-    {
-      company: "Freelancer",
-      position: "Ingeniero Cloud y de Automatización",
-      period: "Mayo 2024 – Presente",
-      description: "• Análisis de requerimientos de negocio y técnicos, elaboración de documentación funcional, técnica y de arquitectura -BPMN, UML, casos de uso, flujos de datos- para asegurar la trazabilidad entre necesidades empresariales y soluciones tecnológicas.\n• Gestión del ciclo completo de proyectos -LCSD-: desde el diseño UX/UI hasta el despliegue en producción, garantizando calidad, documentación y soporte continuo.\n• Desarrollo de soluciones frontend, backend y de base de datos con Angular, Vue, Spring Boot y Node.js, aplicando buenas prácticas de usabilidad, seguridad y diseño responsivo.\n• Diseño de flujos de integración y automatización con n8n y APIs REST, optimizando la interoperabilidad, trazabilidad y eficiencia operativa.\n• Colaboración en la definición y configuración de arquitecturas escalables en AWS, Supabase, Railway y Vercel, asegurando entornos estables de desarrollo, QA y producción.\n• Uso de herramientas de IA para optimizar tareas de análisis, documentación y desarrollo, logrando entregas más ágiles, precisas y alineadas con los objetivos del negocio.",
-      technologies: ["Generative AI","Claude","Cursor","Windsurf","n8n","Supabase","Railway","Vercel","AWS (Solutions Architect Associate)","Diseño de Arquitecturas Cloud"]
+
+  skills: [
+    { 
+      name: "Diseño de Arquitectura Cloud", 
+      level: 4, 
+      category: "Cloud",
+      logos: ["assets/skills/aws.svg", "assets/skills/gcp.svg"]
     },
-    {
-      company: "Q-VISION TECHNOLOGIES para BANCO UNION S.A.",
-      position: "Líder Técnico - Analista de desarrollo",
-      period: "Junio 2022 – Mayo 2024",
-      description: "• Coordiné entre equipos de negocio y proveedores externos, elaborando y validando documentación técnica (arquitecturas, integraciones, flujos de datos) y modelando procesos con BPMN.\n• Estimé esfuerzos y apoyé la planificación de proyectos, asegurando cronogramas realistas y un seguimiento efectivo de las entregas.\n• Participé en procesos de QA y UAT, ejecutando pruebas de humo, funcionales, no funcionales e integración, para validar criterios de aceptación y garantizar la calidad del producto.\n• Brindé soporte en despliegues críticos a producción y trabajé en proyectos de ETL, generando reportes que fortalecieron la toma de decisiones en distintas áreas del banco.",
-      technologies: ["Spring Boot","REST APIs","SQL","PostgreSQL","Oracle Database","ETL","BPMN","QA Testing","Agile (Scrum, Kanban)","Jira"],
-      keyProjects: [
-        "Implementación de nuevas funcionalidades en el portal transaccional.",
-        "Migración y optimización de integraciones con sistemas core banking.",
-        "Acompañamiento en despliegues de alta criticidad con cero incidentes mayores."
-      ]
+    { 
+      name: "Ingeniería DevOps", 
+      level: 4, 
+      category: "DevOps",
+      logos: ["assets/skills/docker.svg", "assets/skills/kubernetes.svg"]
     },
-    {
-      company: "COLGATE - PALMOLIVE",
-      position: "Web Content Analyst",
-      period: "Marzo 2018 – Junio 2022",
-      description: "• Coordiné proyectos web internacionales en AEM, asegurando el cumplimiento de los lineamientos globales de marca y el cumplimiento de los plazos establecidos.\n• Realicé auditorías de QA y generé reportes claros sobre la calidad de los sitios, aplicando listas de verificación internas y criterios de SEO y accesibilidad.\n• Verifiqué prácticas de SEO y estándares de marca en sitios globales, ejecutando análisis de rastreo y reportando incidencias.\n• Implementé códigos de seguimiento, etiquetas y formularios de recolección de datos en LATAM, mejorando la trazabilidad de las campañas digitales.",
-      technologies: ["Adobe Experience Manager (AEM)","SEO (Google Analytics,Google Search Console)","Google Tag Manager","QA Testing","Accessibility Standards","BPMN","Agile (Scrum,Kanban)","Figma","Jira","Confluence"],
-      keyProjects: [
-        "Migración de 50+ sitios web de Colgate a AEM, garantizando su calidad en SEO y accesibilidad.",
-        "Estandarización global de prácticas SEO y QA, mejorando la visibilidad y consistencia de la marca en múltiples mercados.",
-        "Implementación de reportes analíticos y formularios de captura de datos para LATAM, apoyando decisiones de marketing digital basadas en datos."
-      ]
+    { 
+      name: "Modelos de IA Generativa", 
+      level: 5, 
+      category: "Inteligencia Artificial",
+      logos: ["assets/skills/chatgpt.svg", "assets/skills/gemini.svg"]
     },
-    {
-      company: "COMFENALCO VALLE DELAGENTE",
-      position: "Web Designer (práctica profesional)",
-      period: "Enero 2017 – Junio 2017",
-      description: "• Actualización de contenidos y mejora de la experiencia de usuario en la intranet corporativa.\n• Ajustes en HTML y CSS según lineamientos de marca.\n• Apoyo en ceremonias Scrum (daily, sprint planning y reviews).",
-      technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "jQuery", "SASS", "Scrum"],
-      keyProjects: [
-        "Rediseño parcial de la intranet corporativa, mejorando la navegación y tiempos de carga."
-      ]
+    { 
+      name: "Herramientas de Codificación con IA", 
+      level: 4, 
+      category: "Herramientas IA",
+      logos: ["assets/skills/claude.svg", "assets/skills/cursor.svg", "assets/skills/windsurf.svg"]
+    },
+    { 
+      name: "Soluciones de Automatización", 
+      level: 3, 
+      category: "Automatización",
+      logos: ["assets/skills/n8n.svg", "assets/skills/zapier.svg"]
+    },
+    { 
+      name: "Microservicios e Integración de APIs", 
+      level: 4, 
+      category: "Arquitectura",
+      logos: ["assets/skills/soapui.svg", "assets/skills/postman.svg"]
+    },
+    { 
+      name: "Bases de Datos SQL", 
+      level: 5, 
+      category: "Bases de Datos",
+      logos: ["assets/skills/oracle.svg", "assets/skills/postgresql.svg"]
+    },
+    { 
+      name: "Bases de Datos NoSQL", 
+      level: 3, 
+      category: "Bases de Datos",
+      logos: ["assets/skills/mongodb.svg", "assets/skills/firebase.svg"]
+    },
+    { 
+      name: "Desarrollo Backend", 
+      level: 4, 
+      category: "Desarrollo",
+      logos: ["assets/skills/java.svg", "assets/skills/spring-boot.svg", "assets/skills/nodejs.svg", "assets/skills/typescript.svg"]
+    },
+    { 
+      name: "Desarrollo Frontend", 
+      level: 5, 
+      category: "Desarrollo",
+      logos: ["assets/skills/angular.svg", "assets/skills/vuejs.svg", "assets/skills/reactjs.svg", "assets/skills/tailwind.svg"]
+    },
+    { 
+      name: "Optimización SEO y Accesibilidad", 
+      level: 4, 
+      category: "Optimización Web",
+      logos: ["assets/skills/google-analytics.svg", "assets/skills/gtm.svg"]
+    },
+    { 
+      name: "Administración de CMS", 
+      level: 5, 
+      category: "Gestión Web",
+      logos: ["assets/skills/aem.svg", "assets/skills/wordpress.svg"]
+    },
+    { 
+      name: "Inteligencia de Negocios (BI)", 
+      level: 4, 
+      category: "Análisis",
+      logos: ["assets/skills/powerbi.svg"]
+    },
+    { 
+      name: "Modelado de Procesos de Negocio", 
+      level: 5, 
+      category: "Análisis",
+      logos: ["assets/skills/bizagi.svg", "assets/skills/lucidchart.svg"]
+    },
+    { 
+      name: "Herramientas de Gestión de Proyectos", 
+      level: 5, 
+      category: "Gestión",
+      logos: ["assets/skills/jira.svg", "assets/skills/confluence.svg", "assets/skills/trello.svg"]
     }
   ],
-  education: [
-    {
-      institution: "Universidad de San Buenaventura – Cali, Colombia",
-      degree: "Ingeniería Multimedia",
-      period: "2012–2018",
-      description: "Ingeniero multimedia"
-    },
-    {
-      institution: "Universidad de San Buenaventura – Cali, Colombia",
-      degree: "Diplomado en Diseño y Construcción de Proyectos Multimedia",
-      period: "2017",
-      description: "Programa intensivo cubriendo prácticas modernas de desarrollo web y frameworks"
-    }
-  ],
-skills: [
-  { 
-    name: "Diseño de Arquitectura Cloud", 
-    level: 4, 
-    category: "Cloud",
-    logos: ["assets/skills/aws.svg", "assets/skills/gcp.svg"]
-  },
-  { 
-    name: "Ingeniería DevOps", 
-    level: 4, 
-    category: "DevOps",
-    logos: ["assets/skills/docker.svg", "assets/skills/kubernetes.svg"]
-  },
-  { 
-    name: "Modelos de IA Generativa", 
-    level: 5, 
-    category: "Inteligencia Artificial",
-    logos: ["assets/skills/chatgpt.svg", "assets/skills/gemini.svg"]
-  },
-  { 
-    name: "Herramientas de Codificación con IA", 
-    level: 4, 
-    category: "Herramientas IA",
-    logos: ["assets/skills/claude.svg", "assets/skills/cursor.svg", "assets/skills/windsurf.svg"]
-  },
-  { 
-    name: "Soluciones de Automatización", 
-    level: 3, 
-    category: "Automatización",
-    logos: ["assets/skills/n8n.svg", "assets/skills/zapier.svg"]
-  },
-  { 
-    name: "Microservicios e Integración de APIs", 
-    level: 4, 
-    category: "Arquitectura",
-    logos: ["assets/skills/soapui.svg", "assets/skills/postman.svg"]
-  },
-  { 
-    name: "Bases de Datos SQL", 
-    level: 5, 
-    category: "Bases de Datos",
-    logos: ["assets/skills/oracle.svg", "assets/skills/postgresql.svg"]
-  },
-  { 
-    name: "Bases de Datos NoSQL", 
-    level: 3, 
-    category: "Bases de Datos",
-    logos: ["assets/skills/mongodb.svg", "assets/skills/firebase.svg"]
-  },
-  { 
-    name: "Desarrollo Backend", 
-    level: 4, 
-    category: "Desarrollo",
-    logos: ["assets/skills/java.svg", "assets/skills/spring-boot.svg", "assets/skills/nodejs.svg", "assets/skills/typescript.svg"]
-  },
-  { 
-    name: "Desarrollo Frontend", 
-    level: 5, 
-    category: "Desarrollo",
-    logos: ["assets/skills/angular.svg", "assets/skills/vuejs.svg", "assets/skills/reactjs.svg", "assets/skills/tailwind.svg"]
-  },
-  { 
-    name: "Optimización SEO y Accesibilidad", 
-    level: 4, 
-    category: "Optimización Web",
-    logos: ["assets/skills/google-analytics.svg", "assets/skills/gtm.svg"]
-  },
-  { 
-    name: "Administración de CMS", 
-    level: 5, 
-    category: "Gestión Web",
-    logos: ["assets/skills/aem.svg", "assets/skills/wordpress.svg"]
-  },
-  { 
-    name: "Inteligencia de Negocios (BI)", 
-    level: 4, 
-    category: "Análisis",
-    logos: ["assets/skills/powerbi.svg"]
-  },
-  { 
-    name: "Modelado de Procesos de Negocio", 
-    level: 5, 
-    category: "Análisis",
-    logos: ["assets/skills/bizagi.svg", "assets/skills/lucidchart.svg"]
-  },
-  { 
-    name: "Herramientas de Gestión de Proyectos", 
-    level: 5, 
-    category: "Gestión",
-    logos: ["assets/skills/jira.svg", "assets/skills/confluence.svg", "assets/skills/trello.svg"]
-  }
-], 
+
   projects: [
     {
       name: "encárgate app - Landing Page",
@@ -189,43 +134,128 @@ skills: [
       previewImage: "assets/la-rivera-thumbnail.png"
     }
   ],
-  languages: [
-    { name: "Inglés", level: "Avanzado (CEFR C1)" },
-    { name: "Español", level: "Nativo" },
+
+  experience: [
+    {
+      company: "Freelancer",
+      position: "Analista de Negocio – Proyectos Cloud y Automatización",
+      period: "Mayo 2024 – Presente",
+      description: "• Definición de requerimientos funcionales y técnicos utilizando BPMN, UML (diagramas de componentes y secuencia), flujos de datos e historias de usuario.\n• Soporte a iniciativas de automatización mediante la documentación de procesos, definición de requerimientos de APIs y validación de flujos low-code (n8n) como parte de pruebas de concepto.\n• Colaboración con equipos de desarrollo y QA a lo largo del SDLC, apoyando revisiones de diseño, preparación de UAT y alistamiento para producción.\n• Participación en discusiones de solución en entornos AWS, Supabase y Vercel, con enfoque en alineación de procesos e integración de sistemas.",
+      technologies: [
+        "BPMN",
+        "UML",
+        "n8n",
+        "APIs REST",
+        "AWS",
+        "Supabase",
+        "Vercel",
+        "SDLC"
+      ]
+    },
+
+    {
+      company: "Q-VISION TECHNOLOGIES para BANCO UNION S.A.",
+      position: "Líder Técnico - Analista de Desarrollo",
+      period: "Junio 2022 – Mayo 2024",
+      description: "• Lideré la definición de requerimientos y el análisis de procesos utilizando BPMN, actuando como puente entre las áreas de negocio y los equipos de TI.\n• Revisé arquitecturas de sistemas, flujos de integración y modelos de datos en conjunto con equipos internos y proveedores externos.\n• Apoyé la planificación, estimación de esfuerzos, coordinación de QA y UAT, así como despliegues a producción.\n• Contribuí a la mejora de integraciones con sistemas core bancarios, reduciendo errores operativos y mejorando los tiempos de respuesta.",
+      technologies: [
+        "BPMN",
+        "APIs REST",
+        "SQL",
+        "PostgreSQL",
+        "Oracle Database",
+        "QA",
+        "UAT",
+        "Jira",
+        "Agile"
+      ],
+      keyProjects: [
+        "Mejora de integraciones con sistemas core bancarios.",
+        "Soporte a despliegues productivos de alta criticidad.",
+        "Optimización de procesos de QA y validación funcional."
+      ]
+    },
+
+    {
+      company: "COLGATE - PALMOLIVE",
+      position: "Analista de Contenido Web – QA & SEO",
+      period: "Marzo 2018 – Junio 2022",
+      description: "• Coordiné actualizaciones web globales utilizando Adobe Experience Manager (AEM), validando requerimientos y asegurando el cumplimiento de estándares de contenido, accesibilidad y SEO.\n• Realicé auditorías de QA, accesibilidad y validación SEO, generando reportes técnicos y funcionales claros.\n• Documenté flujos de contenido y procesos operativos utilizando BPMN, apoyando la estandarización y consistencia entre equipos globales.",
+      technologies: [
+        "Adobe Experience Manager (AEM)",
+        "SEO",
+        "Google Analytics",
+        "Google Search Console",
+        "QA",
+        "Accesibilidad Web",
+        "BPMN",
+        "Jira",
+        "Confluence"
+      ],
+      keyProjects: [
+        "Coordinación de actualizaciones web globales para múltiples mercados.",
+        "Auditorías de QA y SEO para sitios corporativos.",
+        "Estandarización de procesos de contenido y calidad."
+      ]
+    },
+
+    {
+      company: "COMFENALCO VALLE DELAGENTE",
+      position: "Web Designer (Práctica Profesional)",
+      period: "Enero 2017 – Junio 2017",
+      description: "• Actualización de contenidos y mejora de la experiencia de usuario en la intranet corporativa.\n• Ajustes en HTML y CSS conforme a los lineamientos de marca.\n• Apoyo en ceremonias Scrum (dailys, planificación de sprint y revisiones).",
+      technologies: [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Scrum"
+      ],
+      keyProjects: [
+        "Mejora de usabilidad y estructura de la intranet corporativa."
+      ]
+    }
   ],
+
+  education: [
+    {
+      institution: "Universidad de San Buenaventura – Cali, Colombia",
+      degree: "Ingeniería Multimedia",
+      period: "2012–2018",
+      description: "Ingeniería Multimedia"
+    },
+    {
+      institution: "Universidad de San Buenaventura – Cali, Colombia",
+      degree: "Diplomado en Diseño y Construcción de Proyectos Multimedia",
+      period: "2017",
+      description: "Diplomado profesional"
+    }
+  ],
+
+  languages: [
+    { name: "Español", level: "Nativo", logos: [] },
+    { name: "Inglés", level: "Avanzado (C1 – MCER)", logos: [] }
+  ],
+
   certifications: [
     {
-      name: "EF SET English Certificado (C1) – EF Education First",
-      certificateUrl: "https://cert.efset.org/Exe5JG"
+      name: "Scrum Master Professional Certificate – CertiProf",
+      certificateUrl: ""
     },
     {
-      name: "Preparación General para el examen: Arquitecto de soluciones certificado por AWS - Asociado - AWS Training and Certification",
-      certificateUrl: "assets/certificacion-aws.pdf"
-    }
-    ,
-    {
-      name: "Arquitectura de software y diseño de sistemas modernos a gran escala - Udemy",
-      certificateUrl: "https://www.udemy.com/certificate/UC-572a3e50-a17d-4fca-9fd1-678e0f1f2bc1/"
+      name: "Scrum Foundation Professional Certificate – CertiProf",
+      certificateUrl: ""
     },
     {
-      name: "Modelado de procesos de negocio BPMN 2.0 para analistas de negocio - Udemy",
-      certificateUrl: "https://www.udemy.com/certificate/UC-a9a4f333-338f-45fa-983d-7a0e11937b4b/"
+      name: "BPMN 2.0 Business Process Modelling – Udemy",
+      certificateUrl: ""
     },
     {
-      name: "Desarrollo frontend con Angular y backend Spring Boot 3, RESTFul, JPA, Spring Security JWT, Redux - Udemy",
-      certificateUrl: "https://www.udemy.com/certificate/UC-44e88d6a-501d-4753-aab5-6a9bf61a1b4e/"
+      name: "Arquitectura de Software y Sistemas a Gran Escala – Udemy",
+      certificateUrl: ""
     },
     {
-      name: "Certificado Profesional Scrum Master – CertiProf",
-      certificateUrl: "https://www.credly.com/badges/52311806-1a13-4ac3-ad98-2bb9c0b8b7fd"
-    },
-    {
-      name: "Certificado Profesional de Scrum Foundation – CertiProf",
-      certificateUrl: "https://www.credly.com/badges/25bc1630-1712-435b-951d-826a67547259"
-    },
-    {
-      name: "Lógica Programación: Aprende a Programar en Cualquier Lenguaje – Udemy",
-      certificateUrl: "https://www.udemy.com/certificate/UC-4113573a-6a7d-4aef-a0e7-64c454afd342/"
+      name: "EF SET English Certificate – EF Education First (C1)",
+      certificateUrl: ""
     }
   ]
 };

@@ -64,8 +64,8 @@ export const DesktopView = (): JSX.Element => {
   
   // CV files based on language
   const cvFile = language === 'en' 
-    ? '/src/assets/cv/CV-2026-EN-LT-BA-BYRON-GONZALEZ.pdf'
-    : '/src/assets/cv/CV-2026-ES-LT-BA-BYRON-GONZALEZ.pdf';
+    ? '/src/assets/cv/CV-EN-TBA-BYRON-GONZALEZ-2026.pdf'
+    : '/src/assets/cv/CV-ES-TBA-BYRON-GONZALEZ-2026.pdf';
   
   // Texts based on language
   const texts = {
@@ -175,22 +175,32 @@ export const DesktopView = (): JSX.Element => {
 
           <div className="inline-flex flex-col items-center lg:items-start justify-center relative flex-[0_0_auto]">
             <FadeText>
-              <div className="flex flex-col items-center lg:items-start [font-family:'Poppins',Helvetica] font-medium text-xl lg:text-[40px] tracking-[0] leading-tight lg:leading-[44.9px]">
-                {data.personalInfo.title.split(' & ').map((line, index) => (
-                  <div key={index} className="flex items-center gap-2">
-                    <DecryptedText
-                      text={line}
-                      speed={120}
-                      maxIterations={20}
-                      animateOn="view"
-                      className="gradient-text"
-                      encryptedClassName="text-white/50"
-                      parentClassName=""
-                    />
-                    {index === 0 && <span className="text-white">&</span>}
-                  </div>
-                ))}
-              </div>
+              <h2 className="[font-family:'Poppins',Helvetica] font-medium text-xl lg:text-[40px] tracking-[0] leading-tight lg:leading-[44.9px] text-center lg:text-left">
+                <DecryptedText
+                  text={data.personalInfo.title.split('|')[0].trim()}
+                  speed={120}
+                  maxIterations={20}
+                  animateOn="view"
+                  className="gradient-text inline"
+                  parentClassName="inline"
+                />
+                <DecryptedText
+                  text="&"
+                  speed={1}
+                  maxIterations={1}
+                  animateOn="view"
+                  className="text-white inline mx-2"
+                  parentClassName="inline"
+                />
+                <DecryptedText
+                  text={data.personalInfo.title.split('|')[1].trim()}
+                  speed={120}
+                  maxIterations={20}
+                  animateOn="view"
+                  className="gradient-text inline"
+                  parentClassName="inline"
+                />
+              </h2>
             </FadeText>
           </div>
 
