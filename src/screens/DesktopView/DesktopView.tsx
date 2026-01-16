@@ -64,8 +64,8 @@ export const DesktopView = (): JSX.Element => {
   
   // CV files based on language
   const cvFile = language === 'en' 
-    ? 'src/assets/cv/CV-EN-TBA-BYRON-GONZALEZ-2026.pdf'
-    : 'src/assets/cv/CV-ES-TBA-BYRON-GONZALEZ-2026.pdf';
+    ? '/cv/CV-EN-TBA-BYRON-GONZALEZ-2026.pdf'
+    : '/cv/CV-ES-TBA-BYRON-GONZALEZ-2026.pdf';
   
   // Texts based on language
   const texts = {
