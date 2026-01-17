@@ -176,8 +176,24 @@ export const cvDataEn: CVData = {
 
   certifications: [
     {
-      name: "Scrum Foundation Professional Certificate",
-      certificateUrl: "#"
+      name: "Scrum Master Professional Certificate – CertiProf",
+      certificateUrl: ""
+    },
+    {
+      name: "Scrum Foundation Professional Certificate – CertiProf",
+      certificateUrl: ""
+    },
+    {
+      name: "BPMN 2.0 Business Process Modelling – Udemy",
+      certificateUrl: ""
+    },
+    {
+      name: "Software Architecture and Large-Scale Systems – Udemy",
+      certificateUrl: ""
+    },
+    {
+      name: "EF SET English Certificate – EF Education First (C1)",
+      certificateUrl: ""
     }
   ]
 };
