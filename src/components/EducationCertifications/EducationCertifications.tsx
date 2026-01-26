@@ -1,11 +1,11 @@
 import { GraduationCap, Award, ExternalLink, Calendar, MapPin } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 
-// Import certification provider logos
-import udemyLogo from '../../assets/certifications/udemy-logo.svg';
-import credlyLogo from '../../assets/certifications/certiprof-scrum-master-badge.png';
-import efLogo from '../../assets/certifications/ef-logo.svg';
-import awsLogo from '../../assets/certifications/aws-logo.svg';
+// Import certification provider logos from public folder
+const udemyLogo = '/certifications/udemy-logo.svg';
+const credlyLogo = '/certifications/certiprof-scrum-master-badge.png';
+const efLogo = '/certifications/ef-logo.svg';
+const awsLogo = '/certifications/aws-logo.svg';
 
 // Import AWS certificate PDF
 // AWS certificate is now in public folder
