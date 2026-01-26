@@ -177,23 +177,23 @@ export const cvDataEn: CVData = {
   certifications: [
     {
       name: "Scrum Master Professional Certificate – CertiProf",
-      certificateUrl: ""
+      certificateUrl: "https://www.credly.com/badges/52311806-1a13-4ac3-ad98-2bb9c0b8b7fd"
     },
     {
       name: "Scrum Foundation Professional Certificate – CertiProf",
-      certificateUrl: ""
+      certificateUrl: "https://www.credly.com/badges/25bc1630-1712-435b-951d-826a67547259"
     },
     {
       name: "BPMN 2.0 Business Process Modelling – Udemy",
-      certificateUrl: ""
+      certificateUrl: "https://www.udemy.com/certificate/UC-a9a4f333-338f-45fa-983d-7a0e11937b4b/"
     },
     {
       name: "Software Architecture and Large-Scale Systems – Udemy",
-      certificateUrl: ""
+      certificateUrl: "https://www.udemy.com/certificate/UC-572a3e50-a17d-4fca-9fd1-678e0f1f2bc1/"
     },
     {
       name: "EF SET English Certificate – EF Education First (C1)",
-      certificateUrl: ""
+      certificateUrl: "https://cert.efset.org/Exe5JG"
     }
   ]
 };

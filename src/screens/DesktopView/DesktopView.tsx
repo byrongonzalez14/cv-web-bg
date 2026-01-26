@@ -18,55 +18,55 @@ import { useLanguage } from "../../context/LanguageContext";
 
 export const DesktopView = (): JSX.Element => {
   const { language, data, isTransitioning } = useLanguage();
-  
+
   // Navigation items based on language
-  const navigationItems = language === 'en' 
+  const navigationItems = language === 'en'
     ? [
-        { label: "About Me", id: "about-me" },
-        { label: "Experience", id: "experience" },
-        { label: "Education & Certifications", id: "education-and-certifications" },
-        { label: "Skills", id: "skills" },
-      ]
+      { label: "About Me", id: "about-me" },
+      { label: "Experience", id: "experience" },
+      { label: "Education & Certifications", id: "education-and-certifications" },
+      { label: "Skills", id: "skills" },
+    ]
     : [
-        { label: "Sobre mí", id: "about-me" },
-        { label: "Experiencia", id: "experience" },
-        { label: "Educación y Certificaciones", id: "education-and-certifications" },
-        { label: "Habilidades", id: "skills" },
-      ];
-  
+      { label: "Sobre mí", id: "about-me" },
+      { label: "Experiencia", id: "experience" },
+      { label: "Educación y Certificaciones", id: "education-and-certifications" },
+      { label: "Habilidades", id: "skills" },
+    ];
+
   // Social icons with dynamic links from contact data
   const socialIcons = [
-    { 
+    {
       Icon: Mail,
-      alt: "Email", 
+      alt: "Email",
       href: `mailto:${data.personalInfo.contact.email}`,
       label: data.personalInfo.contact.email
     },
-    { 
+    {
       Icon: MessageCircle,
-      alt: "WhatsApp", 
+      alt: "WhatsApp",
       href: `https://wa.me/${data.personalInfo.contact.phone.replace(/\D/g, '')}`,
       label: data.personalInfo.contact.phone
     },
-    { 
+    {
       Icon: Linkedin,
-      alt: "LinkedIn", 
+      alt: "LinkedIn",
       href: data.personalInfo.contact.linkedin,
       label: "LinkedIn"
     },
-    { 
+    {
       Icon: Github,
-      alt: "GitHub", 
+      alt: "GitHub",
       href: data.personalInfo.contact.github,
       label: "GitHub"
     },
   ];
-  
+
   // CV files based on language
-  const cvFile = language === 'en' 
-    ? '/cv/CV-EN-TBA-BYRON-GONZALEZ-2026.pdf'
-    : '/cv/CV-ES-TBA-BYRON-GONZALEZ-2026.pdf';
-  
+  const cvFile = language === 'en'
+    ? `${import.meta.env.BASE_URL}cv/CV-EN-TBA-BYRON-GONZALEZ-2026.pdf`
+    : `${import.meta.env.BASE_URL}cv/CV-ES-TBA-BYRON-GONZALEZ-2026.pdf`;
+
   // Texts based on language
   const texts = {
     downloadCV: language === 'en' ? 'Download CV' : 'Descargar CV',
@@ -75,33 +75,33 @@ export const DesktopView = (): JSX.Element => {
     skills: language === 'en' ? 'Skills & Technologies ✦ ' : 'Habilidades y Tecnologías ✦ ',
     education: language === 'en' ? 'Education & Certifications ✦ ' : 'Educación y Certificaciones ✦ ',
   };
-  
+
   return (
     <div
       className="flex flex-col items-start relative bg-[#161616]"
       data-model-id="102:2257"
     >
-        <header className="flex flex-col w-full items-start lg:min-h-screen lg:justify-between lg:pb-8 relative overflow-hidden bg-[#161616]">
-          {/* Layered Hero Animation - Desktop only (background) */}
-          <div className="hidden lg:block">
-            <LayeredHero />
-          </div>
-          
-          {/* Navbar - Fixed at top */}
-          <nav className="flex items-start justify-between relative self-stretch w-full flex-[0_0_auto] z-50 pt-5 px-6 lg:px-[120px]">
-            <img
-              className="relative flex-[0_0_auto] h-[36px] lg:h-[47px]"
-              alt="Logo bg white svg"
-              src="/images/brand/logo.svg"
-            />
+      <header className="flex flex-col w-full items-start lg:min-h-screen lg:justify-between lg:pb-8 relative overflow-hidden bg-[#161616]">
+        {/* Layered Hero Animation - Desktop only (background) */}
+        <div className="hidden lg:block">
+          <LayeredHero />
+        </div>
 
-            <div className="flex items-center gap-2 lg:gap-4">
-              {/* Navbar - Hidden on mobile/tablet */}
-              <ul className="hidden lg:inline-flex items-center justify-center gap-[22px] px-5 py-3 relative flex-[0_0_auto] bg-[#ffffff4c] rounded-[80px] backdrop-blur-[4.5px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(4.5px)_brightness(100%)]">
-                {navigationItems.map((item) => (
-                  <li
-                    key={item.id}
-                    className="inline-flex items-center justify-center gap-2.5 relative flex-[0_0_auto]"
+        {/* Navbar - Fixed at top */}
+        <nav className="flex items-start justify-between relative self-stretch w-full flex-[0_0_auto] z-50 pt-5 px-6 lg:px-[120px]">
+          <img
+            className="relative flex-[0_0_auto] h-[36px] lg:h-[47px]"
+            alt="Logo bg white svg"
+            src={`${import.meta.env.BASE_URL}images/brand/logo.svg`}
+          />
+
+          <div className="flex items-center gap-2 lg:gap-4">
+            {/* Navbar - Hidden on mobile/tablet */}
+            <ul className="hidden lg:inline-flex items-center justify-center gap-[22px] px-5 py-3 relative flex-[0_0_auto] bg-[#ffffff4c] rounded-[80px] backdrop-blur-[4.5px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(4.5px)_brightness(100%)]">
+              {navigationItems.map((item) => (
+                <li
+                  key={item.id}
+                  className="inline-flex items-center justify-center gap-2.5 relative flex-[0_0_auto]"
                 >
                   <a
                     href={`#${item.id}`}
@@ -115,10 +115,10 @@ export const DesktopView = (): JSX.Element => {
                 </li>
               ))}
             </ul>
-            
+
             {/* Mobile Menu - Visible on mobile/tablet */}
             <MobileMenu navigationItems={navigationItems} isTransitioning={isTransitioning} />
-            
+
             {/* Language Toggle */}
             <LanguageToggle />
           </div>
@@ -130,25 +130,25 @@ export const DesktopView = (): JSX.Element => {
             {/* Foto principal */}
             <div className="absolute inset-0 z-30 flex items-center justify-center">
               <img
-                src="/images/hero/hero-portrait.png"
+                src={`${import.meta.env.BASE_URL}images/hero/hero-portrait.png`}
                 alt="Byron Gonzalez"
                 className="h-full w-auto object-contain"
               />
             </div>
-            
+
             {/* Pincelada horizontal */}
             <div className="absolute inset-0 z-10 flex items-center justify-center">
               <img
-                src="/images/hero/brush-stroke-1.png"
+                src={`${import.meta.env.BASE_URL}images/hero/brush-stroke-1.png`}
                 alt="Brush stroke 1"
                 className="h-[60%] w-auto object-contain"
               />
             </div>
-            
+
             {/* Pincelada diagonal */}
             <div className="absolute inset-0 z-20 flex items-center justify-center">
               <img
-                src="/images/hero/brush-stroke-2.png"
+                src={`${import.meta.env.BASE_URL}images/hero/brush-stroke-2.png`}
                 alt="Brush stroke 2"
                 className="h-[70%] w-auto object-contain"
               />
@@ -159,92 +159,92 @@ export const DesktopView = (): JSX.Element => {
         {/* Hero Content - Card debajo en mobile, lado izquierdo en desktop */}
         <div className="w-full lg:flex-1 lg:flex lg:items-center lg:justify-start relative z-10 px-6 lg:px-[120px] py-8 lg:py-0">
           <section className="flex flex-col w-full lg:w-[669px] items-center lg:items-start justify-center gap-4 lg:gap-[22px] pt-8 lg:pt-[45px] pb-6 lg:pb-[35px] px-6 lg:px-20 relative z-10 bg-[#2323234c] rounded-[40px_0px_40px_0px] lg:rounded-[80px_0px_80px_0px] backdrop-blur-[5px] backdrop-brightness-[100%] [-webkit-backdrop-filter:blur(5px)_brightness(100%)]">
-          <div className="flex flex-col items-center lg:items-start gap-3 lg:gap-[19px] relative self-stretch w-full flex-[0_0_auto]">
-            <div className="inline-flex items-center justify-center relative flex-[0_0_auto]">
-              <h1 className="relative flex items-center justify-center w-fit mt-[-1.00px] [font-family:'Slackey',Helvetica] font-normal text-white text-5xl lg:text-[79.9px] tracking-[0] leading-tight lg:leading-[44.9px] whitespace-nowrap text-center lg:text-left">
-                {data.personalInfo.name.split(' ')[0].toUpperCase()}
-              </h1>
+            <div className="flex flex-col items-center lg:items-start gap-3 lg:gap-[19px] relative self-stretch w-full flex-[0_0_auto]">
+              <div className="inline-flex items-center justify-center relative flex-[0_0_auto]">
+                <h1 className="relative flex items-center justify-center w-fit mt-[-1.00px] [font-family:'Slackey',Helvetica] font-normal text-white text-5xl lg:text-[79.9px] tracking-[0] leading-tight lg:leading-[44.9px] whitespace-nowrap text-center lg:text-left">
+                  {data.personalInfo.name.split(' ')[0].toUpperCase()}
+                </h1>
+              </div>
+
+              <div className="inline-flex items-center justify-center relative flex-[0_0_auto]">
+                <h1 className="relative flex items-center justify-center w-fit mt-[-1.00px] [font-family:'Slackey',Helvetica] font-normal text-white text-5xl lg:text-[79.9px] tracking-[0] leading-tight lg:leading-[44.9px] whitespace-nowrap text-center lg:text-left">
+                  {data.personalInfo.name.split(' ')[1].toUpperCase()}
+                </h1>
+              </div>
             </div>
 
-            <div className="inline-flex items-center justify-center relative flex-[0_0_auto]">
-              <h1 className="relative flex items-center justify-center w-fit mt-[-1.00px] [font-family:'Slackey',Helvetica] font-normal text-white text-5xl lg:text-[79.9px] tracking-[0] leading-tight lg:leading-[44.9px] whitespace-nowrap text-center lg:text-left">
-                {data.personalInfo.name.split(' ')[1].toUpperCase()}
-              </h1>
-            </div>
-          </div>
-
-          <div className="inline-flex flex-col items-center lg:items-start justify-center relative flex-[0_0_auto]">
-            <FadeText>
-              <h2 className="[font-family:'Poppins',Helvetica] font-medium text-xl lg:text-[40px] tracking-[0] leading-tight lg:leading-[44.9px] text-center lg:text-left">
-                <DecryptedText
-                  text={data.personalInfo.title.split('|')[0].trim()}
-                  speed={120}
-                  maxIterations={20}
-                  animateOn="view"
-                  className="gradient-text inline"
-                  parentClassName="inline"
-                />
-                <DecryptedText
-                  text="&"
-                  speed={1}
-                  maxIterations={1}
-                  animateOn="view"
-                  className="text-white inline mx-2"
-                  parentClassName="inline"
-                />
-                <DecryptedText
-                  text={data.personalInfo.title.split('|')[1].trim()}
-                  speed={120}
-                  maxIterations={20}
-                  animateOn="view"
-                  className="gradient-text inline"
-                  parentClassName="inline"
-                />
-              </h2>
-            </FadeText>
-          </div>
-
-          <div className="inline-flex flex-col items-center justify-center gap-3 lg:gap-4 relative flex-[0_0_auto]">
-            {/* Social Icons - ARRIBA del botón */}
-            <div className="inline-flex items-center justify-center gap-4 lg:gap-5 relative flex-[0_0_auto]">
-              {socialIcons.map((icon, index) => {
-                const IconComponent = icon.Icon;
-                return (
-                  <a
-                    key={index}
-                    href={icon.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white/70 hover:text-[#d9ff6c] hover:scale-125 transition-all duration-300"
-                    aria-label={icon.alt}
-                    title={icon.label}
-                  >
-                    <IconComponent size={24} className="lg:w-7 lg:h-7" strokeWidth={1.5} />
-                  </a>
-                );
-              })}
+            <div className="inline-flex flex-col items-center lg:items-start justify-center relative flex-[0_0_auto]">
+              <FadeText>
+                <h2 className="[font-family:'Poppins',Helvetica] font-medium text-xl lg:text-[40px] tracking-[0] leading-tight lg:leading-[44.9px] text-center lg:text-left">
+                  <DecryptedText
+                    text={data.personalInfo.title.split('|')[0].trim()}
+                    speed={120}
+                    maxIterations={20}
+                    animateOn="view"
+                    className="gradient-text inline"
+                    parentClassName="inline"
+                  />
+                  <DecryptedText
+                    text="|"
+                    speed={1}
+                    maxIterations={1}
+                    animateOn="view"
+                    className="text-white inline mx-2"
+                    parentClassName="inline"
+                  />
+                  <DecryptedText
+                    text={data.personalInfo.title.split('|')[1].trim()}
+                    speed={120}
+                    maxIterations={20}
+                    animateOn="view"
+                    className="gradient-text inline"
+                    parentClassName="inline"
+                  />
+                </h2>
+              </FadeText>
             </div>
 
-            {/* Download CV Button - DEBAJO de los iconos */}
-            <a 
-              href={cvFile}
-              download
-              className="all-[unset] box-border inline-flex items-center gap-2 lg:gap-2.5 px-6 lg:px-[30px] py-3 lg:py-3.5 relative flex-[0_0_auto] bg-[#d9ff6c] rounded-[82px] cursor-pointer hover:bg-[#c5e861] transition-colors duration-300"
-            >
-              <img
-                className="relative w-[13px] lg:w-[15px] h-[16.5px] lg:h-[19.5px]"
-                alt="File icon"
-                src="/icons/file.svg"
-              />
+            <div className="inline-flex flex-col items-center justify-center gap-3 lg:gap-4 relative flex-[0_0_auto]">
+              {/* Social Icons - ARRIBA del botón */}
+              <div className="inline-flex items-center justify-center gap-4 lg:gap-5 relative flex-[0_0_auto]">
+                {socialIcons.map((icon, index) => {
+                  const IconComponent = icon.Icon;
+                  return (
+                    <a
+                      key={index}
+                      href={icon.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white/70 hover:text-[#d9ff6c] hover:scale-125 transition-all duration-300"
+                      aria-label={icon.alt}
+                      title={icon.label}
+                    >
+                      <IconComponent size={24} className="lg:w-7 lg:h-7" strokeWidth={1.5} />
+                    </a>
+                  );
+                })}
+              </div>
 
-              <span className="relative w-fit mt-[-1.00px] [font-family:'Lexend',Helvetica] font-normal text-grey-11 text-base lg:text-lg tracking-[0] leading-[27px] whitespace-nowrap transition-opacity duration-200" style={{ opacity: isTransitioning ? 0.5 : 1 }}>
-                {texts.downloadCV}
-              </span>
-            </a>
-          </div>
-        </section>
+              {/* Download CV Button - DEBAJO de los iconos */}
+              <a
+                href={cvFile}
+                download
+                className="all-[unset] box-border inline-flex items-center gap-2 lg:gap-2.5 px-6 lg:px-[30px] py-3 lg:py-3.5 relative flex-[0_0_auto] bg-[#d9ff6c] rounded-[82px] cursor-pointer hover:bg-[#c5e861] transition-colors duration-300"
+              >
+                <img
+                  className="relative w-[13px] lg:w-[15px] h-[16.5px] lg:h-[19.5px]"
+                  alt="File icon"
+                  src={`${import.meta.env.BASE_URL}icons/file.svg`}
+                />
+
+                <span className="relative w-fit mt-[-1.00px] [font-family:'Lexend',Helvetica] font-normal text-grey-11 text-base lg:text-lg tracking-[0] leading-[27px] whitespace-nowrap transition-opacity duration-200" style={{ opacity: isTransitioning ? 0.5 : 1 }}>
+                  {texts.downloadCV}
+                </span>
+              </a>
+            </div>
+          </section>
         </div>
-        
+
         {/* Indicador de scroll */}
         <ScrollIndicator />
       </header>
@@ -252,7 +252,7 @@ export const DesktopView = (): JSX.Element => {
       {/* Separador animado - About Me */}
       <div id="about-me" className="w-full bg-[#d9ff6c] py-4 flex items-center">
         <div className="transition-opacity duration-200 w-full" style={{ opacity: isTransitioning ? 0.5 : 1 }}>
-          <CurvedTextLoop 
+          <CurvedTextLoop
             marqueeText={texts.aboutMe}
             speed={1}
             curveAmount={0}
@@ -268,7 +268,7 @@ export const DesktopView = (): JSX.Element => {
       {/* Separador animado - Work Experience */}
       <div id="experience" className="w-full bg-[#d9ff6c] py-4 flex items-center">
         <div className="transition-opacity duration-200 w-full" style={{ opacity: isTransitioning ? 0.5 : 1 }}>
-          <CurvedTextLoop 
+          <CurvedTextLoop
             marqueeText={texts.workExperience}
             speed={2}
             curveAmount={0}
@@ -284,7 +284,7 @@ export const DesktopView = (): JSX.Element => {
       {/* Separador animado - Education & Certifications */}
       <div id="education-and-certifications" className="w-full bg-[#d9ff6c] py-4 flex items-center">
         <div className="transition-opacity duration-200 w-full" style={{ opacity: isTransitioning ? 0.5 : 1 }}>
-          <CurvedTextLoop 
+          <CurvedTextLoop
             marqueeText={texts.education}
             speed={2}
             curveAmount={0}
@@ -300,7 +300,7 @@ export const DesktopView = (): JSX.Element => {
       {/* Separador - Skills */}
       <div id="skills" className="w-full bg-[#d9ff6c] py-4 flex items-center">
         <div className="transition-opacity duration-200 w-full" style={{ opacity: isTransitioning ? 0.5 : 1 }}>
-          <CurvedTextLoop 
+          <CurvedTextLoop
             marqueeText={texts.skills}
             speed={2}
             curveAmount={0}
@@ -315,9 +315,9 @@ export const DesktopView = (): JSX.Element => {
 
       {/* Formulario de Contacto CTA */}
       <ContactCTA />
-          {/* Footer */}
-          <Footer />
-   {/* fin de la página */}
+      {/* Footer */}
+      <Footer />
+      {/* fin de la página */}
 
     </div>
   );

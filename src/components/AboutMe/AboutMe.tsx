@@ -6,7 +6,7 @@ export const AboutMe = () => {
 
   const titles = {
     main: language === 'en' ? 'About Me' : 'Sobre Mí',
-    subtitle: language === 'en' 
+    subtitle: language === 'en'
       ? 'Bridging the gap between business and technology'
       : 'Conectando el negocio con la tecnología',
   };
@@ -14,7 +14,7 @@ export const AboutMe = () => {
   return (
     <section className="w-full bg-[#0d0d0d] px-8 md:px-[120px] py-20">
       <div className="w-full max-w-7xl mx-auto">
-        
+
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-4 py-2 bg-[#d9ff6c]/10 rounded-full border border-[#d9ff6c]/20 mb-6">
@@ -23,8 +23,8 @@ export const AboutMe = () => {
               {language === 'en' ? 'Get To Know Me' : 'Conóceme'}
             </span>
           </div>
-         
-         
+
+
           {/* titulo principal
           
           
@@ -39,14 +39,14 @@ export const AboutMe = () => {
 
         {/* Contenido principal: Foto + Summary */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          
+
           {/* Lado izquierdo - Foto con máscara de recorte */}
           <div className="relative">
             <div className="h-[480px] bg-[#1a1a1a] rounded-3xl border border-white/10 hover:border-[#d9ff6c]/30 transition-all duration-300 overflow-hidden group">
               <img
                 className="w-full h-full object-cover object-center scale-125"
                 alt="Byron Gonzalez"
-                src="/images/about/profile.png"
+                src={`${import.meta.env.BASE_URL}images/about/profile.png`}
               />
             </div>
           </div>

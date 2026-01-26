@@ -4,17 +4,18 @@ import { useLanguage } from '../../context/LanguageContext';
 // Función para obtener el logo de la empresa
 const getCompanyLogo = (companyName: string): { logos: string[], hasLogo: boolean, isColgate: boolean } => {
   const name = companyName.toUpperCase();
-  
+  const baseUrl = import.meta.env.BASE_URL;
+
   if (name.includes('Q-VISION') && name.includes('BANCO UNION')) {
-    return { logos: ['/images/experiences/logo-qvision.png', '/images/experiences/banco-union-logo.svg'], hasLogo: true, isColgate: false };
+    return { logos: [`${baseUrl}images/experiences/logo-qvision.png`, `${baseUrl}images/experiences/banco-union-logo.svg`], hasLogo: true, isColgate: false };
   }
   if (name.includes('COLGATE')) {
-    return { logos: ['/images/experiences/colgate-palmolive-logo.png'], hasLogo: true, isColgate: true };
+    return { logos: [`${baseUrl}images/experiences/colgate-palmolive-logo.png`], hasLogo: true, isColgate: true };
   }
   if (name.includes('COMFENALCO')) {
-    return { logos: ['/images/experiences/comfenalco-logo.svg'], hasLogo: true, isColgate: false };
+    return { logos: [`${baseUrl}images/experiences/comfenalco-logo.svg`], hasLogo: true, isColgate: false };
   }
-  
+
   return { logos: [], hasLogo: false, isColgate: false };
 };
 
@@ -23,7 +24,7 @@ export const ExperienceTimeline = () => {
 
   const titles = {
     main: language === 'en' ? 'Professional Journey' : 'Trayectoria Profesional',
-    subtitle: language === 'en' 
+    subtitle: language === 'en'
       ? 'Building innovative solutions across different industries'
       : 'Construyendo soluciones innovadoras en diferentes industrias',
     responsibilities: language === 'en' ? 'Key Responsibilities' : 'Responsabilidades Clave',
@@ -34,7 +35,7 @@ export const ExperienceTimeline = () => {
   return (
     <section className="w-full bg-[#161616] px-8 md:px-[120px] py-20">
       <div className="w-full max-w-7xl mx-auto">
-        
+
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-4 py-2 bg-[#d9ff6c]/10 rounded-full border border-[#d9ff6c]/20 mb-6">
@@ -43,7 +44,7 @@ export const ExperienceTimeline = () => {
               {language === 'en' ? 'Career Path' : 'Camino Profesional'}
             </span>
           </div>
-          
+
 
           {/* titulo principal
           <h2 className="text-5xl md:text-6xl font-bold text-white [font-family:'Slackey',Helvetica] mb-4">
@@ -64,9 +65,9 @@ export const ExperienceTimeline = () => {
           <div className="space-y-12">
             {data.experience.map((exp, index) => {
               const isEven = index % 2 === 0;
-              
+
               return (
-                <div 
+                <div
                   key={index}
                   className={`relative flex flex-col lg:flex-row gap-8 ${isEven ? 'lg:flex-row-reverse' : ''}`}
                 >
@@ -80,9 +81,9 @@ export const ExperienceTimeline = () => {
                       return hasLogo ? (
                         <div className="flex items-center gap-4 mb-2">
                           {logos.map((logo, idx) => (
-                            <img 
+                            <img
                               key={idx}
-                              src={logo} 
+                              src={logo}
                               alt={exp.company}
                               className={isColgate ? "max-w-[200px] h-16 object-contain" : "max-w-[140px] h-12 object-contain"}
                             />
@@ -108,11 +109,11 @@ export const ExperienceTimeline = () => {
                         return hasLogo ? (
                           <div className="flex flex-col items-center gap-6 mb-4">
                             {logos.map((logo, idx) => (
-                              <img 
+                              <img
                                 key={idx}
-                                src={logo} 
+                                src={logo}
                                 alt={exp.company}
-                                className={isColgate 
+                                className={isColgate
                                   ? "max-w-[240px] lg:max-w-[300px] h-20 lg:h-24 object-contain transition-transform hover:scale-110"
                                   : "max-w-[180px] lg:max-w-[220px] h-16 lg:h-20 object-contain transition-transform hover:scale-110"
                                 }
@@ -135,7 +136,7 @@ export const ExperienceTimeline = () => {
                   {/* Card de experiencia */}
                   <div className={`lg:w-1/2 pl-8 lg:pl-0 ${isEven ? 'lg:pr-12' : 'lg:pl-12'}`}>
                     <div className="bg-[#1a1a1a] rounded-3xl p-8 border border-white/10 hover:border-[#d9ff6c]/30 transition-all duration-300 hover:transform hover:scale-[1.02] group">
-                      
+
                       {/* Header de la card - Solo posición */}
                       <div className="flex items-center gap-3 mb-6">
                         <div className="w-12 h-12 rounded-xl bg-[#d9ff6c]/10 flex items-center justify-center group-hover:bg-[#d9ff6c]/20 transition-colors">

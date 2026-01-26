@@ -2,14 +2,15 @@ import { GraduationCap, Award, ExternalLink, Calendar, MapPin } from 'lucide-rea
 import { useLanguage } from '../../context/LanguageContext';
 
 // Import certification provider logos from public folder
-const udemyLogo = '/certifications/udemy-logo.svg';
-const credlyLogo = '/certifications/certiprof-scrum-master-badge.png';
-const efLogo = '/certifications/ef-logo.svg';
-const awsLogo = '/certifications/aws-logo.svg';
+// Using import.meta.env.BASE_URL ensures correct path resolution in both dev and production
+const udemyLogo = `${import.meta.env.BASE_URL}certifications/udemy-logo.svg`;
+const credlyLogo = `${import.meta.env.BASE_URL}certifications/certiprof-scrum-master-badge.png`;
+const efLogo = `${import.meta.env.BASE_URL}certifications/ef-logo.svg`;
+const awsLogo = `${import.meta.env.BASE_URL}certifications/aws-logo.svg`;
 
 // Import AWS certificate PDF
 // AWS certificate is now in public folder
-const awsCertificatePdf = '/documents/certifications/aws-certificate.pdf';
+const awsCertificatePdf = `${import.meta.env.BASE_URL}documents/certifications/aws-certificate.pdf`;
 
 // Función para obtener el logo del proveedor
 const getProviderLogo = (url: string): string | null => {
@@ -31,7 +32,7 @@ export const EducationCertifications = () => {
 
   const titles = {
     main: language === 'en' ? 'Education & Certifications' : 'Educación y Certificaciones',
-    subtitle: language === 'en' 
+    subtitle: language === 'en'
       ? 'Continuous learning and professional development'
       : 'Aprendizaje continuo y desarrollo profesional',
     education: language === 'en' ? 'Academic Background' : 'Formación Académica',
@@ -42,7 +43,7 @@ export const EducationCertifications = () => {
   return (
     <section className="w-full bg-[#0d0d0d] px-8 md:px-[120px] py-20">
       <div className="w-full max-w-7xl mx-auto">
-        
+
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-3 px-4 py-2 bg-[#d9ff6c]/10 rounded-full border border-[#d9ff6c]/20 mb-6">
@@ -51,7 +52,7 @@ export const EducationCertifications = () => {
               {language === 'en' ? 'Learning Journey' : 'Camino de Aprendizaje'}
             </span>
           </div>
-          
+
           {/*
           
           <h2 className="text-5xl md:text-6xl font-bold text-white [font-family:'Slackey',Helvetica] mb-4">
@@ -78,13 +79,13 @@ export const EducationCertifications = () => {
           {/* Cards de Educación - Destacadas */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {data.education.map((edu, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-gradient-to-br from-[#1a1a1a] to-[#161616] rounded-3xl p-8 border-2 border-[#d9ff6c]/20 hover:border-[#d9ff6c]/50 transition-all duration-300 hover:transform hover:scale-[1.02] group relative overflow-hidden"
               >
                 {/* Efecto de brillo en hover */}
                 <div className="absolute inset-0 bg-gradient-to-br from-[#d9ff6c]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                
+
                 <div className="relative z-10">
                   {/* Badge de universidad */}
                   <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#d9ff6c]/10 rounded-full border border-[#d9ff6c]/30 mb-4">
@@ -145,8 +146,8 @@ export const EducationCertifications = () => {
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
                     {getProviderLogo(cert.certificateUrl) ? (
-                      <img 
-                        src={getProviderLogo(cert.certificateUrl)!} 
+                      <img
+                        src={getProviderLogo(cert.certificateUrl)!}
                         alt="Provider logo"
                         className="w-full h-full object-contain"
                       />

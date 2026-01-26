@@ -5,22 +5,22 @@ export const Footer = () => {
   const { language, data } = useLanguage();
 
   const socialLinks = [
-    { 
+    {
       Icon: Mail,
       href: `mailto:${data.personalInfo.contact.email}`,
       label: 'Email'
     },
-    { 
+    {
       Icon: MessageCircle,
       href: `https://wa.me/${data.personalInfo.contact.phone.replace(/\D/g, '')}`,
       label: 'WhatsApp'
     },
-    { 
+    {
       Icon: Linkedin,
       href: data.personalInfo.contact.linkedin,
       label: 'LinkedIn'
     },
-    { 
+    {
       Icon: Github,
       href: data.personalInfo.contact.github,
       label: 'GitHub'
@@ -31,19 +31,19 @@ export const Footer = () => {
     <footer className="w-full bg-[#161616] border-t border-white/10">
       <div className="px-8 md:px-[120px] py-12">
         <div className="max-w-7xl mx-auto">
-          
+
           {/* Grid principal - 3 columnas equilibradas */}
           <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_auto] gap-x-20 gap-y-12 mb-8 items-start">
-            
+
             {/* Columna 1 - Branding */}
             <div className="space-y-4">
               <img
                 className="h-12"
                 alt="Logo"
-                src="/images/brand/logo.svg"
+                src={`${import.meta.env.BASE_URL}images/brand/logo.svg`}
               />
               <p className="text-white/60 text-sm leading-relaxed [font-family:'Poppins',Helvetica] max-w-sm">
-                {language === 'en' 
+                {language === 'en'
                   ? 'Business Analyst & Technical Lead specializing in cloud solutions and automation.'
                   : 'Business Analyst & Technical Lead especializado en soluciones cloud y automatización.'}
               </p>
@@ -94,7 +94,7 @@ export const Footer = () => {
                   );
                 })}
               </div>
-              
+
               {/* Ubicación */}
               <div className="pt-4">
                 <p className="text-white/40 text-sm [font-family:'Poppins',Helvetica] whitespace-nowrap">
@@ -107,10 +107,10 @@ export const Footer = () => {
           {/* Separador */}
           <div className="border-t border-white/10 pt-8">
             <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-              
+
               {/* Copyright */}
               <p className="text-white/40 text-sm [font-family:'Poppins',Helvetica] flex items-center gap-2">
-                © {new Date().getFullYear()} {data.personalInfo.name}. 
+                © {new Date().getFullYear()} {data.personalInfo.name}.
                 <span className="flex items-center gap-1">
                   {language === 'en' ? 'Made with' : 'Hecho con'}
                   <Heart className="w-4 h-4 text-[#d9ff6c] fill-[#d9ff6c]" />
