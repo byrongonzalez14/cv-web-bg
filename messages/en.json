@@ -1,0 +1,231 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "experience": "Experience",
+    "contact": "Contact",
+    "cta": "Let's talk"
+  },
+  "meta": {
+    "siteName": "Byron González — AI Solutions Consultant",
+    "home": {
+      "title": "Byron González — AI Solutions & Automation Consultant",
+      "description": "I design, document, and validate AI automation solutions — voice and SMS agents, workflows, and APIs — that reduce manual work. 5+ years across banking, enterprise, and automation. Cali, Colombia · Remote."
+    },
+    "about": {
+      "title": "About — Byron González",
+      "description": "AI solutions consultant and Technical Business Analyst. The bridge between what your business needs and what your technical team builds."
+    },
+    "services": {
+      "title": "Services — AI Consulting, Business Analysis, Integrations & Web Development",
+      "description": "AI and automation consulting, business analysis and BPMN/UML documentation, systems and API integration, and end-to-end web development."
+    },
+    "experience": {
+      "title": "Experience & CV — Byron González",
+      "description": "5+ years of experience: LATO AI, Banco Unión, Colgate-Palmolive. Download my CV in English or Spanish."
+    },
+    "contact": {
+      "title": "Contact — Byron González",
+      "description": "Tell me about your project. Book a discovery call or reach out via email, LinkedIn, or WhatsApp."
+    },
+    "privacy": {
+      "title": "Privacy Policy — Byron González",
+      "description": "Privacy and personal data policy for byrongonzalez.com.co."
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "// ai solutions consultant",
+      "titleLine1": "AI automation",
+      "titleLine2": "that actually ships",
+      "subtitle": "I design, document, and validate automation solutions — AI voice and SMS agents, workflows, and APIs — that cut the manual work out of your operation.",
+      "ctaPrimary": "View services",
+      "ctaSecondary": "Let's talk",
+      "scroll": "scroll"
+    },
+    "trust": {
+      "label": "I've worked with teams at"
+    },
+    "services": {
+      "eyebrow": "// services",
+      "title": "How I can help",
+      "viewAll": "View all services"
+    },
+    "results": {
+      "eyebrow": "// results",
+      "title": "Work that speaks in numbers"
+    },
+    "about": {
+      "eyebrow": "// about",
+      "title": "The bridge between business and technology",
+      "text": "Over 5 years translating business needs into requirements technical teams can build without ambiguity — across banking, enterprise, and AI automation.",
+      "cta": "Get to know me"
+    },
+    "ctaBand": {
+      "title": "Got a process eating your team's hours?",
+      "text": "Tell me how it runs today and I'll propose how to automate it.",
+      "cta": "Book a call"
+    }
+  },
+  "about": {
+    "eyebrow": "// about",
+    "title": "Byron González",
+    "intro1": "I started on the content and QA side at Colgate-Palmolive, managing over 60 global sites. That's where I learned what almost nobody teaches you: projects don't fail for lack of technology — they fail because nobody properly translated what the business needed.",
+    "intro2": "I've been that translator ever since: as a Technical Lead in banking defining a payment gateway migration, as a freelance analyst building end-to-end cloud solutions, and today as an AI consultant designing voice and SMS agents that serve real customers for a client portfolio in the UK and US.",
+    "intro3": "My job is simple to describe and hard to do well: understand your operation, document it precisely, and design the automation solution that can actually be built — then stay until it's validated and working.",
+    "how": {
+      "eyebrow": "// how i work",
+      "title": "Working principles",
+      "principles": [
+        {
+          "title": "Discovery first",
+          "text": "I don't propose solutions without understanding the real process. The first conversation is for diagnosing, not selling."
+        },
+        {
+          "title": "Everything documented",
+          "text": "BPMN, UML, technical scope. If it isn't written down precisely, it can't be built or validated."
+        },
+        {
+          "title": "Measurable outcomes",
+          "text": "Every solution defines from the design stage which metric it improves: time, errors, cost, or conversion."
+        },
+        {
+          "title": "QA to the finish line",
+          "text": "I don't deliver paper designs: I validate flows, iterate prompts, and stay through approval."
+        }
+      ]
+    },
+    "journey": {
+      "eyebrow": "// journey",
+      "title": "The road here",
+      "cta": "View full experience"
+    },
+    "info": {
+      "location": "Location",
+      "languages": "Languages",
+      "availability": "Availability"
+    },
+    "ctaBand": {
+      "title": "Shall we work together?",
+      "text": "Tell me about your project and I'll reply within 24 hours.",
+      "cta": "Get in touch"
+    }
+  },
+  "services": {
+    "eyebrow": "// services",
+    "title": "Services",
+    "subtitle": "Four ways to make your operation depend less on manual tasks and more on systems that work.",
+    "problemLabel": "The problem",
+    "includesLabel": "What's included",
+    "toolsLabel": "Tools",
+    "engagementLabel": "How we work",
+    "examplesLabel": "Live projects",
+    "cta": "Let's discuss your case",
+    "cases": {
+      "eyebrow": "// case studies",
+      "title": "Case studies",
+      "subtitle": "Three examples of what my work looks like when it reaches production.",
+      "challengeLabel": "The challenge",
+      "solutionLabel": "What I did",
+      "outcomeLabel": "The result"
+    },
+    "process": {
+      "eyebrow": "// process",
+      "title": "From idea to production"
+    },
+    "faq": {
+      "eyebrow": "// faq",
+      "title": "Frequently asked questions"
+    }
+  },
+  "experience": {
+    "eyebrow": "// experience",
+    "title": "Experience",
+    "subtitle": "5+ years across banking, enterprise, and AI automation.",
+    "downloadEs": "CV en Español",
+    "downloadEn": "CV in English",
+    "skills": {
+      "eyebrow": "// skills",
+      "title": "Technical skills"
+    },
+    "toolsTitle": "Everyday tools",
+    "education": {
+      "eyebrow": "// education",
+      "title": "Education & certifications",
+      "educationTitle": "Education",
+      "certificationsTitle": "Certifications",
+      "viewCertificate": "View certificate"
+    },
+    "languagesTitle": "Languages",
+    "ctaBand": {
+      "title": "Looking for this profile for your team or project?",
+      "text": "Available for consulting, projects, and remote roles.",
+      "cta": "Get in touch"
+    }
+  },
+  "contact": {
+    "eyebrow": "// contact",
+    "title": "Let's talk",
+    "subtitle": "Tell me about your project or process and I'll reply within 24 hours.",
+    "direct": {
+      "title": "Direct channels",
+      "email": "Send me an email",
+      "whatsapp": "Chat on WhatsApp",
+      "whatsappMessage": "Hi Byron, I saw your website and would like to talk about a project.",
+      "linkedin": "Connect on LinkedIn"
+    },
+    "form": {
+      "title": "Or leave me a message",
+      "name": "Name",
+      "namePlaceholder": "Your name",
+      "email": "Email",
+      "emailPlaceholder": "you@email.com",
+      "company": "Company (optional)",
+      "companyPlaceholder": "Your company",
+      "service": "What do you need?",
+      "servicePlaceholder": "Select an option",
+      "serviceOptions": {
+        "ai": "AI & automation",
+        "analysis": "Business analysis",
+        "integration": "Systems integration",
+        "web": "Web development",
+        "other": "Other / Not sure yet"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Tell me which process you want to improve or what project you have in mind…",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Message sent! I'll reply within 24 hours.",
+      "error": "The message could not be sent. Try again or email me directly.",
+      "validation": {
+        "name": "Enter your name",
+        "email": "Enter a valid email",
+        "message": "Tell me a bit more (minimum 10 characters)"
+      }
+    },
+    "availability": "Cali, Colombia · Remote worldwide · ES / EN"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "updated": "Last updated"
+  },
+  "footer": {
+    "tagline": "AI Solutions Consultant · Technical Business Analyst",
+    "navTitle": "Navigation",
+    "contactTitle": "Contact",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy"
+  },
+  "consent": {
+    "message": "I use analytics cookies to understand how the site is used and improve it.",
+    "accept": "Accept",
+    "reject": "Reject",
+    "privacyLink": "Learn more"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The page you're looking for doesn't exist or has moved.",
+    "cta": "Back home"
+  }
+}

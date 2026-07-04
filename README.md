@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# byrongonzalez.com.co — v2
 
-## Getting Started
+Sitio profesional de Byron González (AI Solutions Consultant), reconstruido como sitio multi-página con Next.js.
 
-First, run the development server:
+🌐 **Producción:** [byrongonzalez.com.co](https://byrongonzalez.com.co)
+
+## Stack
+
+- **Next.js 16** (App Router, Turbopack) + **React 19** + **TypeScript**
+- **Tailwind CSS 4** (tokens en `src/app/globals.css` vía `@theme`)
+- **next-intl** — i18n con rutas localizadas: español en raíz (`/servicios`), inglés con prefijo (`/en/services`)
+- **motion** (framer-motion v12) + **Lenis** — animaciones y smooth scroll
+- **Resend** — formulario de contacto vía Server Action
+- **GTM + Consent Mode v2 + Vercel Analytics/Speed Insights** — analítica
+
+## Desarrollo
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build    # build de producción (todo SSG)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Variables de entorno
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Copia `.env.example` a `.env.local` y completa:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Variable | Para qué | Dónde se crea |
+|---|---|---|
+| `NEXT_PUBLIC_GTM_ID` | Google Tag Manager (GA4 + Clarity van dentro del contenedor) | tagmanager.google.com |
+| `RESEND_API_KEY` | Envío del formulario de contacto | resend.com |
+| `CONTACT_FROM` | Remitente del email (verificar dominio en Resend) | — |
+| `CONTACT_TO` | Correo donde llegan los mensajes | — |
 
-## Learn More
+Sin estas variables el sitio funciona igual: sin GTM no se carga tracking de Google, y el formulario muestra un error amable.
 
-To learn more about Next.js, take a look at the following resources:
+## Estructura
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `src/app/[locale]/` — páginas: Home, quien-soy, servicios, experiencia, contacto, privacidad
+- `src/i18n/routing.ts` — fuente única de verdad de rutas/slugs por idioma (la usan proxy, sitemap y hreflang)
+- `src/content/` — datos del CV y servicios por idioma (edita aquí el contenido)
+- `messages/{es,en}.json` — textos de UI
+- `src/lib/actions/contact.ts` — server action del formulario (zod + honeypot + Resend)
+- `src/components/analytics/` — GTM, Consent Mode v2 regional y banner de consentimiento
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Eventos de analítica (dataLayer)
 
-## Deploy on Vercel
+`generate_lead` (formulario enviado) · `file_download` (descarga de CV) · `click_whatsapp` · `click_linkedin` · `click_email`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Configúralos como key events en GA4 vía triggers de GTM.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Checklist de lanzamiento
+
+1. Crear cuentas: GTM, GA4, Microsoft Clarity, Resend → poner IDs en Vercel (Environment Variables).
+2. En GTM: tag de GA4 + tag de Clarity + triggers para los eventos custom.
+3. Deploy en Vercel, activar Analytics y Speed Insights en el dashboard.
+4. Apuntar el dominio `byrongonzalez.com.co` al proyecto nuevo.
+5. Google Search Console: verificar dominio (DNS TXT) y enviar `sitemap.xml`.
+6. Validar con Rich Results Test (Person, FAQPage, ProfessionalService).
