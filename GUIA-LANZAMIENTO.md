@@ -193,3 +193,28 @@ Proyecto → **Settings → Environment Variables** → **Add** (marca Productio
 | Cómo navegan (grabaciones, mapas de calor, dónde hacen click) | Clarity → Recordings / Heatmaps |
 | Velocidad real del sitio para tus visitantes | Vercel → Speed Insights |
 | Cuántos te contactaron (formulario, WhatsApp, CV descargado) | GA4 → Informes → Interacción → Eventos |
+
+---
+
+## 8. Guía de lectura — cómo revisar cada herramienta en el día a día
+
+### Microsoft Clarity (clarity.microsoft.com → tu proyecto)
+- **Dashboard**: resumen de sesiones + señales de fricción automáticas: *Dead clicks* (clics que no hacen nada — botón roto o mal diseñado), *Rage clicks* (clics repetidos por frustración), *Excessive scrolling*, *Quick backs* (entra y se va enseguida).
+- **Recordings**: grabaciones reales de sesiones — ves el mouse, el scroll, los clics de una persona real navegando tu sitio. La forma más rápida de detectar confusión de UX.
+- **Heatmaps**: mapa de calor por página (filtra por URL, ej. `/servicios`) — dónde hace clic la gente y hasta dónde llega haciendo scroll.
+- ⏳ Tarda ~2 horas en mostrar la primera grabación después de que alguien visite el sitio.
+
+### Google Analytics 4 (analytics.google.com → tu propiedad)
+- **Informes → Tiempo real**: quién está en el sitio ahora mismo (país, página, dispositivo). Funciona al instante — pruébalo entrando al sitio desde otro dispositivo.
+- **Informes → Ciclo de vida → Adquisición**: de dónde viene la gente (Google, directo, LinkedIn, etc.).
+- **Informes → Ciclo de vida → Interacción → Eventos**: aquí ves `generate_lead`, `file_download`, `click_whatsapp`, `click_linkedin`, `click_email` — cuántas veces pasó cada uno.
+- **Informes → Ciclo de vida → Interacción → Páginas y pantallas**: qué páginas visitan más.
+- **Recomendado**: Admin → Eventos → busca `generate_lead` → activa **"Marcar como evento clave"** (key event), así GA4 lo resalta como conversión, no como una visita más.
+- ⏳ Todo excepto Tiempo real tarda 24-48h en poblarse (Google procesa por lotes).
+
+### SEO — verificar lo implementado
+- **Search Console → Rendimiento**: en unos días muestra qué palabras usa la gente en Google para encontrarte, impresiones y clics.
+- **Search Console → Indexing → Pages**: confirma que Google indexó las 12 URLs (6 páginas × 2 idiomas).
+- **Rich Results Test** (search.google.com/test/rich-results): pega `https://byrongonzalez.com.co/servicios` — debe detectar `FAQPage` y `ProfessionalService`.
+- **Vista previa social** (opengraph.xyz): pega tu URL para ver la tarjeta que se muestra al compartir en LinkedIn/WhatsApp.
+- **Hreflang manual**: `view-source:https://byrongonzalez.com.co/` → busca `hreflang` → deben aparecer 3 líneas (`es-CO`, `en`, `x-default`).
