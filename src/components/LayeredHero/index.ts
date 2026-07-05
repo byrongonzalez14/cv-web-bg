@@ -1,1 +1,0 @@
-export { LayeredHero } from './LayeredHero';

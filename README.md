@@ -1,69 +1,59 @@
-# Byron Gonzalez - Professional CV
+# byrongonzalez.com.co — v2
 
-Personal website and interactive CV built by **Byron Gonzalez**.
+Sitio profesional de Byron González (AI Solutions Consultant), reconstruido como sitio multi-página con Next.js.
 
-🌐 **Live Site:** [byrongonzalez.com.co](https://byrongonzalez.com.co)
+🌐 **Producción:** [byrongonzalez.com.co](https://byrongonzalez.com.co)
 
-## 🚀 Tech Stack
+## Stack
 
-- **React 18** - UI Framework
-- **TypeScript** - Type Safety
-- **Vite** - Build Tool & Dev Server
-- **Tailwind CSS** - Styling
-- **Lenis** - Smooth Scrolling
-- **Framer Motion** - Animations
-- **Lucide React** - Icons
+- **Next.js 16** (App Router, Turbopack) + **React 19** + **TypeScript**
+- **Tailwind CSS 4** (tokens en `src/app/globals.css` vía `@theme`)
+- **next-intl** — i18n con rutas localizadas: español en raíz (`/servicios`), inglés con prefijo (`/en/services`)
+- **motion** (framer-motion v12) + **Lenis** — animaciones y smooth scroll
+- **Resend** — formulario de contacto vía Server Action
+- **GTM + Consent Mode v2 + Vercel Analytics/Speed Insights** — analítica
 
-## 🎨 Features
+## Desarrollo
 
-- ✅ Fully responsive (Mobile, Tablet, Desktop)
-- ✅ Multi-language support (English/Spanish)
-- ✅ Smooth scroll animations
-- ✅ Interactive components
-- ✅ Modern UI/UX design
-- ✅ SEO optimized
-
-## 🛠️ Getting Started
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) (v18 or higher)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/byrongonzalez14/cv-web-bg.git
-cd cv-web-bg
-```
-
-2. Install dependencies:
 ```bash
 npm install
+npm run dev      # http://localhost:3000
+npm run build    # build de producción (todo SSG)
 ```
 
-3. Run development server:
-```bash
-npm run dev
-```
+## Variables de entorno
 
-Your site should be accessible at [http://localhost:5173/](http://localhost:5173/)
+Copia `.env.example` a `.env.local` y completa:
 
-### Build for Production
+| Variable | Para qué | Dónde se crea |
+|---|---|---|
+| `NEXT_PUBLIC_GTM_ID` | Google Tag Manager (GA4 + Clarity van dentro del contenedor) | tagmanager.google.com |
+| `RESEND_API_KEY` | Envío del formulario de contacto | resend.com |
+| `CONTACT_FROM` | Remitente del email (verificar dominio en Resend) | — |
+| `CONTACT_TO` | Correo donde llegan los mensajes | — |
 
-```bash
-npm run build
-```
+Sin estas variables el sitio funciona igual: sin GTM no se carga tracking de Google, y el formulario muestra un error amable.
 
-The built files will be in the `dist` folder.
+## Estructura
 
-## 📝 License
+- `src/app/[locale]/` — páginas: Home, quien-soy, servicios, experiencia, contacto, privacidad
+- `src/i18n/routing.ts` — fuente única de verdad de rutas/slugs por idioma (la usan proxy, sitemap y hreflang)
+- `src/content/` — datos del CV y servicios por idioma (edita aquí el contenido)
+- `messages/{es,en}.json` — textos de UI
+- `src/lib/actions/contact.ts` — server action del formulario (zod + honeypot + Resend)
+- `src/components/analytics/` — GTM, Consent Mode v2 regional y banner de consentimiento
 
-© 2024 Byron Gonzalez. All rights reserved.
+## Eventos de analítica (dataLayer)
 
-## 📧 Contact
+`generate_lead` (formulario enviado) · `file_download` (descarga de CV) · `click_whatsapp` · `click_linkedin` · `click_email`
 
-- **Email:** byrongonzalez14@gmail.com
-- **LinkedIn:** [linkedin.com/in/byrongonzalezing](https://www.linkedin.com/in/byrongonzalezing/)
-- **GitHub:** [github.com/byrongonzalez14](https://github.com/byrongonzalez14)
+Configúralos como key events en GA4 vía triggers de GTM.
+
+## Checklist de lanzamiento
+
+1. Crear cuentas: GTM, GA4, Microsoft Clarity, Resend → poner IDs en Vercel (Environment Variables).
+2. En GTM: tag de GA4 + tag de Clarity + triggers para los eventos custom.
+3. Deploy en Vercel, activar Analytics y Speed Insights en el dashboard.
+4. Apuntar el dominio `byrongonzalez.com.co` al proyecto nuevo.
+5. Google Search Console: verificar dominio (DNS TXT) y enviar `sitemap.xml`.
+6. Validar con Rich Results Test (Person, FAQPage, ProfessionalService).

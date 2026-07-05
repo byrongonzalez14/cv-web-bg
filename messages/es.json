@@ -1,0 +1,231 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Quién soy",
+    "services": "Servicios",
+    "experience": "Experiencia",
+    "contact": "Contacto",
+    "cta": "Hablemos"
+  },
+  "meta": {
+    "siteName": "Byron González — Consultor de Soluciones de IA",
+    "home": {
+      "title": "Byron González — Consultor de Soluciones de IA y Automatización",
+      "description": "Diseño, documento y valido soluciones de automatización con IA — agentes de voz y SMS, workflows y APIs — que reducen tareas manuales. 5+ años en banca, enterprise y automatización. Cali, Colombia · Remoto."
+    },
+    "about": {
+      "title": "Quién soy — Byron González",
+      "description": "Consultor de soluciones de IA y Analista de Negocio Técnico. El puente entre lo que tu negocio necesita y lo que tu equipo técnico construye."
+    },
+    "services": {
+      "title": "Servicios — Consultoría IA, Análisis de Negocio, Integraciones y Desarrollo Web",
+      "description": "Consultoría de IA y automatización, análisis de negocio y documentación BPMN/UML, integración de sistemas y APIs, y desarrollo web end-to-end."
+    },
+    "experience": {
+      "title": "Experiencia y CV — Byron González",
+      "description": "5+ años de experiencia: LATO AI, Banco Unión, Colgate-Palmolive. Descarga mi CV en español o inglés."
+    },
+    "contact": {
+      "title": "Contacto — Byron González",
+      "description": "Cuéntame tu proyecto. Agenda una llamada de discovery o escríbeme por email, LinkedIn o WhatsApp."
+    },
+    "privacy": {
+      "title": "Política de Privacidad — Byron González",
+      "description": "Política de privacidad y tratamiento de datos personales de byrongonzalez.com.co."
+    }
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "// consultor de soluciones de ia",
+      "titleLine1": "Automatización con IA",
+      "titleLine2": "que sí llega a producción",
+      "subtitle": "Diseño, documento y valido soluciones de automatización — agentes de voz y SMS con IA, workflows y APIs — que reducen el trabajo manual de tu operación.",
+      "ctaPrimary": "Ver servicios",
+      "ctaSecondary": "Hablemos",
+      "scroll": "desliza"
+    },
+    "trust": {
+      "label": "He trabajado con equipos de"
+    },
+    "services": {
+      "eyebrow": "// servicios",
+      "title": "Cómo puedo ayudarte",
+      "viewAll": "Ver todos los servicios"
+    },
+    "results": {
+      "eyebrow": "// resultados",
+      "title": "Trabajo que habla en números"
+    },
+    "about": {
+      "eyebrow": "// quién soy",
+      "title": "El puente entre negocio y tecnología",
+      "text": "Más de 5 años traduciendo necesidades de negocio en requerimientos que los equipos técnicos pueden construir sin ambigüedad — en banca, enterprise y automatización con IA.",
+      "cta": "Conóceme"
+    },
+    "ctaBand": {
+      "title": "¿Tienes un proceso que se come las horas de tu equipo?",
+      "text": "Cuéntame cómo opera hoy y te propongo cómo automatizarlo.",
+      "cta": "Agendar una llamada"
+    }
+  },
+  "about": {
+    "eyebrow": "// quién soy",
+    "title": "Byron González",
+    "intro1": "Empecé del lado del contenido y el QA en Colgate-Palmolive, gestionando más de 60 sitios globales. Ahí aprendí lo que casi nadie te enseña: los proyectos no fallan por falta de tecnología, fallan porque nadie tradujo bien lo que el negocio necesitaba.",
+    "intro2": "Desde entonces he sido ese traductor: como Líder Técnico en banca definiendo la migración de una pasarela de pagos, como analista freelance construyendo soluciones cloud end-to-end, y hoy como consultor de IA diseñando agentes de voz y SMS que atienden clientes reales para una cartera de clientes en Reino Unido y Estados Unidos.",
+    "intro3": "Mi trabajo es simple de describir y difícil de hacer bien: entender tu operación, documentarla con precisión y diseñar la solución de automatización que sí se puede construir — y quedarme hasta validar que funcione.",
+    "how": {
+      "eyebrow": "// cómo trabajo",
+      "title": "Principios de trabajo",
+      "principles": [
+        {
+          "title": "Discovery primero",
+          "text": "No propongo soluciones sin entender el proceso real. La primera conversación es para diagnosticar, no para vender."
+        },
+        {
+          "title": "Todo documentado",
+          "text": "BPMN, UML, scope técnico. Si no está escrito con precisión, no se puede construir ni validar."
+        },
+        {
+          "title": "Resultados medibles",
+          "text": "Cada solución define desde el diseño qué métrica mejora: tiempo, errores, costo o conversión."
+        },
+        {
+          "title": "QA hasta el final",
+          "text": "No entrego diseños en papel: valido flujos, itero prompts y acompaño hasta la aprobación."
+        }
+      ]
+    },
+    "journey": {
+      "eyebrow": "// trayectoria",
+      "title": "El camino hasta aquí",
+      "cta": "Ver experiencia completa"
+    },
+    "info": {
+      "location": "Ubicación",
+      "languages": "Idiomas",
+      "availability": "Disponibilidad"
+    },
+    "ctaBand": {
+      "title": "¿Trabajamos juntos?",
+      "text": "Cuéntame tu proyecto y te respondo en menos de 24 horas.",
+      "cta": "Contactar"
+    }
+  },
+  "services": {
+    "eyebrow": "// servicios",
+    "title": "Servicios",
+    "subtitle": "Cuatro formas de ayudarte a que tu operación dependa menos de tareas manuales y más de sistemas que funcionan.",
+    "problemLabel": "El problema",
+    "includesLabel": "Qué incluye",
+    "toolsLabel": "Herramientas",
+    "engagementLabel": "Cómo trabajamos",
+    "examplesLabel": "Proyectos en línea",
+    "cta": "Hablemos de tu caso",
+    "cases": {
+      "eyebrow": "// casos de estudio",
+      "title": "Casos de estudio",
+      "subtitle": "Tres ejemplos de cómo se ve mi trabajo cuando llega a producción.",
+      "challengeLabel": "El reto",
+      "solutionLabel": "Lo que hice",
+      "outcomeLabel": "El resultado"
+    },
+    "process": {
+      "eyebrow": "// proceso",
+      "title": "De la idea a producción"
+    },
+    "faq": {
+      "eyebrow": "// preguntas frecuentes",
+      "title": "Preguntas frecuentes"
+    }
+  },
+  "experience": {
+    "eyebrow": "// experiencia",
+    "title": "Experiencia",
+    "subtitle": "Más de 5 años entre banca, enterprise y automatización con IA.",
+    "downloadEs": "CV en Español",
+    "downloadEn": "CV in English",
+    "skills": {
+      "eyebrow": "// habilidades",
+      "title": "Habilidades técnicas"
+    },
+    "toolsTitle": "Herramientas del día a día",
+    "education": {
+      "eyebrow": "// formación",
+      "title": "Educación y certificaciones",
+      "educationTitle": "Educación",
+      "certificationsTitle": "Certificaciones",
+      "viewCertificate": "Ver certificado"
+    },
+    "languagesTitle": "Idiomas",
+    "ctaBand": {
+      "title": "¿Buscas este perfil para tu equipo o proyecto?",
+      "text": "Disponible para consultoría, proyectos y roles remotos.",
+      "cta": "Contactar"
+    }
+  },
+  "contact": {
+    "eyebrow": "// contacto",
+    "title": "Hablemos",
+    "subtitle": "Cuéntame tu proyecto o tu proceso y te respondo en menos de 24 horas.",
+    "direct": {
+      "title": "Canales directos",
+      "email": "Escríbeme un correo",
+      "whatsapp": "Hablemos por WhatsApp",
+      "whatsappMessage": "Hola Byron, vi tu sitio web y me gustaría hablar sobre un proyecto.",
+      "linkedin": "Conecta en LinkedIn"
+    },
+    "form": {
+      "title": "O déjame un mensaje",
+      "name": "Nombre",
+      "namePlaceholder": "Tu nombre",
+      "email": "Correo",
+      "emailPlaceholder": "tu@correo.com",
+      "company": "Empresa (opcional)",
+      "companyPlaceholder": "Tu empresa",
+      "service": "¿Qué necesitas?",
+      "servicePlaceholder": "Selecciona una opción",
+      "serviceOptions": {
+        "ai": "IA y automatización",
+        "analysis": "Análisis de negocio",
+        "integration": "Integración de sistemas",
+        "web": "Desarrollo web",
+        "other": "Otro / No estoy seguro"
+      },
+      "message": "Mensaje",
+      "messagePlaceholder": "Cuéntame qué proceso quieres mejorar o qué proyecto tienes en mente…",
+      "submit": "Enviar mensaje",
+      "sending": "Enviando…",
+      "success": "¡Mensaje enviado! Te respondo en menos de 24 horas.",
+      "error": "No se pudo enviar el mensaje. Intenta de nuevo o escríbeme directo al correo.",
+      "validation": {
+        "name": "Escribe tu nombre",
+        "email": "Escribe un correo válido",
+        "message": "Cuéntame un poco más (mínimo 10 caracteres)"
+      }
+    },
+    "availability": "Cali, Colombia · Remoto para todo el mundo · ES / EN"
+  },
+  "privacy": {
+    "title": "Política de Privacidad",
+    "updated": "Última actualización"
+  },
+  "footer": {
+    "tagline": "Consultor de Soluciones de IA · Analista de Negocio Técnico",
+    "navTitle": "Navegación",
+    "contactTitle": "Contacto",
+    "rights": "Todos los derechos reservados.",
+    "privacy": "Privacidad"
+  },
+  "consent": {
+    "message": "Uso cookies de analítica para entender cómo se usa el sitio y mejorarlo.",
+    "accept": "Aceptar",
+    "reject": "Rechazar",
+    "privacyLink": "Más información"
+  },
+  "notFound": {
+    "title": "Página no encontrada",
+    "text": "La página que buscas no existe o cambió de lugar.",
+    "cta": "Volver al inicio"
+  }
+}
