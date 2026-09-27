@@ -42,6 +42,9 @@ export async function generateMetadata({
     // Default title: every page overrides it, so in practice it is used by
     // not-found.tsx (which cannot export metadata of its own).
     title: t("siteName"),
+    // Google Search Console ownership for the cv-web-bg.vercel.app property.
+    // Keep it: removing the tag un-verifies the property.
+    verification: { google: "pwysJOqTvJgGdLFNxlgBledpFaYvKe3zX93qZS5hEIM" },
   };
 }
 
