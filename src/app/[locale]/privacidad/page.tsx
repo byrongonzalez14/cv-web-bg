@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { buildPageMetadata } from "@/lib/metadata";
+import { buildPageMetadata, SITE_HOST } from "@/lib/metadata";
 import { PageHeader } from "@/components/ui/PageHeader";
 
 export async function generateMetadata({
@@ -16,7 +16,7 @@ const CONTENT = {
   es: [
     {
       title: "1. Responsable del tratamiento",
-      body: "Este sitio (byrongonzalez.com.co) es operado por Byron González, con domicilio en Cali, Colombia. Para cualquier consulta sobre tus datos puedes escribir a byrongonzalezing@gmail.com.",
+      body: `Este sitio (${SITE_HOST}) es operado por Byron González, con domicilio en Cali, Colombia. Para cualquier consulta sobre tus datos puedes escribir a byrongonzalezing@gmail.com.`,
     },
     {
       title: "2. Datos que se recogen",
@@ -42,7 +42,7 @@ const CONTENT = {
   en: [
     {
       title: "1. Data controller",
-      body: "This site (byrongonzalez.com.co) is operated by Byron González, based in Cali, Colombia. For any questions about your data you can write to byrongonzalezing@gmail.com.",
+      body: `This site (${SITE_HOST}) is operated by Byron González, based in Cali, Colombia. For any questions about your data you can write to byrongonzalezing@gmail.com.`,
     },
     {
       title: "2. Data collected",

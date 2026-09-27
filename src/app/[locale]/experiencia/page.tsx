@@ -53,7 +53,7 @@ export default async function ExperiencePage({
             <TrackedLink
               href={CV_FILES.es}
               download
-              event="file_download"
+              event="cv_download"
               eventParams={{ file_name: "CV-ES", file_extension: "pdf" }}
               className={buttonClass("primary")}
             >
@@ -63,7 +63,7 @@ export default async function ExperiencePage({
             <TrackedLink
               href={CV_FILES.en}
               download
-              event="file_download"
+              event="cv_download"
               eventParams={{ file_name: "CV-EN", file_extension: "pdf" }}
               className={buttonClass("ghost")}
             >

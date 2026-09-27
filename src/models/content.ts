@@ -11,6 +11,7 @@ export interface Profile {
   linkedin: string;
   github: string;
   website: string;
+  calendar: string;
 }
 
 export interface Experience {

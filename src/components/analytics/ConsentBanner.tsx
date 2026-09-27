@@ -55,9 +55,12 @@ export function ConsentBanner() {
           transition={{ duration: 0.3 }}
           className="fixed bottom-4 left-4 right-4 z-50 max-w-sm rounded-card border border-line bg-surface-2 p-5 shadow-2xl sm:right-auto"
           role="dialog"
+          aria-labelledby="consent-message"
           aria-live="polite"
         >
-          <p className="text-sm leading-relaxed text-fg">{t("message")}</p>
+          <p id="consent-message" className="text-sm leading-relaxed text-fg">
+            {t("message")}
+          </p>
           <div className="mt-4 flex items-center gap-3">
             <button
               type="button"

@@ -11,14 +11,14 @@
     "siteName": "Byron González — Consultor de Soluciones de IA",
     "home": {
       "title": "Byron González — Consultor de Soluciones de IA y Automatización",
-      "description": "Diseño, documento y valido soluciones de automatización con IA — agentes de voz y SMS, workflows y APIs — que reducen tareas manuales. 5+ años en banca, enterprise y automatización. Cali, Colombia · Remoto."
+      "description": "Consultor de IA y Analista de Negocio (5+ años en banca y enterprise). Diseño y valido automatizaciones con agentes de voz y SMS, workflows y APIs."
     },
     "about": {
       "title": "Quién soy — Byron González",
       "description": "Consultor de soluciones de IA y Analista de Negocio Técnico. El puente entre lo que tu negocio necesita y lo que tu equipo técnico construye."
     },
     "services": {
-      "title": "Servicios — Consultoría IA, Análisis de Negocio, Integraciones y Desarrollo Web",
+      "title": "Consultoría de IA y Análisis de Negocio — Byron González",
       "description": "Consultoría de IA y automatización, análisis de negocio y documentación BPMN/UML, integración de sistemas y APIs, y desarrollo web end-to-end."
     },
     "experience": {
@@ -31,7 +31,7 @@
     },
     "privacy": {
       "title": "Política de Privacidad — Byron González",
-      "description": "Política de privacidad y tratamiento de datos personales de byrongonzalez.com.co."
+      "description": "Política de privacidad y tratamiento de datos personales de este sitio."
     }
   },
   "home": {
@@ -173,7 +173,9 @@
       "email": "Escríbeme un correo",
       "whatsapp": "Hablemos por WhatsApp",
       "whatsappMessage": "Hola Byron, vi tu sitio web y me gustaría hablar sobre un proyecto.",
-      "linkedin": "Conecta en LinkedIn"
+      "linkedin": "Conecta en LinkedIn",
+      "calendar": "Agenda una llamada de descubrimiento",
+      "calendarHint": "Elige el horario que te sirva · Google Calendar"
     },
     "form": {
       "title": "O déjame un mensaje",
@@ -221,7 +223,7 @@
     "message": "Uso cookies de analítica para entender cómo se usa el sitio y mejorarlo.",
     "accept": "Aceptar",
     "reject": "Rechazar",
-    "privacyLink": "Más información"
+    "privacyLink": "Política de privacidad"
   },
   "notFound": {
     "title": "Página no encontrada",

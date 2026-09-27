@@ -53,7 +53,7 @@ Extra recomendado (2 min): en **Admin → Data settings → Data retention** *(A
 
 ### 2c. Etiquetas para los eventos de conversión
 
-El sitio ya envía estos eventos al dataLayer: `generate_lead`, `file_download`, `click_whatsapp`, `click_linkedin`, `click_email`. Para que GA4 los reciba:
+El sitio ya envía estos eventos al dataLayer: `generate_lead` (formulario enviado), `book_call` (clic en agendar llamada), `cv_download` (descarga de CV — se llama así y no `file_download` para no duplicar el evento automático de *Enhanced measurement* de GA4), `click_whatsapp`, `click_linkedin`, `click_email`. Para que GA4 los reciba:
 
 1. *(Opcional — si lo saltas, todo funciona igual)* Menú **Variables** → sección **User-Defined Variables** → **New** → clic en **Variable Configuration** → sección *Page Variables* → **Data Layer Variable**. Ojo, hay dos "nombres" distintos:
    - En el campo **Data Layer Variable Name** escribe: `method` (exacto, es el dato que envía el sitio).
@@ -63,13 +63,13 @@ El sitio ya envía estos eventos al dataLayer: `generate_lead`, `file_download`,
    - En **Event Name** escribe: `generate_lead` (exacto).
    - *This trigger fires on*: se deja en **All Custom Events**.
    - Arriba a la izquierda renombra *"Untitled Trigger"* a: `Event - generate_lead` → **Save**.
-   - Repite lo mismo para: `file_download`, `click_whatsapp`, `click_linkedin`, `click_email` (5 triggers en total; en cada uno el **Event Name** debe ser idéntico al nombre del evento).
+   - Repite lo mismo para: `book_call`, `cv_download`, `click_whatsapp`, `click_linkedin`, `click_email` (6 triggers en total; en cada uno el **Event Name** debe ser idéntico al nombre del evento).
 3. Menú **Tags** → **New** → clic en **Tag Configuration** → elige **Google Analytics: GA4 Event**:
    - En **Measurement ID** pega tu `G-XXXXXXXXXX`.
    - En **Event Name** escribe: `generate_lead`.
    - Clic en **Triggering** → selecciona el trigger `Event - generate_lead`.
    - Arriba a la izquierda renombra a: `GA4 - generate_lead` → **Save**.
-   - Repite para los otros 4 eventos (5 tags en total, cada una con su trigger correspondiente).
+   - Repite para los otros 5 eventos (6 tags en total, cada una con su trigger correspondiente).
 
 ### 2d. Publicar
 
@@ -207,7 +207,7 @@ Proyecto → **Settings → Environment Variables** → **Add** (marca Productio
 ### Google Analytics 4 (analytics.google.com → tu propiedad)
 - **Informes → Tiempo real**: quién está en el sitio ahora mismo (país, página, dispositivo). Funciona al instante — pruébalo entrando al sitio desde otro dispositivo.
 - **Informes → Ciclo de vida → Adquisición**: de dónde viene la gente (Google, directo, LinkedIn, etc.).
-- **Informes → Ciclo de vida → Interacción → Eventos**: aquí ves `generate_lead`, `file_download`, `click_whatsapp`, `click_linkedin`, `click_email` — cuántas veces pasó cada uno.
+- **Informes → Ciclo de vida → Interacción → Eventos**: aquí ves `generate_lead`, `book_call`, `cv_download`, `click_whatsapp`, `click_linkedin`, `click_email` — cuántas veces pasó cada uno.
 - **Informes → Ciclo de vida → Interacción → Páginas y pantallas**: qué páginas visitan más.
 - **Recomendado**: Admin → Eventos → busca `generate_lead` → activa **"Marcar como evento clave"** (key event), así GA4 lo resalta como conversión, no como una visita más.
 - ⏳ Todo excepto Tiempo real tarda 24-48h en poblarse (Google procesa por lotes).

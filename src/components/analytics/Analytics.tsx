@@ -1,4 +1,3 @@
-import Script from "next/script";
 import { GoogleTagManager } from "@next/third-parties/google";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -37,6 +36,21 @@ if (stored === 'granted' || stored === 'denied') {
 }
 `;
 
+/**
+ * Consent Mode defaults. Rendered inside <head> (see layout.tsx) as a plain
+ * inline script so it runs while the HTML is parsed, before gtm.js, which
+ * @next/third-parties injects after hydration.
+ */
+export function ConsentDefaults() {
+  if (!process.env.NEXT_PUBLIC_GTM_ID) return null;
+  return (
+    <script
+      id="consent-default"
+      dangerouslySetInnerHTML={{ __html: CONSENT_DEFAULT_SCRIPT }}
+    />
+  );
+}
+
 export function Analytics() {
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
 
@@ -44,9 +58,6 @@ export function Analytics() {
     <>
       {gtmId ? (
         <>
-          <Script id="consent-default" strategy="beforeInteractive">
-            {CONSENT_DEFAULT_SCRIPT}
-          </Script>
           <GoogleTagManager gtmId={gtmId} />
           <noscript>
             <iframe

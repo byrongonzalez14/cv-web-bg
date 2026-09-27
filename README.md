@@ -1,8 +1,8 @@
-# byrongonzalez.com.co — v2
+# Sitio de Byron González — v2
 
 Sitio profesional de Byron González (AI Solutions Consultant), reconstruido como sitio multi-página con Next.js.
 
-🌐 **Producción:** [byrongonzalez.com.co](https://byrongonzalez.com.co)
+🌐 **Producción:** [cv-web-bg.vercel.app](https://cv-web-bg.vercel.app) (el dominio byrongonzalez.com.co venció en sep-2026)
 
 ## Stack
 
@@ -45,7 +45,9 @@ Sin estas variables el sitio funciona igual: sin GTM no se carga tracking de Goo
 
 ## Eventos de analítica (dataLayer)
 
-`generate_lead` (formulario enviado) · `file_download` (descarga de CV) · `click_whatsapp` · `click_linkedin` · `click_email`
+`generate_lead` (formulario enviado) · `book_call` (clic en agendar llamada) · `cv_download` (descarga de CV) · `click_whatsapp` · `click_linkedin` · `click_email`
+
+> `cv_download` se llama así (y no `file_download`) para no duplicar el evento automático de *Enhanced measurement* de GA4 en los enlaces `.pdf`.
 
 Configúralos como key events en GA4 vía triggers de GTM.
 

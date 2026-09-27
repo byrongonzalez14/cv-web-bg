@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { Mail } from "lucide-react";
+import { CalendarDays, Mail } from "lucide-react";
 import { getCvData } from "@/content";
 import { buildPageMetadata } from "@/lib/metadata";
 import { PageHeader } from "@/components/ui/PageHeader";
@@ -52,6 +52,27 @@ export default async function ContactPage({
               {t("direct.title")}
             </h2>
             <div className="mt-5 space-y-3">
+              <TrackedLink
+                href={profile.calendar}
+                target="_blank"
+                rel="noopener noreferrer"
+                event="book_call"
+                eventParams={{ method: "google_calendar" }}
+                className={channelClass}
+              >
+                <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-line text-accent">
+                  <CalendarDays size={20} />
+                </span>
+                <span>
+                  <span className="block text-sm font-medium group-hover:text-accent">
+                    {t("direct.calendar")}
+                  </span>
+                  <span className="mt-0.5 block font-mono text-xs text-muted">
+                    {t("direct.calendarHint")}
+                  </span>
+                </span>
+              </TrackedLink>
+
               <TrackedLink
                 href={`mailto:${profile.email}`}
                 event="click_email"

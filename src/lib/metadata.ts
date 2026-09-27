@@ -3,7 +3,14 @@ import { getTranslations } from "next-intl/server";
 import { getPathname } from "@/i18n/navigation";
 import { routing, type AppPathname } from "@/i18n/routing";
 
-export const BASE_URL = "https://byrongonzalez.com.co";
+// Public origin of the site. Override with NEXT_PUBLIC_SITE_URL (e.g. after
+// renaming the Vercel project or adding a custom domain); no trailing slash.
+export const BASE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://cv-web-bg.vercel.app"
+).replace(/\/$/, "");
+
+/** Host without protocol, for display purposes. */
+export const SITE_HOST = BASE_URL.replace(/^https?:\/\//, "");
 
 const HREFLANG: Record<string, string> = { es: "es-CO", en: "en" };
 

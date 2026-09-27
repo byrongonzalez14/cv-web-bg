@@ -11,14 +11,14 @@
     "siteName": "Byron González — AI Solutions Consultant",
     "home": {
       "title": "Byron González — AI Solutions & Automation Consultant",
-      "description": "I design, document, and validate AI automation solutions — voice and SMS agents, workflows, and APIs — that reduce manual work. 5+ years across banking, enterprise, and automation. Cali, Colombia · Remote."
+      "description": "AI Solutions Consultant & Business Analyst (5+ years in banking and enterprise). I design and validate automations with voice & SMS agents, workflows and APIs."
     },
     "about": {
       "title": "About — Byron González",
       "description": "AI solutions consultant and Technical Business Analyst. The bridge between what your business needs and what your technical team builds."
     },
     "services": {
-      "title": "Services — AI Consulting, Business Analysis, Integrations & Web Development",
+      "title": "AI Consulting & Business Analysis Services — Byron González",
       "description": "AI and automation consulting, business analysis and BPMN/UML documentation, systems and API integration, and end-to-end web development."
     },
     "experience": {
@@ -31,7 +31,7 @@
     },
     "privacy": {
       "title": "Privacy Policy — Byron González",
-      "description": "Privacy and personal data policy for byrongonzalez.com.co."
+      "description": "Privacy and personal data policy for this site."
     }
   },
   "home": {
@@ -173,7 +173,9 @@
       "email": "Send me an email",
       "whatsapp": "Chat on WhatsApp",
       "whatsappMessage": "Hi Byron, I saw your website and would like to talk about a project.",
-      "linkedin": "Connect on LinkedIn"
+      "linkedin": "Connect on LinkedIn",
+      "calendar": "Book a discovery call",
+      "calendarHint": "Pick a time that works for you · Google Calendar"
     },
     "form": {
       "title": "Or leave me a message",
@@ -221,7 +223,7 @@
     "message": "I use analytics cookies to understand how the site is used and improve it.",
     "accept": "Accept",
     "reject": "Reject",
-    "privacyLink": "Learn more"
+    "privacyLink": "Privacy policy"
   },
   "notFound": {
     "title": "Page not found",

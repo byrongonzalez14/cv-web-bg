@@ -1,16 +1,25 @@
 import { Link } from "@/i18n/navigation";
 import { buttonClass } from "@/components/ui/Button";
 import { FadeIn } from "@/components/motion/FadeIn";
+import { TrackedLink } from "@/components/ui/TrackedLink";
 
 export function CtaBand({
   title,
   text,
   cta,
+  href,
 }: {
   title: string;
   text: string;
   cta: string;
+  /**
+   * External booking URL (Google Calendar). When set, the button opens it in
+   * a new tab and tracks `book_call`; otherwise it links to the contact page.
+   */
+  href?: string;
 }) {
+  const buttonClassName = buttonClass("primary", "shrink-0");
+
   return (
     <section className="mx-auto max-w-6xl px-4 pb-24 md:px-6 md:pb-32">
       <FadeIn>
@@ -30,9 +39,22 @@ export function CtaBand({
               </h2>
               <p className="mt-3 text-muted">{text}</p>
             </div>
-            <Link href="/contacto" className={buttonClass("primary", "shrink-0")}>
-              {cta}
-            </Link>
+            {href ? (
+              <TrackedLink
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                event="book_call"
+                eventParams={{ method: "google_calendar" }}
+                className={buttonClassName}
+              >
+                {cta}
+              </TrackedLink>
+            ) : (
+              <Link href="/contacto" className={buttonClassName}>
+                {cta}
+              </Link>
+            )}
           </div>
         </div>
       </FadeIn>

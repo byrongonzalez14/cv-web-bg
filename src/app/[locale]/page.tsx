@@ -171,6 +171,7 @@ export default async function HomePage({
         title={t("ctaBand.title")}
         text={t("ctaBand.text")}
         cta={t("ctaBand.cta")}
+        href={profile.calendar}
       />
     </>
   );

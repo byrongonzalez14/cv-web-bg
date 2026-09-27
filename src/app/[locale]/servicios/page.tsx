@@ -3,7 +3,7 @@ import Image from "next/image";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowRight, Check, ExternalLink } from "lucide-react";
 import { Link } from "@/i18n/navigation";
-import { getServices } from "@/content";
+import { getCvData, getServices } from "@/content";
 import { buildPageMetadata } from "@/lib/metadata";
 import { faqJsonLd, JsonLd, professionalServiceJsonLd } from "@/lib/jsonld";
 import { PageHeader } from "@/components/ui/PageHeader";
@@ -34,6 +34,7 @@ export default async function ServicesPage({
   const t = await getTranslations({ locale, namespace: "services" });
   const tHome = await getTranslations({ locale, namespace: "home.ctaBand" });
   const { services, caseStudies, process, faqs } = getServices(locale);
+  const { profile } = getCvData(locale);
 
   return (
     <>
@@ -263,6 +264,7 @@ export default async function ServicesPage({
         title={tHome("title")}
         text={tHome("text")}
         cta={tHome("cta")}
+        href={profile.calendar}
       />
     </>
   );

@@ -1,4 +1,5 @@
 import { ImageResponse } from "next/og";
+import { SITE_HOST } from "@/lib/metadata";
 
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
@@ -71,7 +72,7 @@ export default async function OpengraphImage({
           }}
         >
           <div style={{ display: "flex", color: "#22d3ee", fontSize: 26 }}>
-            byrongonzalez.com.co
+            {SITE_HOST}
           </div>
           <div
             style={{

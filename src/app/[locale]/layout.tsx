@@ -1,13 +1,13 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
-import { setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { SmoothScroll } from "@/components/motion/SmoothScroll";
-import { Analytics } from "@/components/analytics/Analytics";
+import { Analytics, ConsentDefaults } from "@/components/analytics/Analytics";
 import { JsonLd, personJsonLd } from "@/lib/jsonld";
 import { BASE_URL } from "@/lib/metadata";
 import "../globals.css";
@@ -30,8 +30,24 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  metadataBase: new URL(BASE_URL),
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "meta" });
+  return {
+    metadataBase: new URL(BASE_URL),
+    // Default title: every page overrides it, so in practice it is used by
+    // not-found.tsx (which cannot export metadata of its own).
+    title: t("siteName"),
+  };
+}
+
+export const viewport: Viewport = {
+  themeColor: "#0a0a0f",
+  colorScheme: "dark",
 };
 
 export function generateStaticParams() {
@@ -57,7 +73,7 @@ export default async function LocaleLayout({
       className={`${inter.variable} ${spaceGrotesk.variable} ${jetbrainsMono.variable} antialiased`}
     >
       <head>
-        <meta name="color-scheme" content="dark" />
+        <ConsentDefaults />
         <JsonLd data={personJsonLd(locale)} />
       </head>
       <body className="bg-bg text-fg min-h-screen flex flex-col">
