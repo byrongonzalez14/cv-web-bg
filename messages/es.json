@@ -41,11 +41,29 @@
   "home": {
     "hero": {
       "eyebrow": "// consultor de soluciones de ia",
-      "titleLine1": "Automatización con IA",
-      "titleLine2": "que sí llega a producción",
+      "titleLine1": "Automatizo los procesos",
+      "titleLine2": "que frenan tu negocio",
       "subtitle": "Diseño, documento y valido soluciones de automatización — agentes de voz y SMS con IA, workflows y APIs — que reducen el trabajo manual de tu operación.",
       "ctaPrimary": "Ver servicios",
       "ctaSecondary": "Hablemos",
+      "stats": [
+        {
+          "value": "5+",
+          "label": "años de experiencia"
+        },
+        {
+          "value": "3",
+          "label": "países de clientes"
+        },
+        {
+          "value": "60+",
+          "label": "sitios globales gestionados"
+        },
+        {
+          "value": "ES / EN",
+          "label": "bilingüe (C1)"
+        }
+      ],
       "scroll": "desliza"
     },
     "trust": {
@@ -129,14 +147,14 @@
     "cases": {
       "eyebrow": "// casos de estudio",
       "title": "Casos de estudio",
-      "subtitle": "Tres ejemplos de cómo se ve mi trabajo cuando llega a producción.",
+      "subtitle": "Tres ejemplos de mi trabajo y los resultados que dejó.",
       "challengeLabel": "El reto",
       "solutionLabel": "Lo que hice",
       "outcomeLabel": "El resultado"
     },
     "process": {
       "eyebrow": "// proceso",
-      "title": "De la idea a producción"
+      "title": "De la idea a la solución funcionando"
     },
     "faq": {
       "eyebrow": "// preguntas frecuentes",

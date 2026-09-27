@@ -24,6 +24,8 @@ export interface Experience {
   bullets: string[];
   tags: string[];
   logo?: string;
+  /** Logo of the end client when the work was done through a contractor. */
+  clientLogo?: string;
 }
 
 export interface SkillCategory {

@@ -8,6 +8,7 @@ import { FadeIn } from "@/components/motion/FadeIn";
 
 export async function Hero({ locale }: { locale: string }) {
   const t = await getTranslations({ locale, namespace: "home.hero" });
+  const stats = t.raw("stats") as { value: string; label: string }[];
 
   return (
     <section className="relative flex min-h-[92svh] items-center overflow-hidden">
@@ -52,7 +53,22 @@ export async function Hero({ locale }: { locale: string }) {
           </div>
         </FadeIn>
 
-        <div className="mt-20 hidden items-center gap-3 md:flex">
+        <FadeIn delay={0.35}>
+          <dl className="mt-10 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-5 border-t border-line pt-6 sm:grid-cols-4">
+            {stats.map((stat) => (
+              <div key={stat.label} className="flex flex-col">
+                <dt className="mt-1 text-xs leading-snug text-muted">
+                  {stat.label}
+                </dt>
+                <dd className="order-first font-display text-xl font-semibold tracking-tight md:text-2xl">
+                  {stat.value}
+                </dd>
+              </div>
+            ))}
+          </dl>
+        </FadeIn>
+
+        <div className="mt-12 hidden items-center gap-3 md:flex">
           <span className="h-px w-10 bg-line" />
           <span className="font-mono text-xs uppercase tracking-widest text-muted">
             {t("scroll")}

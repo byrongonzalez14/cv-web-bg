@@ -99,13 +99,24 @@ export default async function ExperiencePage({
                     </p>
                   </div>
                   {exp.logo ? (
-                    <Image
-                      src={exp.logo}
-                      alt={exp.client ?? exp.company}
-                      width={240}
-                      height={36}
-                      className="h-8 w-auto opacity-60 grayscale"
-                    />
+                    <div className="flex flex-col items-end gap-4">
+                      <Image
+                        src={exp.logo}
+                        alt={exp.company}
+                        width={240}
+                        height={36}
+                        className="h-8 w-auto opacity-60 grayscale"
+                      />
+                      {exp.clientLogo && exp.client ? (
+                        <Image
+                          src={exp.clientLogo}
+                          alt={exp.client}
+                          width={240}
+                          height={36}
+                          className="h-8 w-auto opacity-60 grayscale"
+                        />
+                      ) : null}
+                    </div>
                   ) : null}
                 </div>
                 <ul className="mt-4 max-w-3xl space-y-2">

@@ -58,7 +58,8 @@ export const cvDataEs: CVContent = {
         "Coordiné con Arquitectura, Seguridad e Infraestructura la revisión de flujos de integración y modelos de datos sobre sistemas core bancarios.",
       ],
       tags: ["Banca", "BPMN", "REST", "SOAP", "SQL", "Arquitectura"],
-      logo: "/images/experiences/banco-union-logo.svg",
+      logo: "/images/experiences/logo-qvision.png",
+      clientLogo: "/images/experiences/banco-union-logo.svg",
     },
     {
       slug: "colgate",

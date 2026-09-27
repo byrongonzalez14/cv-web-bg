@@ -41,11 +41,29 @@
   "home": {
     "hero": {
       "eyebrow": "// ai solutions consultant",
-      "titleLine1": "AI automation",
-      "titleLine2": "that actually ships",
+      "titleLine1": "I automate the processes",
+      "titleLine2": "that slow your business down",
       "subtitle": "I design, document, and validate automation solutions — AI voice and SMS agents, workflows, and APIs — that cut the manual work out of your operation.",
       "ctaPrimary": "View services",
       "ctaSecondary": "Let's talk",
+      "stats": [
+        {
+          "value": "5+",
+          "label": "years of experience"
+        },
+        {
+          "value": "3",
+          "label": "client countries"
+        },
+        {
+          "value": "60+",
+          "label": "global sites managed"
+        },
+        {
+          "value": "ES / EN",
+          "label": "bilingual (C1)"
+        }
+      ],
       "scroll": "scroll"
     },
     "trust": {
@@ -129,14 +147,14 @@
     "cases": {
       "eyebrow": "// case studies",
       "title": "Case studies",
-      "subtitle": "Three examples of what my work looks like when it reaches production.",
+      "subtitle": "Three examples of my work and the results it delivered.",
       "challengeLabel": "The challenge",
       "solutionLabel": "What I did",
       "outcomeLabel": "The result"
     },
     "process": {
       "eyebrow": "// process",
-      "title": "From idea to production"
+      "title": "From idea to a working solution"
     },
     "faq": {
       "eyebrow": "// faq",
