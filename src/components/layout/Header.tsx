@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { AnimatePresence, motion } from "motion/react";
 import { Menu, X } from "lucide-react";
@@ -17,17 +17,37 @@ const NAV_ITEMS: { href: AppPathname; key: "about" | "services" | "experience" }
   { href: "/experiencia", key: "experience" },
 ];
 
+const MOBILE_NAV_ID = "mobile-nav";
+
 export function Header() {
   const t = useTranslations("nav");
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+
+  // While the mobile menu is open: Esc closes it and the page behind it
+  // does not scroll.
+  useEffect(() => {
+    if (!open) return;
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setOpen(false);
+    };
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    document.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [open]);
 
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-bg/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-6">
         <Link
           href="/"
-          className="flex items-center gap-3"
+          className="flex min-h-11 items-center gap-3"
           onClick={() => setOpen(false)}
         >
           <Image
@@ -48,6 +68,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
+              aria-current={pathname === item.href ? "page" : undefined}
               className={cn(
                 "text-sm transition-colors hover:text-accent",
                 pathname === item.href ? "text-accent" : "text-muted",
@@ -65,14 +86,15 @@ export function Header() {
           </Link>
         </div>
 
-        <div className="flex items-center gap-3 md:hidden">
+        <div className="flex items-center gap-1 md:hidden">
           <LocaleSwitcher />
           <button
             type="button"
-            aria-label="Menu"
+            aria-label={open ? t("closeMenu") : t("menu")}
             aria-expanded={open}
+            aria-controls={MOBILE_NAV_ID}
             onClick={() => setOpen(!open)}
-            className="text-fg"
+            className="-mr-2 flex h-11 w-11 items-center justify-center rounded-lg text-fg"
           >
             {open ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -82,6 +104,7 @@ export function Header() {
       <AnimatePresence>
         {open ? (
           <motion.nav
+            id={MOBILE_NAV_ID}
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
@@ -93,6 +116,7 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
+                  aria-current={pathname === item.href ? "page" : undefined}
                   onClick={() => setOpen(false)}
                   className={cn(
                     "rounded-lg px-3 py-3 text-base transition-colors",

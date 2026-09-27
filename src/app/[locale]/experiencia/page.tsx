@@ -22,8 +22,8 @@ export async function generateMetadata({
 }
 
 const CV_FILES = {
-  es: "/cv/CV-ES-TBA-BYRON-GONZALEZ-2026.pdf",
-  en: "/cv/CV-EN-TBA-BYRON-GONZALEZ-2026.pdf",
+  es: "/cv/CV-ES-TBA-BYRON-GONZALEZ-2027.pdf",
+  en: "/cv/CV-EN-TBA-BYRON-GONZALEZ-2027.pdf",
 };
 
 export default async function ExperiencePage({

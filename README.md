@@ -31,6 +31,9 @@ Copia `.env.example` a `.env.local` y completa:
 | `RESEND_API_KEY` | Envío del formulario de contacto | resend.com |
 | `CONTACT_FROM` | Remitente del email (verificar dominio en Resend) | — |
 | `CONTACT_TO` | Correo donde llegan los mensajes | — |
+| `NEXT_PUBLIC_SITE_URL` | Origen público del sitio (por defecto `https://cv-web-bg.vercel.app`) | — |
+| `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | Anti-bots del formulario (clave pública) | dash.cloudflare.com → Turnstile |
+| `TURNSTILE_SECRET_KEY` | Anti-bots del formulario (clave secreta, solo servidor) | dash.cloudflare.com → Turnstile |
 
 Sin estas variables el sitio funciona igual: sin GTM no se carga tracking de Google, y el formulario muestra un error amable.
 
@@ -40,7 +43,8 @@ Sin estas variables el sitio funciona igual: sin GTM no se carga tracking de Goo
 - `src/i18n/routing.ts` — fuente única de verdad de rutas/slugs por idioma (la usan proxy, sitemap y hreflang)
 - `src/content/` — datos del CV y servicios por idioma (edita aquí el contenido)
 - `messages/{es,en}.json` — textos de UI
-- `src/lib/actions/contact.ts` — server action del formulario (zod + honeypot + Resend)
+- `src/lib/actions/contact.ts` — server action del formulario (validación + honeypot + Turnstile + Resend)
+- `src/lib/contact/` — reglas de validación y lista de países, compartidas por el formulario y el servidor
 - `src/components/analytics/` — GTM, Consent Mode v2 regional y banner de consentimiento
 
 ## Eventos de analítica (dataLayer)

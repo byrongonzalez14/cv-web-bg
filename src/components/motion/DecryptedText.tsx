@@ -34,7 +34,7 @@ export function DecryptedText({
         rafId = requestAnimationFrame(tick);
         return;
       }
-      if (now - last > 35) {
+      if (now - last > 30) {
         last = now;
         setDisplay(
           text
@@ -46,7 +46,7 @@ export function DecryptedText({
             })
             .join(""),
         );
-        iteration += text.length / 30;
+        iteration += text.length / 16;
         if (iteration >= text.length) {
           setDisplay(text);
           return;

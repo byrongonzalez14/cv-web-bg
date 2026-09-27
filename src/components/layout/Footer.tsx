@@ -44,12 +44,12 @@ export function Footer() {
           <p className="font-mono text-xs uppercase tracking-wider text-muted">
             {t("navTitle")}
           </p>
-          <ul className="mt-4 space-y-2">
+          <ul className="mt-3">
             {NAV_ITEMS.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="text-sm text-fg transition-colors hover:text-accent"
+                  className="inline-flex min-h-9 items-center text-sm text-fg transition-colors hover:text-accent"
                 >
                   {tNav(item.key)}
                 </Link>
@@ -62,11 +62,11 @@ export function Footer() {
           <p className="font-mono text-xs uppercase tracking-wider text-muted">
             {t("contactTitle")}
           </p>
-          <ul className="mt-4 space-y-2">
+          <ul className="mt-3">
             <li>
               <a
                 href={`mailto:${profile.email}`}
-                className="inline-flex items-center gap-2 text-sm text-fg transition-colors hover:text-accent"
+                className="inline-flex min-h-9 items-center gap-2 text-sm text-fg transition-colors hover:text-accent"
               >
                 <Mail size={16} /> {profile.email}
               </a>
@@ -76,7 +76,7 @@ export function Footer() {
                 href={profile.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-fg transition-colors hover:text-accent"
+                className="inline-flex min-h-9 items-center gap-2 text-sm text-fg transition-colors hover:text-accent"
               >
                 <LinkedInIcon size={16} /> LinkedIn
               </a>
@@ -86,7 +86,7 @@ export function Footer() {
                 href={profile.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-sm text-fg transition-colors hover:text-accent"
+                className="inline-flex min-h-9 items-center gap-2 text-sm text-fg transition-colors hover:text-accent"
               >
                 <GitHubIcon size={16} /> GitHub
               </a>
@@ -100,7 +100,10 @@ export function Footer() {
           <p>
             © {year} Byron González. {t("rights")}
           </p>
-          <Link href="/privacidad" className="transition-colors hover:text-accent">
+          <Link
+            href="/privacidad"
+            className="inline-flex min-h-9 items-center transition-colors hover:text-accent"
+          >
             {t("privacy")}
           </Link>
         </div>

@@ -5,6 +5,9 @@ export const routing = defineRouting({
   defaultLocale: "es",
   localePrefix: "as-needed",
   localeDetection: false,
+  // hreflang is already in the HTML (lib/metadata.ts); skip the duplicate
+  // Link response header, which used a different language code.
+  alternateLinks: false,
   pathnames: {
     "/": "/",
     "/quien-soy": { es: "/quien-soy", en: "/about" },

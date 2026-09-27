@@ -5,7 +5,11 @@
     "services": "Servicios",
     "experience": "Experiencia",
     "contact": "Contacto",
-    "cta": "Hablemos"
+    "cta": "Hablemos",
+    "menu": "Menú",
+    "closeMenu": "Cerrar menú",
+    "language": "Idioma",
+    "skip": "Saltar al contenido"
   },
   "meta": {
     "siteName": "Byron González — Consultor de Soluciones de IA",
@@ -183,10 +187,16 @@
       "namePlaceholder": "Tu nombre",
       "email": "Correo",
       "emailPlaceholder": "tu@correo.com",
-      "company": "Empresa (opcional)",
+      "phone": "Teléfono",
+      "phoneCountry": "País del número",
+      "phonePlaceholder": "Número",
+      "phoneOtherPlaceholder": "+código y número",
+      "otherCountry": "Otro país",
+      "otherCountryShort": "Otro",
+      "optional": "opcional",
+      "company": "Empresa",
       "companyPlaceholder": "Tu empresa",
       "service": "¿Qué necesitas?",
-      "servicePlaceholder": "Selecciona una opción",
       "serviceOptions": {
         "ai": "IA y automatización",
         "analysis": "Análisis de negocio",
@@ -198,12 +208,25 @@
       "messagePlaceholder": "Cuéntame qué proceso quieres mejorar o qué proyecto tienes en mente…",
       "submit": "Enviar mensaje",
       "sending": "Enviando…",
-      "success": "¡Mensaje enviado! Te respondo en menos de 24 horas.",
+      "successTitle": "¡Mensaje enviado!",
+      "success": "Gracias por escribir. Te respondo en menos de 24 horas.",
+      "sendAnother": "Enviar otro mensaje",
       "error": "No se pudo enviar el mensaje. Intenta de nuevo o escríbeme directo al correo.",
+      "errorCaptcha": "No pudimos verificar que no eres un robot. Intenta de nuevo en unos segundos.",
+      "captchaPending": "Estamos terminando la verificación de seguridad. Espera un par de segundos y vuelve a enviar.",
+      "privacyNote": "Al enviar aceptas la <link>política de privacidad</link>.",
       "validation": {
-        "name": "Escribe tu nombre",
-        "email": "Escribe un correo válido",
-        "message": "Cuéntame un poco más (mínimo 10 caracteres)"
+        "nameRequired": "Escribe tu nombre",
+        "nameInvalid": "Usa solo letras (entre 2 y 80 caracteres)",
+        "emailRequired": "Escribe tu correo",
+        "emailInvalid": "Ese correo no parece válido. Ejemplo: nombre@empresa.com",
+        "phoneInvalid": "El número no coincide con el país seleccionado",
+        "phoneIntl": "Incluye el código del país. Ejemplo: +44 7700 900123",
+        "companyLong": "Máximo 120 caracteres",
+        "serviceInvalid": "Selecciona una de las opciones",
+        "messageRequired": "Cuéntame en qué te puedo ayudar",
+        "messageShort": "Cuéntame un poco más (mínimo 10 caracteres)",
+        "messageLong": "Máximo 2000 caracteres"
       }
     },
     "availability": "Cali, Colombia · Remoto para todo el mundo · ES / EN"

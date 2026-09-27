@@ -218,3 +218,21 @@ Proyecto → **Settings → Environment Variables** → **Add** (marca Productio
 - **Rich Results Test** (search.google.com/test/rich-results): pega `https://byrongonzalez.com.co/servicios` — debe detectar `FAQPage` y `ProfessionalService`.
 - **Vista previa social** (opengraph.xyz): pega tu URL para ver la tarjeta que se muestra al compartir en LinkedIn/WhatsApp.
 - **Hreflang manual**: `view-source:https://byrongonzalez.com.co/` → busca `hreflang` → deben aparecer 3 líneas (`es-CO`, `en`, `x-default`).
+
+---
+
+## 9. Cloudflare Turnstile — anti-bots del formulario (~10 min)
+
+Turnstile verifica de forma invisible que quien envía el formulario es una persona. Sin las claves el formulario funciona igual, protegido solo por el campo trampa (honeypot).
+
+1. Entra a **https://dash.cloudflare.com** y crea una cuenta gratis (no necesitas dominio ni tarjeta).
+2. Menú izquierdo → **Turnstile** → **Add widget** *(Agregar widget)*.
+3. **Widget name**: `cv-web-bg` · **Hostname**: `cv-web-bg.vercel.app` (agrega también `localhost` si quieres probar en tu equipo).
+4. **Widget Mode**: **Managed** → **Create**.
+5. Copia las dos claves: **Site Key** (pública) y **Secret Key** (privada).
+6. En **Vercel** → proyecto → **Settings → Environment Variables** agrega:
+   - `NEXT_PUBLIC_TURNSTILE_SITE_KEY` = Site Key
+   - `TURNSTILE_SECRET_KEY` = Secret Key
+7. **Redeploy** (Deployments → ⋯ → Redeploy). Las variables `NEXT_PUBLIC_*` solo se aplican en un build nuevo.
+8. Prueba: envía un mensaje desde `/contacto`. En Cloudflare → Turnstile → tu widget verás las verificaciones.
+

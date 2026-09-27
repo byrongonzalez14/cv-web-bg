@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import NextLink from "next/link";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowRight } from "lucide-react";
-import { Link } from "@/i18n/navigation";
+import { getPathname, Link } from "@/i18n/navigation";
+import type { AppLocale } from "@/i18n/routing";
 import { getCvData, getServices } from "@/content";
 import { buildPageMetadata } from "@/lib/metadata";
 import { Hero } from "@/components/sections/Hero";
@@ -42,6 +44,10 @@ export default async function HomePage({
   const t = await getTranslations({ locale, namespace: "home" });
   const { profile, results } = getCvData(locale);
   const { services } = getServices(locale);
+  const servicesPath = getPathname({
+    locale: locale as AppLocale,
+    href: "/servicios",
+  });
 
   return (
     <>
@@ -79,8 +85,8 @@ export default async function HomePage({
         <Stagger className="mt-12 grid gap-4 sm:grid-cols-2">
           {services.map((service, i) => (
             <StaggerItem key={service.slug}>
-              <Link
-                href="/servicios"
+              <NextLink
+                href={`${servicesPath}#${service.slug}`}
                 className="group flex h-full flex-col justify-between rounded-card border border-line bg-surface p-6 transition-all duration-300 hover:border-accent/50 hover:bg-surface-2 md:p-8"
               >
                 <div>
@@ -101,7 +107,7 @@ export default async function HomePage({
                     className="transition-transform duration-300 group-hover:translate-x-1"
                   />
                 </span>
-              </Link>
+              </NextLink>
             </StaggerItem>
           ))}
         </Stagger>

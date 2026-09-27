@@ -1,76 +1,115 @@
 "use server";
 
-import { z } from "zod";
+import { headers } from "next/headers";
 import { Resend } from "resend";
-
-const contactSchema = z.object({
-  name: z.string().trim().min(2, "name"),
-  email: z.string().trim().email("email"),
-  company: z.string().trim().max(200).optional(),
-  service: z.string().trim().max(100).optional(),
-  message: z.string().trim().min(10, "message").max(5000),
-  // Honeypot: real users never fill this
-  website: z.string().max(0).optional().or(z.literal("")),
-});
+import { findCountry } from "@/lib/contact/countries";
+import {
+  formatPhone,
+  validateContact,
+  type ContactErrors,
+  type ContactValues,
+} from "@/lib/contact/validation";
 
 export interface ContactFormState {
   status: "idle" | "success" | "error";
-  /** Field-level validation error keys (name | email | message) */
-  fieldErrors?: Record<string, string>;
+  /** Field-level validation errors (keys of contact.form.validation). */
+  fieldErrors?: ContactErrors;
+  /** Form-level failure: bot check rejected or the email could not be sent. */
+  formError?: "captcha" | "send";
+}
+
+const SERVICE_LABELS: Record<string, string> = {
+  "ai-automation": "IA y automatización",
+  "business-analysis": "Análisis de negocio",
+  integration: "Integración de sistemas",
+  "web-development": "Desarrollo web",
+  other: "Otro / No está seguro",
+};
+
+/**
+ * Cloudflare Turnstile server-side check. When TURNSTILE_SECRET_KEY is not
+ * configured the check is skipped, so the form keeps working (protected only
+ * by the honeypot) until the keys are added.
+ */
+async function verifyTurnstile(token: string): Promise<boolean> {
+  const secret = process.env.TURNSTILE_SECRET_KEY;
+  if (!secret) return true;
+  if (!token) return false;
+
+  const forwardedFor = (await headers()).get("x-forwarded-for");
+  const ip = forwardedFor?.split(",")[0]?.trim();
+
+  const body = new URLSearchParams({ secret, response: token });
+  if (ip) body.set("remoteip", ip);
+
+  try {
+    const res = await fetch(
+      "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+      { method: "POST", body, cache: "no-store" },
+    );
+    const data = (await res.json()) as { success?: boolean };
+    return data.success === true;
+  } catch (err) {
+    console.error("Turnstile verification failed:", err);
+    return false;
+  }
 }
 
 export async function sendContactMessage(
   _prev: ContactFormState,
   formData: FormData,
 ): Promise<ContactFormState> {
-  const raw = {
-    name: String(formData.get("name") ?? ""),
-    email: String(formData.get("email") ?? ""),
-    company: String(formData.get("company") ?? ""),
-    service: String(formData.get("service") ?? ""),
-    message: String(formData.get("message") ?? ""),
-    website: String(formData.get("website") ?? ""),
-  };
+  const field = (name: string) => String(formData.get(name) ?? "");
 
   // Honeypot triggered → pretend success, send nothing
-  if (raw.website) {
+  if (field("website")) {
     return { status: "success" };
   }
 
-  const parsed = contactSchema.safeParse(raw);
-  if (!parsed.success) {
-    const fieldErrors: Record<string, string> = {};
-    for (const issue of parsed.error.issues) {
-      const field = String(issue.path[0] ?? "");
-      if (field && !fieldErrors[field]) {
-        fieldErrors[field] = issue.message;
-      }
-    }
-    return { status: "error", fieldErrors };
+  const raw: ContactValues = {
+    name: field("name"),
+    email: field("email"),
+    phoneCountry: field("phoneCountry"),
+    phone: field("phone"),
+    company: field("company"),
+    service: field("service"),
+    message: field("message"),
+  };
+
+  const { values, errors, valid } = validateContact(raw);
+  if (!valid) {
+    return { status: "error", fieldErrors: errors };
+  }
+
+  if (!(await verifyTurnstile(field("cf-turnstile-response")))) {
+    return { status: "error", formError: "captcha" };
   }
 
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
     console.error("RESEND_API_KEY is not configured");
-    return { status: "error" };
+    return { status: "error", formError: "send" };
   }
 
-  const { name, email, company, service, message } = parsed.data;
+  const phone = formatPhone(values);
+  const country = findCountry(values.phoneCountry);
+  const service = SERVICE_LABELS[values.service];
 
   try {
     const resend = new Resend(apiKey);
     const { error } = await resend.emails.send({
       from: process.env.CONTACT_FROM ?? "Web <onboarding@resend.dev>",
       to: process.env.CONTACT_TO ?? "byrongonzalezing@gmail.com",
-      replyTo: email,
-      subject: `[Web] ${name}${service ? ` — ${service}` : ""}`,
+      replyTo: values.email,
+      subject: `[Web] ${values.name}${service ? ` — ${service}` : ""}`,
       text: [
-        `Nombre: ${name}`,
-        `Email: ${email}`,
-        company ? `Empresa: ${company}` : null,
+        `Nombre: ${values.name}`,
+        `Email: ${values.email}`,
+        phone ? `Teléfono: ${phone}${country ? ` (${country.es})` : ""}` : null,
+        values.company ? `Empresa: ${values.company}` : null,
         service ? `Servicio: ${service}` : null,
         "",
-        message,
+        values.message,
       ]
         .filter((line): line is string => line !== null)
         .join("\n"),
@@ -78,12 +117,12 @@ export async function sendContactMessage(
 
     if (error) {
       console.error("Resend error:", error);
-      return { status: "error" };
+      return { status: "error", formError: "send" };
     }
 
     return { status: "success" };
   } catch (err) {
     console.error("Contact form error:", err);
-    return { status: "error" };
+    return { status: "error", formError: "send" };
   }
 }

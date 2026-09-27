@@ -19,6 +19,10 @@
 
   --radius-card: 1rem;
 
+  /* Small labels: 13px instead of Tailwind's 12px, easier to read on phones */
+  --text-xs: 0.8125rem;
+  --text-xs--line-height: 1.125rem;
+
   --animate-marquee: marquee 30s linear infinite;
 
   @keyframes marquee {
@@ -33,7 +37,6 @@
 
 html {
   color-scheme: dark;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -54,8 +57,104 @@ body {
   scrollbar-color: var(--color-surface-2) transparent;
 }
 
-/* Focus visibility on dark bg */
-:focus-visible {
+/* Focus visibility on dark bg. Form fields draw their own ring instead. */
+:focus-visible:not(input, textarea, select) {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
+}
+
+/* Skip link: visible only when it receives keyboard focus */
+.skip-link {
+  position: fixed;
+  left: 1rem;
+  top: -4rem;
+  z-index: 60;
+  border-radius: 9999px;
+  background-color: var(--color-accent);
+  color: var(--color-bg);
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 0.75rem;
+}
+
+/*
+ * Entrances are CSS animations so the server-rendered HTML is visible as
+ * soon as it paints (no JavaScript needed). FadeIn.tsx only takes over for
+ * elements that are still below the fold after hydration.
+ */
+@keyframes reveal-rise {
+  from {
+    opacity: 0;
+    transform: translateY(var(--reveal-y, 20px));
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes page-enter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.page-enter {
+  animation: page-enter 0.3s ease-out both;
+}
+
+.reveal {
+  animation: reveal-rise 0.5s cubic-bezier(0.21, 0.47, 0.32, 0.98) both;
+  animation-delay: var(--reveal-delay, 0ms);
+}
+
+.reveal[data-reveal="wait"] {
+  animation: none;
+  opacity: 0;
+  transform: translateY(var(--reveal-y, 20px));
+}
+
+.reveal[data-reveal="in"] {
+  animation: none;
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 0.5s ease-out,
+    transform 0.5s cubic-bezier(0.21, 0.47, 0.32, 0.98);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+[data-stagger] > .reveal:nth-child(2) {
+  --reveal-delay: 70ms;
+}
+[data-stagger] > .reveal:nth-child(3) {
+  --reveal-delay: 140ms;
+}
+[data-stagger] > .reveal:nth-child(4) {
+  --reveal-delay: 210ms;
+}
+[data-stagger] > .reveal:nth-child(5) {
+  --reveal-delay: 280ms;
+}
+[data-stagger] > .reveal:nth-child(n + 6) {
+  --reveal-delay: 350ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-enter,
+  .reveal,
+  .reveal[data-reveal] {
+    animation: none;
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
 }

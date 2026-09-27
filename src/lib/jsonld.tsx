@@ -1,11 +1,15 @@
 import { getCvData, getServices } from "@/content";
 import { BASE_URL } from "./metadata";
 
+const PERSON_ID = `${BASE_URL}/#person`;
+const SERVICE_ID = `${BASE_URL}/#service`;
+
 export function personJsonLd(locale: string) {
   const { profile } = getCvData(locale);
   return {
     "@context": "https://schema.org",
     "@type": "Person",
+    "@id": PERSON_ID,
     name: profile.name,
     jobTitle: `${profile.headline} | ${profile.tagline}`,
     description: profile.summary,
@@ -27,10 +31,23 @@ export function professionalServiceJsonLd(locale: string) {
   return {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: profile.name,
+    "@id": SERVICE_ID,
+    name: `${profile.name} — ${profile.headline}`,
     description: profile.summary,
     url: BASE_URL,
+    image: `${BASE_URL}/images/about/profile.png`,
+    email: profile.email,
+    telephone: profile.phone,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Cali",
+      addressRegion: "Valle del Cauca",
+      addressCountry: "CO",
+    },
     areaServed: "Worldwide",
+    availableLanguage: ["es", "en"],
+    founder: { "@id": PERSON_ID },
+    sameAs: [profile.linkedin, profile.github],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: locale === "es" ? "Servicios" : "Services",
@@ -63,7 +80,10 @@ export function JsonLd({ data }: { data: object }) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      // Escaping "<" keeps any text from closing the <script> element.
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(data).replace(/</g, "\\u003c"),
+      }}
     />
   );
 }

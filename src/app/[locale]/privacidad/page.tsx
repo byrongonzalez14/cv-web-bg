@@ -20,7 +20,7 @@ const CONTENT = {
     },
     {
       title: "2. Datos que se recogen",
-      body: "Formulario de contacto: nombre, correo electrónico, empresa (opcional) y el mensaje que envíes. Estos datos se usan exclusivamente para responder tu solicitud y no se comparten con terceros ni se usan para envíos comerciales no solicitados. Analítica: el sitio usa Google Analytics 4, Google Tag Manager, Microsoft Clarity y Vercel Analytics para entender de forma agregada cómo se usa el sitio (páginas visitadas, país, tipo de dispositivo, interacciones). Estas herramientas pueden usar cookies o identificadores similares.",
+      body: "Formulario de contacto: nombre, correo electrónico, teléfono y empresa (ambos opcionales) y el mensaje que envíes. Estos datos se usan exclusivamente para responder tu solicitud y no se comparten con terceros ni se usan para envíos comerciales no solicitados. Analítica: el sitio usa Google Analytics 4, Google Tag Manager, Microsoft Clarity y Vercel Analytics para entender de forma agregada cómo se usa el sitio (páginas visitadas, país, tipo de dispositivo, interacciones). Estas herramientas pueden usar cookies o identificadores similares. Proveedores que procesan estos datos: Vercel (alojamiento del sitio), Resend (envío del correo del formulario) y Cloudflare Turnstile (verificación anti-bots del formulario); pueden procesarlos fuera de Colombia.",
     },
     {
       title: "3. Finalidad y base legal",
@@ -46,7 +46,7 @@ const CONTENT = {
     },
     {
       title: "2. Data collected",
-      body: "Contact form: name, email, company (optional), and the message you send. This data is used exclusively to respond to your request and is not shared with third parties or used for unsolicited commercial messages. Analytics: the site uses Google Analytics 4, Google Tag Manager, Microsoft Clarity, and Vercel Analytics to understand in aggregate how the site is used (pages visited, country, device type, interactions). These tools may use cookies or similar identifiers.",
+      body: "Contact form: name, email, phone and company (both optional), and the message you send. This data is used exclusively to respond to your request and is not shared with third parties or used for unsolicited commercial messages. Analytics: the site uses Google Analytics 4, Google Tag Manager, Microsoft Clarity, and Vercel Analytics to understand in aggregate how the site is used (pages visited, country, device type, interactions). These tools may use cookies or similar identifiers. Providers that process this data: Vercel (site hosting), Resend (delivery of the form email), and Cloudflare Turnstile (anti-bot check on the form); they may process it outside Colombia.",
     },
     {
       title: "3. Purpose and legal basis",
@@ -83,7 +83,7 @@ export default async function PrivacyPage({
       <PageHeader eyebrow="// legal" title={t("title")} />
       <section className="mx-auto max-w-3xl px-4 pb-24 md:px-6 md:pb-32">
         <p className="font-mono text-xs text-muted">
-          {t("updated")}: 2026-07-04
+          {t("updated")}: 2026-09-27
         </p>
         <div className="mt-8 space-y-8">
           {sections.map((section) => (

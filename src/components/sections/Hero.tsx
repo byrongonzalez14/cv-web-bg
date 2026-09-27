@@ -32,15 +32,15 @@ export async function Hero({ locale }: { locale: string }) {
           <DecryptedText text={t("titleLine1")} />
           <br />
           <span className="text-accent">
-            <DecryptedText text={t("titleLine2")} delay={0.6} />
+            <DecryptedText text={t("titleLine2")} delay={0.15} />
           </span>
         </h1>
-        <FadeIn delay={0.3}>
+        <FadeIn delay={0.15}>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted md:text-lg">
             {t("subtitle")}
           </p>
         </FadeIn>
-        <FadeIn delay={0.45}>
+        <FadeIn delay={0.25}>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <Link href="/servicios" className={buttonClass("primary")}>
               {t("ctaPrimary")}

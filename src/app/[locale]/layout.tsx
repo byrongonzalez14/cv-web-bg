@@ -69,6 +69,7 @@ export default async function LocaleLayout({
     notFound();
   }
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "nav" });
 
   return (
     <html
@@ -80,10 +81,15 @@ export default async function LocaleLayout({
         <JsonLd data={personJsonLd(locale)} />
       </head>
       <body className="bg-bg text-fg min-h-screen flex flex-col">
+        <a href="#contenido" className="skip-link">
+          {t("skip")}
+        </a>
         <NextIntlClientProvider>
           <SmoothScroll>
             <Header />
-            <main className="flex-1">{children}</main>
+            <main id="contenido" tabIndex={-1} className="flex-1 outline-none">
+              {children}
+            </main>
             <Footer />
           </SmoothScroll>
           <Analytics />

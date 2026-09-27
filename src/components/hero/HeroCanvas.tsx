@@ -12,7 +12,7 @@ interface Particle {
 /**
  * Subtle constellation particle field behind the hero text.
  * ~3 KB, zero dependencies, gated by prefers-reduced-motion and
- * paused when the tab is hidden.
+ * paused when the tab is hidden or the hero is scrolled out of view.
  */
 export function HeroCanvas() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -87,13 +87,21 @@ export function HeroCanvas() {
       rafId = requestAnimationFrame(draw);
     };
 
+    // Animate only while the tab is visible and the canvas is on screen.
+    let onScreen = true;
+    let running = true;
     const onVisibility = () => {
-      if (document.hidden) {
-        cancelAnimationFrame(rafId);
-      } else {
-        rafId = requestAnimationFrame(draw);
-      }
+      const shouldRun = onScreen && !document.hidden;
+      if (shouldRun === running) return;
+      running = shouldRun;
+      cancelAnimationFrame(rafId);
+      if (running) rafId = requestAnimationFrame(draw);
     };
+    const screenObserver = new IntersectionObserver(([entry]) => {
+      onScreen = entry.isIntersecting;
+      onVisibility();
+    });
+    screenObserver.observe(canvas);
 
     const observer = new ResizeObserver(resize);
     observer.observe(canvas);
@@ -104,6 +112,7 @@ export function HeroCanvas() {
     return () => {
       cancelAnimationFrame(rafId);
       observer.disconnect();
+      screenObserver.disconnect();
       document.removeEventListener("visibilitychange", onVisibility);
     };
   }, []);

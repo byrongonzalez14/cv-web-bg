@@ -5,7 +5,11 @@
     "services": "Services",
     "experience": "Experience",
     "contact": "Contact",
-    "cta": "Let's talk"
+    "cta": "Let's talk",
+    "menu": "Menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "skip": "Skip to content"
   },
   "meta": {
     "siteName": "Byron González — AI Solutions Consultant",
@@ -183,10 +187,16 @@
       "namePlaceholder": "Your name",
       "email": "Email",
       "emailPlaceholder": "you@email.com",
-      "company": "Company (optional)",
+      "phone": "Phone",
+      "phoneCountry": "Phone country",
+      "phonePlaceholder": "Number",
+      "phoneOtherPlaceholder": "+code and number",
+      "otherCountry": "Other country",
+      "otherCountryShort": "Other",
+      "optional": "optional",
+      "company": "Company",
       "companyPlaceholder": "Your company",
       "service": "What do you need?",
-      "servicePlaceholder": "Select an option",
       "serviceOptions": {
         "ai": "AI & automation",
         "analysis": "Business analysis",
@@ -198,12 +208,25 @@
       "messagePlaceholder": "Tell me which process you want to improve or what project you have in mind…",
       "submit": "Send message",
       "sending": "Sending…",
-      "success": "Message sent! I'll reply within 24 hours.",
+      "successTitle": "Message sent!",
+      "success": "Thanks for reaching out. I'll reply within 24 hours.",
+      "sendAnother": "Send another message",
       "error": "The message could not be sent. Try again or email me directly.",
+      "errorCaptcha": "We couldn't verify that you're not a robot. Please try again in a few seconds.",
+      "captchaPending": "The security check is still finishing. Wait a couple of seconds and send again.",
+      "privacyNote": "By sending you accept the <link>privacy policy</link>.",
       "validation": {
-        "name": "Enter your name",
-        "email": "Enter a valid email",
-        "message": "Tell me a bit more (minimum 10 characters)"
+        "nameRequired": "Enter your name",
+        "nameInvalid": "Use letters only (2 to 80 characters)",
+        "emailRequired": "Enter your email",
+        "emailInvalid": "That email doesn't look valid. Example: name@company.com",
+        "phoneInvalid": "The number doesn't match the selected country",
+        "phoneIntl": "Include the country code. Example: +44 7700 900123",
+        "companyLong": "Maximum 120 characters",
+        "serviceInvalid": "Pick one of the options",
+        "messageRequired": "Tell me how I can help",
+        "messageShort": "Tell me a bit more (minimum 10 characters)",
+        "messageLong": "Maximum 2000 characters"
       }
     },
     "availability": "Cali, Colombia · Remote worldwide · ES / EN"
