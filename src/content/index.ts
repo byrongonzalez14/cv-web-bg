@@ -4,6 +4,8 @@ import { cvDataEs } from "./cv-data.es";
 import { servicesEn } from "./services.en";
 import { servicesEs } from "./services.es";
 
+export { CASE_SLUGS, getCase, getWork } from "./cases";
+
 export function getCvData(locale: string): CVContent {
   return locale === "en" ? cvDataEn : cvDataEs;
 }

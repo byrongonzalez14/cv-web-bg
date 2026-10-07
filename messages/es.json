@@ -3,6 +3,7 @@
     "home": "Inicio",
     "about": "Quién soy",
     "services": "Servicios",
+    "work": "Proyectos",
     "experience": "Experiencia",
     "contact": "Contacto",
     "cta": "Hablemos",
@@ -28,6 +29,10 @@
     "experience": {
       "title": "Experiencia y CV — Byron González",
       "description": "5+ años de experiencia: LATO AI, Banco Unión, Colgate-Palmolive. Descarga mi CV en español o inglés."
+    },
+    "work": {
+      "title": "Proyectos — Byron González",
+      "description": "Casos de estudio y proyectos: rediseños, automatizaciones y herramientas construidas de punta a punta, con las decisiones detrás de cada uno."
     },
     "contact": {
       "title": "Contacto — Byron González",
@@ -144,14 +149,6 @@
     "engagementLabel": "Cómo trabajamos",
     "examplesLabel": "Proyectos en línea",
     "cta": "Hablemos de tu caso",
-    "cases": {
-      "eyebrow": "// casos de estudio",
-      "title": "Casos de estudio",
-      "subtitle": "Tres ejemplos de mi trabajo y los resultados que dejó.",
-      "challengeLabel": "El reto",
-      "solutionLabel": "Lo que hice",
-      "outcomeLabel": "El resultado"
-    },
     "process": {
       "eyebrow": "// proceso",
       "title": "De la idea a la solución funcionando"
@@ -159,6 +156,12 @@
     "faq": {
       "eyebrow": "// preguntas frecuentes",
       "title": "Preguntas frecuentes"
+    },
+    "work": {
+      "eyebrow": "// proyectos",
+      "title": "Así se ve cuando está hecho",
+      "text": "Casos de estudio con el resultado funcionando: qué encontré, qué construí y por qué.",
+      "cta": "Ver proyectos"
     }
   },
   "experience": {
@@ -270,5 +273,28 @@
     "title": "Página no encontrada",
     "text": "La página que buscas no existe o cambió de lugar.",
     "cta": "Volver al inicio"
+  },
+  "work": {
+    "eyebrow": "// proyectos",
+    "title": "Proyectos",
+    "subtitle": "Trabajo real, con sus datos, sus decisiones y lo que haría distinto. Cada caso muestra el resultado funcionando.",
+    "viewCase": "Ver el caso",
+    "othersTitle": "Otros trabajos",
+    "upcomingTitle": "En construcción",
+    "upcomingBadge": "pronto",
+    "ctaBand": {
+      "title": "¿Tienes un proceso o un sitio que merece este nivel de cuidado?",
+      "text": "Cuéntame cómo funciona hoy y te propongo por dónde empezar.",
+      "cta": "Agendar una llamada"
+    },
+    "case": {
+      "back": "Todos los proyectos",
+      "startEyebrow": "// contexto",
+      "problemsEyebrow": "// problema → solución",
+      "builtEyebrow": "// lo construido",
+      "decisionsEyebrow": "// criterio",
+      "nextEyebrow": "// siguiente paso",
+      "closingText": "Cuéntame tu caso y te propongo cómo resolverlo."
+    }
   }
 }

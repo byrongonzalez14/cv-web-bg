@@ -15,8 +15,12 @@ export const routing = defineRouting({
     "/experiencia": { es: "/experiencia", en: "/experience" },
     "/contacto": { es: "/contacto", en: "/contact" },
     "/privacidad": { es: "/privacidad", en: "/privacy" },
+    "/proyectos": { es: "/proyectos", en: "/work" },
+    "/proyectos/[slug]": { es: "/proyectos/[slug]", en: "/work/[slug]" },
   },
 });
 
 export type AppLocale = (typeof routing.locales)[number];
 export type AppPathname = keyof typeof routing.pathnames;
+/** Pathnames without dynamic segments: the ones a plain link can point to. */
+export type StaticPathname = Exclude<AppPathname, `${string}[${string}`>;

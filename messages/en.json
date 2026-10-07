@@ -3,6 +3,7 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
+    "work": "Work",
     "experience": "Experience",
     "contact": "Contact",
     "cta": "Let's talk",
@@ -28,6 +29,10 @@
     "experience": {
       "title": "Experience & CV — Byron González",
       "description": "5+ years of experience: LATO AI, Banco Unión, Colgate-Palmolive. Download my CV in English or Spanish."
+    },
+    "work": {
+      "title": "Work — Byron González",
+      "description": "Case studies and projects: redesigns, automations and tools built end to end, with the decisions behind each one."
     },
     "contact": {
       "title": "Contact — Byron González",
@@ -144,14 +149,6 @@
     "engagementLabel": "How we work",
     "examplesLabel": "Live projects",
     "cta": "Let's discuss your case",
-    "cases": {
-      "eyebrow": "// case studies",
-      "title": "Case studies",
-      "subtitle": "Three examples of my work and the results it delivered.",
-      "challengeLabel": "The challenge",
-      "solutionLabel": "What I did",
-      "outcomeLabel": "The result"
-    },
     "process": {
       "eyebrow": "// process",
       "title": "From idea to a working solution"
@@ -159,6 +156,12 @@
     "faq": {
       "eyebrow": "// faq",
       "title": "Frequently asked questions"
+    },
+    "work": {
+      "eyebrow": "// work",
+      "title": "What it looks like when it's done",
+      "text": "Case studies with the result running: what I found, what I built and why.",
+      "cta": "View work"
     }
   },
   "experience": {
@@ -270,5 +273,28 @@
     "title": "Page not found",
     "text": "The page you're looking for doesn't exist or has moved.",
     "cta": "Back home"
+  },
+  "work": {
+    "eyebrow": "// work",
+    "title": "Work",
+    "subtitle": "Real work, with its data, its decisions and what I would do differently. Every case shows the result running.",
+    "viewCase": "View case",
+    "othersTitle": "Other work",
+    "upcomingTitle": "In progress",
+    "upcomingBadge": "soon",
+    "ctaBand": {
+      "title": "Got a process or a website that deserves this level of care?",
+      "text": "Tell me how it works today and I'll propose where to start.",
+      "cta": "Book a call"
+    },
+    "case": {
+      "back": "All projects",
+      "startEyebrow": "// context",
+      "problemsEyebrow": "// problem → solution",
+      "builtEyebrow": "// what I built",
+      "decisionsEyebrow": "// judgment",
+      "nextEyebrow": "// next step",
+      "closingText": "Tell me about your case and I'll propose how to solve it."
+    }
   }
 }

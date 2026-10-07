@@ -33,7 +33,7 @@ export default async function ServicesPage({
 
   const t = await getTranslations({ locale, namespace: "services" });
   const tHome = await getTranslations({ locale, namespace: "home.ctaBand" });
-  const { services, caseStudies, process, faqs } = getServices(locale);
+  const { services, process, faqs } = getServices(locale);
   const { profile } = getCvData(locale);
 
   return (
@@ -158,66 +158,22 @@ export default async function ServicesPage({
         ))}
       </section>
 
-      {/* Case studies */}
+      {/* Real work lives in /proyectos */}
       <section className="border-t border-line">
         <div className="mx-auto max-w-6xl px-4 py-24 md:px-6 md:py-32">
           <FadeIn>
-            <SectionHeading
-              eyebrow={t("cases.eyebrow")}
-              title={t("cases.title")}
-              subtitle={t("cases.subtitle")}
-            />
+            <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
+              <SectionHeading
+                eyebrow={t("work.eyebrow")}
+                title={t("work.title")}
+                subtitle={t("work.text")}
+              />
+              <Link href="/proyectos" className={buttonClass("ghost", "shrink-0")}>
+                {t("work.cta")}
+                <ArrowRight size={18} />
+              </Link>
+            </div>
           </FadeIn>
-          <Stagger className="mt-12 grid gap-4 lg:grid-cols-3">
-            {caseStudies.map((cs) => (
-              <StaggerItem key={cs.slug}>
-                <article className="flex h-full flex-col rounded-card border border-line bg-surface p-6 md:p-8">
-                  <p className="font-mono text-xs uppercase tracking-wider text-muted">
-                    {cs.sector}
-                  </p>
-                  <h3 className="mt-3 font-display text-xl font-semibold tracking-tight">
-                    {cs.title}
-                  </h3>
-
-                  <div className="mt-5 border-y border-line py-4">
-                    <p className="font-display text-3xl font-bold text-accent">
-                      {cs.metric}
-                    </p>
-                    <p className="mt-1 font-mono text-xs uppercase tracking-wider text-muted">
-                      {cs.metricLabel}
-                    </p>
-                  </div>
-
-                  <div className="mt-5 space-y-4 text-sm leading-relaxed">
-                    <div>
-                      <p className="font-mono text-xs uppercase tracking-wider text-accent">
-                        {t("cases.challengeLabel")}
-                      </p>
-                      <p className="mt-1 text-muted">{cs.challenge}</p>
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs uppercase tracking-wider text-accent">
-                        {t("cases.solutionLabel")}
-                      </p>
-                      <p className="mt-1 text-muted">{cs.solution}</p>
-                    </div>
-                    <div>
-                      <p className="font-mono text-xs uppercase tracking-wider text-accent">
-                        {t("cases.outcomeLabel")}
-                      </p>
-                      <p className="mt-1 text-muted">{cs.outcome}</p>
-                    </div>
-                  </div>
-
-                  <div className="mt-auto flex flex-wrap gap-2 pt-6">
-                    {cs.tags.map((tag) => (
-                      <Tag key={tag}>{tag}</Tag>
-                    ))}
-                  </div>
-                </article>
-              </StaggerItem>
-            ))}
-          </Stagger>
         </div>
       </section>
 

@@ -1,5 +1,6 @@
 "use client";
 
+import { useParams } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { usePathname, useRouter } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
@@ -14,6 +15,7 @@ export function LocaleSwitcher() {
   const t = useTranslations("nav");
   const locale = useLocale();
   const pathname = usePathname();
+  const params = useParams();
   const router = useRouter();
 
   return (
@@ -29,7 +31,13 @@ export function LocaleSwitcher() {
           lang={l}
           aria-label={LANGUAGE_NAMES[l]}
           aria-pressed={l === locale}
-          onClick={() => router.replace(pathname, { locale: l })}
+          onClick={() =>
+            router.replace(
+              // @ts-expect-error -- next-intl validates params per pathname; here they come from the current route.
+              { pathname, params },
+              { locale: l },
+            )
+          }
           className={cn(
             "flex h-9 min-w-10 items-center justify-center rounded-full px-2.5 uppercase transition-colors",
             l === locale

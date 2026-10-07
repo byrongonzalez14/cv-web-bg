@@ -3,12 +3,13 @@ import { useLocale, useTranslations } from "next-intl";
 import { Mail } from "lucide-react";
 import { GitHubIcon, LinkedInIcon } from "@/components/ui/SocialIcons";
 import { Link } from "@/i18n/navigation";
-import type { AppPathname } from "@/i18n/routing";
+import type { StaticPathname } from "@/i18n/routing";
 import { getCvData } from "@/content";
 
-const NAV_ITEMS: { href: AppPathname; key: "about" | "services" | "experience" | "contact" }[] = [
+const NAV_ITEMS: { href: StaticPathname; key: "about" | "services" | "work" | "experience" | "contact" }[] = [
   { href: "/quien-soy", key: "about" },
   { href: "/servicios", key: "services" },
+  { href: "/proyectos", key: "work" },
   { href: "/experiencia", key: "experience" },
   { href: "/contacto", key: "contact" },
 ];

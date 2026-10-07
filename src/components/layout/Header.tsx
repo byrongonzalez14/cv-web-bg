@@ -6,14 +6,15 @@ import { useTranslations } from "next-intl";
 import { AnimatePresence, motion } from "motion/react";
 import { Menu, X } from "lucide-react";
 import { Link, usePathname } from "@/i18n/navigation";
-import type { AppPathname } from "@/i18n/routing";
+import type { StaticPathname } from "@/i18n/routing";
 import { buttonClass } from "@/components/ui/Button";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 import { cn } from "@/lib/utils";
 
-const NAV_ITEMS: { href: AppPathname; key: "about" | "services" | "experience" }[] = [
+const NAV_ITEMS: { href: StaticPathname; key: "about" | "services" | "work" | "experience" }[] = [
   { href: "/quien-soy", key: "about" },
   { href: "/servicios", key: "services" },
+  { href: "/proyectos", key: "work" },
   { href: "/experiencia", key: "experience" },
 ];
 
