@@ -5,6 +5,7 @@ import { GitHubIcon, LinkedInIcon } from "@/components/ui/SocialIcons";
 import { Link } from "@/i18n/navigation";
 import type { StaticPathname } from "@/i18n/routing";
 import { getCvData } from "@/content";
+import { FooterEdge } from "./FooterEdge";
 
 const NAV_ITEMS: { href: StaticPathname; key: "about" | "services" | "work" | "experience" | "contact" }[] = [
   { href: "/quien-soy", key: "about" },
@@ -22,7 +23,8 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-line bg-surface/40">
+    <footer className="relative bg-surface/40">
+      <FooterEdge />
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 md:grid-cols-3 md:px-6">
         <div>
           <div className="flex items-center gap-3">

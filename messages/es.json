@@ -277,11 +277,8 @@
   "work": {
     "eyebrow": "// proyectos",
     "title": "Proyectos",
-    "subtitle": "Trabajo real, con sus datos, sus decisiones y lo que haría distinto. Cada caso muestra el resultado funcionando.",
+    "subtitle": "Sitios y productos que diseñé y construí. Los que tienen caso de estudio cuentan el porqué de cada decisión.",
     "viewCase": "Ver el caso",
-    "othersTitle": "Otros trabajos",
-    "upcomingTitle": "En construcción",
-    "upcomingBadge": "pronto",
     "ctaBand": {
       "title": "¿Tienes un proceso o un sitio que merece este nivel de cuidado?",
       "text": "Cuéntame cómo funciona hoy y te propongo por dónde empezar.",
@@ -295,6 +292,8 @@
       "decisionsEyebrow": "// criterio",
       "nextEyebrow": "// siguiente paso",
       "closingText": "Cuéntame tu caso y te propongo cómo resolverlo."
-    }
+    },
+    "visitSite": "Visitar el sitio",
+    "scrollHint": "Desliza"
   }
 }

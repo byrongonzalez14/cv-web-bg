@@ -44,19 +44,32 @@ export interface CaseStudyPage {
   meta: { title: string; description: string };
 }
 
-export interface OtherProject {
-  name: string;
-  kind: string;
-  url: string;
-}
+/** `label`: two or three words saying what the clip or screenshot shows. */
+export type ProjectMedia =
+  | { type: "video"; src: string; poster: string; label: string }
+  | { type: "image"; src: string; label: string };
 
-export interface UpcomingProject {
+/** One row of the projects list: a case study of this site or a live site. */
+export interface ProjectCard {
   name: string;
   kind: string;
+  summary: string;
+  stack: string[];
+  /** Brand color of the project: tints its scene and the curtain that reveals it. */
+  accent: string;
+  /** Clips or screenshots (1200x750) shown in the carousel, in order. */
+  media: ProjectMedia[];
+  /**
+   * White logo (SVG or transparent PNG) shown on the curtain that brings the
+   * project in. Without it, the project name is set in type instead.
+   */
+  logo?: string;
+  /** Slug of a case study on this site; when absent the card opens `url`. */
+  caseSlug?: string;
+  url?: string;
 }
 
 export interface WorkContent {
   cases: CaseStudyPage[];
-  others: OtherProject[];
-  upcoming: UpcomingProject[];
+  projects: ProjectCard[];
 }

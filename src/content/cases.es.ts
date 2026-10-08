@@ -1,5 +1,5 @@
 import type { WorkContent } from "@/models/cases";
-import { DEOCCIDENTE_VIDEOS } from "./case-videos";
+import { deoccidenteMedia, deoccidenteVideos } from "./case-videos";
 
 export const casesEs: WorkContent = {
   cases: [
@@ -16,7 +16,7 @@ export const casesEs: WorkContent = {
         { value: "0", label: "servidores y bases de datos que mantener" },
         { value: "1", label: "sola fuente de datos: rutas, horarios y oficinas alimentan todas las pantallas" },
       ],
-      videos: DEOCCIDENTE_VIDEOS,
+      videos: deoccidenteVideos("es"),
       cover: "buscador",
       startingPoint: {
         title: "El punto de partida",
@@ -161,13 +161,55 @@ export const casesEs: WorkContent = {
       },
     },
   ],
-  others: [
-    { name: "Encárgate", kind: "Aplicación web", url: "https://encargate-app.vercel.app/" },
-    { name: "Vidrios Bedoya", kind: "Sitio web", url: "https://vidrios-bedoya.vercel.app/" },
-    { name: "La Rivera", kind: "Sitio web", url: "https://la-rivera.vercel.app/" },
-  ],
-  upcoming: [
-    { name: "Asistente de descubrimiento por Telegram", kind: "Bot con traspaso a humano" },
-    { name: "Onboarding automatizado", kind: "Automatización de procesos" },
+  projects: [
+    {
+      name: "De Occidente",
+      kind: "Caso de estudio · Rediseño conceptual",
+      summary: "Buscador de rutas con trasbordos, mapa de la red y asistente sin IA para una cooperativa de transporte.",
+      stack: ["React", "TypeScript", "Vite", "Tailwind"],
+      accent: "#c01e27",
+      logo: "/images/projects/logos/deoccidente.svg",
+      media: deoccidenteMedia("es"),
+      caseSlug: "deoccidente",
+    },
+    {
+      name: "Encárgate",
+      kind: "Aplicación web",
+      summary: "Landing de una app que conecta personas con proveedores de servicios de confianza cerca de ellas.",
+      stack: ["Vue", "Vercel"],
+      accent: "#f2601c",
+      logo: "/images/projects/logos/encargate.svg",
+      media: [
+        { type: "image", src: "/images/projects/encargate.jpg", label: "Inicio" },
+        { type: "image", src: "/images/projects/encargate-2.jpg", label: "Beneficios" },
+        { type: "image", src: "/images/projects/encargate-3.jpg", label: "Preguntas frecuentes" },
+      ],
+      url: "https://encargate-app.vercel.app/",
+    },
+    {
+      name: "Vidrios Bedoya",
+      kind: "Sitio web",
+      summary: "Catálogo y contacto por WhatsApp para un taller de vidrio, espejos y marquetería en Cali.",
+      stack: ["Angular", "Bulma", "Vercel"],
+      accent: "#5f8ba6",
+      media: [
+        { type: "image", src: "/images/projects/vidrios-bedoya.jpg", label: "Inicio" },
+        { type: "image", src: "/images/projects/vidrios-bedoya-2.jpg", label: "Servicios" },
+        { type: "image", src: "/images/projects/vidrios-bedoya-3.jpg", label: "Por qué elegirnos" },
+      ],
+      url: "https://vidrios-bedoya.vercel.app/",
+    },
+    {
+      name: "La Rivera",
+      kind: "Sitio web",
+      summary: "Sitio de una casa campestre: espacios, sitios de interés y reservas.",
+      stack: ["Angular", "Vercel"],
+      accent: "#3aa76d",
+      media: [
+        { type: "image", src: "/images/projects/la-rivera.jpg", label: "Inicio" },
+        { type: "image", src: "/images/projects/la-rivera-2.jpg", label: "Espacios" },
+      ],
+      url: "https://la-rivera.vercel.app/",
+    },
   ],
 };

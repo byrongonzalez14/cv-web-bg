@@ -24,6 +24,23 @@ export function Header() {
   const t = useTranslations("nav");
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [hidden, setHidden] = useState(false);
+
+  // Directional header: it steps aside while the page scrolls down and
+  // returns as soon as the scroll turns back up.
+  // Keyboard focus brings it back (see `has-[:focus-visible]` below); a link
+  // that merely kept focus after a mouse click does not pin it.
+  useEffect(() => {
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (Math.abs(y - lastY) < 6) return;
+      setHidden(y > lastY && y > 96);
+      lastY = y;
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   // While the mobile menu is open: Esc closes it and the page behind it
   // does not scroll.
@@ -44,7 +61,12 @@ export function Header() {
   }, [open]);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-line bg-bg/80 backdrop-blur-md">
+    <header
+      className={cn(
+        "fixed inset-x-0 top-0 z-50 border-b border-line bg-bg/80 backdrop-blur-md transition-transform duration-500 ease-[cubic-bezier(0.34,1.3,0.64,1)] has-[:focus-visible]:translate-y-0 motion-reduce:transition-none",
+        hidden && !open && "-translate-y-full",
+      )}
+    >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-6">
         <Link
           href="/"

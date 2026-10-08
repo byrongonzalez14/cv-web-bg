@@ -277,11 +277,8 @@
   "work": {
     "eyebrow": "// work",
     "title": "Work",
-    "subtitle": "Real work, with its data, its decisions and what I would do differently. Every case shows the result running.",
+    "subtitle": "Sites and products I designed and built. The ones with a case study explain the why behind each decision.",
     "viewCase": "View case",
-    "othersTitle": "Other work",
-    "upcomingTitle": "In progress",
-    "upcomingBadge": "soon",
     "ctaBand": {
       "title": "Got a process or a website that deserves this level of care?",
       "text": "Tell me how it works today and I'll propose where to start.",
@@ -295,6 +292,8 @@
       "decisionsEyebrow": "// judgment",
       "nextEyebrow": "// next step",
       "closingText": "Tell me about your case and I'll propose how to solve it."
-    }
+    },
+    "visitSite": "Visit the site",
+    "scrollHint": "Scroll"
   }
 }

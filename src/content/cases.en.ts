@@ -1,5 +1,5 @@
 import type { WorkContent } from "@/models/cases";
-import { DEOCCIDENTE_VIDEOS } from "./case-videos";
+import { deoccidenteMedia, deoccidenteVideos } from "./case-videos";
 
 export const casesEn: WorkContent = {
   cases: [
@@ -16,7 +16,7 @@ export const casesEn: WorkContent = {
         { value: "0", label: "servers or databases to maintain" },
         { value: "1", label: "single data source: routes, timetables and offices feed every screen" },
       ],
-      videos: DEOCCIDENTE_VIDEOS,
+      videos: deoccidenteVideos("en"),
       cover: "buscador",
       startingPoint: {
         title: "Where it started",
@@ -161,13 +161,55 @@ export const casesEn: WorkContent = {
       },
     },
   ],
-  others: [
-    { name: "Encárgate", kind: "Web app", url: "https://encargate-app.vercel.app/" },
-    { name: "Vidrios Bedoya", kind: "Website", url: "https://vidrios-bedoya.vercel.app/" },
-    { name: "La Rivera", kind: "Website", url: "https://la-rivera.vercel.app/" },
-  ],
-  upcoming: [
-    { name: "Discovery assistant on Telegram", kind: "Bot with human handoff" },
-    { name: "Automated onboarding", kind: "Process automation" },
+  projects: [
+    {
+      name: "De Occidente",
+      kind: "Case study · Concept redesign",
+      summary: "A route finder with transfers, a network map and a rules-based assistant for a transport cooperative.",
+      stack: ["React", "TypeScript", "Vite", "Tailwind"],
+      accent: "#c01e27",
+      logo: "/images/projects/logos/deoccidente.svg",
+      media: deoccidenteMedia("en"),
+      caseSlug: "deoccidente",
+    },
+    {
+      name: "Encárgate",
+      kind: "Web app",
+      summary: "Landing page for an app that connects people with trusted service providers near them.",
+      stack: ["Vue", "Vercel"],
+      accent: "#f2601c",
+      logo: "/images/projects/logos/encargate.svg",
+      media: [
+        { type: "image", src: "/images/projects/encargate.jpg", label: "Home" },
+        { type: "image", src: "/images/projects/encargate-2.jpg", label: "Benefits" },
+        { type: "image", src: "/images/projects/encargate-3.jpg", label: "FAQ" },
+      ],
+      url: "https://encargate-app.vercel.app/",
+    },
+    {
+      name: "Vidrios Bedoya",
+      kind: "Website",
+      summary: "Catalog and WhatsApp contact for a glass, mirror and framing workshop in Cali.",
+      stack: ["Angular", "Bulma", "Vercel"],
+      accent: "#5f8ba6",
+      media: [
+        { type: "image", src: "/images/projects/vidrios-bedoya.jpg", label: "Home" },
+        { type: "image", src: "/images/projects/vidrios-bedoya-2.jpg", label: "Services" },
+        { type: "image", src: "/images/projects/vidrios-bedoya-3.jpg", label: "Why choose us" },
+      ],
+      url: "https://vidrios-bedoya.vercel.app/",
+    },
+    {
+      name: "La Rivera",
+      kind: "Website",
+      summary: "Website for a country house: spaces, nearby places and bookings.",
+      stack: ["Angular", "Vercel"],
+      accent: "#3aa76d",
+      media: [
+        { type: "image", src: "/images/projects/la-rivera.jpg", label: "Home" },
+        { type: "image", src: "/images/projects/la-rivera-2.jpg", label: "Spaces" },
+      ],
+      url: "https://la-rivera.vercel.app/",
+    },
   ],
 };
