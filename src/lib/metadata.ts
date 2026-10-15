@@ -3,8 +3,9 @@ import { getTranslations } from "next-intl/server";
 import { getPathname } from "@/i18n/navigation";
 import { routing, type AppLocale, type StaticPathname } from "@/i18n/routing";
 
-// Public origin of the site. Override with NEXT_PUBLIC_SITE_URL (e.g. after
-// renaming the Vercel project or adding a custom domain); no trailing slash.
+// Public origin of the site, set with NEXT_PUBLIC_SITE_URL in Vercel
+// (https://byrongonzalez.com.co); no trailing slash. next.config.ts reads the
+// same variable to redirect the other hosts to it.
 export const BASE_URL = (
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://cv-web-bg.vercel.app"
 ).replace(/\/$/, "");

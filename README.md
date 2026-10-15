@@ -2,7 +2,7 @@
 
 Sitio profesional de Byron González (AI Solutions Consultant), reconstruido como sitio multi-página con Next.js.
 
-🌐 **Producción:** [cv-web-bg.vercel.app](https://cv-web-bg.vercel.app) (el dominio byrongonzalez.com.co venció en sep-2026)
+🌐 **Producción:** [byrongonzalez.com.co](https://byrongonzalez.com.co) (renovado en oct-2026 hasta sep-2027; `cv-web-bg.vercel.app` y `www` redirigen a él)
 
 ## Stack
 
@@ -31,7 +31,7 @@ Copia `.env.example` a `.env.local` y completa:
 | `RESEND_API_KEY` | Envío del formulario de contacto | resend.com |
 | `CONTACT_FROM` | Remitente del email (verificar dominio en Resend) | — |
 | `CONTACT_TO` | Correo donde llegan los mensajes | — |
-| `NEXT_PUBLIC_SITE_URL` | Origen público del sitio (por defecto `https://cv-web-bg.vercel.app`) | — |
+| `NEXT_PUBLIC_SITE_URL` | Dirección principal del sitio: `https://byrongonzalez.com.co`. Define canonical, sitemap y hacia dónde redirigen los otros dominios (sin ella queda `https://cv-web-bg.vercel.app`) | Vercel → Settings → Environment Variables |
 | `NEXT_PUBLIC_TURNSTILE_SITE_KEY` | Anti-bots del formulario (clave pública) | dash.cloudflare.com → Turnstile |
 | `TURNSTILE_SECRET_KEY` | Anti-bots del formulario (clave secreta, solo servidor) | dash.cloudflare.com → Turnstile |
 

@@ -14,7 +14,7 @@ export const cvDataEn: CVContent = {
     remote: "Available for remote work worldwide",
     linkedin: "https://www.linkedin.com/in/byrongonzalezing/",
     github: "https://github.com/byrongonzalez14",
-    website: "https://cv-web-bg.vercel.app",
+    website: "https://byrongonzalez.com.co",
     calendar: "https://calendar.app.google/CxghgVXff9bhjrjA9",
   },
 

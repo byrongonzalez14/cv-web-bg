@@ -3,6 +3,21 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const isDev = process.env.NODE_ENV === "development";
 
+// The main address comes from NEXT_PUBLIC_SITE_URL (set in Vercel). The
+// other hosts that serve this same deployment send visitors there with a
+// permanent redirect, so search engines keep a single address. While the
+// variable still points to cv-web-bg.vercel.app nothing redirects to the
+// custom domain, so this file can ship before the domain is ready.
+const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://cv-web-bg.vercel.app"
+).replace(/\/$/, "");
+const SITE_HOST = new URL(SITE_URL).host;
+const ALIAS_HOSTS = [
+  "cv-web-bg.vercel.app",
+  "byrongonzalez.com.co",
+  "www.byrongonzalez.com.co",
+].filter((host) => host !== SITE_HOST);
+
 // Content Security Policy.
 // 'unsafe-inline' for scripts is required: the site is fully static (no
 // per-request nonces) and GTM injects inline tags (Clarity is a Custom HTML
@@ -16,8 +31,10 @@ const GOOGLE_SCRIPTS =
   "https://*.googletagmanager.com https://tagassistant.google.com https://*.google-analytics.com https://*.analytics.google.com";
 const GOOGLE_CONNECT =
   "https://*.googletagmanager.com https://tagassistant.google.com https://*.google-analytics.com https://*.analytics.google.com https://*.g.doubleclick.net https://*.google.com";
-const CLARITY = "https://www.clarity.ms https://*.clarity.ms https://c.bing.com";
-const VERCEL = "https://va.vercel-scripts.com https://vitals.vercel-insights.com";
+const CLARITY =
+  "https://www.clarity.ms https://*.clarity.ms https://c.bing.com";
+const VERCEL =
+  "https://va.vercel-scripts.com https://vitals.vercel-insights.com";
 // Turnstile (contact form bot check): script + the iframe it renders.
 const TURNSTILE = "https://challenges.cloudflare.com";
 
@@ -50,6 +67,14 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return ALIAS_HOSTS.map((host) => ({
+      source: "/:path*",
+      has: [{ type: "host" as const, value: host }],
+      destination: `${SITE_URL}/:path*`,
+      permanent: true,
+    }));
+  },
   async headers() {
     return [{ source: "/(.*)", headers: securityHeaders }];
   },
